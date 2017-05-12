@@ -11992,7 +11992,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The PROJET estimate is very good for the first 10 seconds, when the vocals are spatially separated. Afterwards, separation fails. The MELODIA and REPET-SIM estimates have comparable performance. Ideally, we would use PROJET for the first 10 seconds of this mixture and then use a combination of MELODIA and REPET-SIM for the last 20 seconds of the mixture.</p>
+<p>The PROJET estimate is very good for the first 10 seconds, when the vocals are spatially separated. Afterwards, separation fails, resulting in no audio from 10 seconds to the end. The MELODIA and REPET-SIM estimates have comparable performance. Ideally, we would use PROJET for the first 10 seconds of this mixture and then use a combination of MELODIA and REPET-SIM for the last 20 seconds of the mixture.</p>
 <h3 id="Our-algorithm-picks-the-best-algorithm-at-every-second-and-uses-its-output.">Our algorithm picks the best algorithm at every second and uses its output.<a class="anchor-link" href="#Our-algorithm-picks-the-best-algorithm-at-every-second-and-uses-its-output.">&#182;</a></h3><p>Below is the output of our system, which predicts SDR for each algorithm output for 1 second chunks and uses the algorithm that has the highest predicted SDR in that 1-second chunk. Our system correctly uses PROJET for the first 10 seconds of the mixture and then switches between REPET-SIM and MELODIA for the remainder of the mixture, predicting them to have comparable SDR.</p>
 
 </div>
@@ -13676,7 +13676,7 @@ GAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -13692,8 +13692,8 @@ GAAAAABJRU5ErkJggg==
 <span class="s1"> code_show = !code_show</span>
 <span class="s1">} </span>
 <span class="s1">$( document ).ready(code_toggle);</span>
-<span class="s1">&lt;/script&gt;</span>
-<span class="s1">&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;&lt;/form&gt;&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="s1">&lt;/script&gt;&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="c1">#&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;&lt;/form&gt;&#39;&#39;&#39;)</span>
 </pre></div>
 
 </div>
@@ -13705,7 +13705,7 @@ GAAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[95]:</div>
+<div class="prompt output_prompt">Out[98]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13721,7 +13721,6 @@ function code_toggle() {
 } 
 $( document ).ready(code_toggle);
 </script>
-<form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form>
 </div>
 
 </div>
