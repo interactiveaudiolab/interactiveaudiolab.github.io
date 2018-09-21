@@ -11778,20 +11778,49 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="The-****-Source-Separation-Library---&#8212;---Demo">The <code>****</code> Source Separation Library   &#8212;   Demo<a class="anchor-link" href="#The-****-Source-Separation-Library---&#8212;---Demo">&#182;</a></h1><h3 id="****-is-an-open-source-python-library-for-audio-source-separation."><code>****</code> is an open source python library for audio source separation.<a class="anchor-link" href="#****-is-an-open-source-python-library-for-audio-source-separation.">&#182;</a></h3><p>It is built to be easy to use existing source separation algorithms and to develop new algorithms. In this demo we will explore some basic functionality of <code>****</code>, including running and evaluating some source separation algorithms.</p>
+<h1 id="The-Northwestern-University-Source-Separation-Library-(nussl)-&#8212;---Demo">The Northwestern University Source Separation Library (<code>nussl</code>) &#8212;   Demo<a class="anchor-link" href="#The-Northwestern-University-Source-Separation-Library-(nussl)-&#8212;---Demo">&#182;</a></h1><h3 id="nussl-is-an-open-source-python-library-for-audio-source-separation."><code>nussl</code> is an open source python library for audio source separation.<a class="anchor-link" href="#nussl-is-an-open-source-python-library-for-audio-source-separation.">&#182;</a></h3><p>It is built to be easy to use existing source separation algorithms and to develop new algorithms. In this demo we will explore some basic functionality of <code>nussl</code>, including running and evaluating some source separation algorithms.</p>
 <p>Let's get started by exploring how to import audio.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" style="display: none;">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">librosa</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">jsonpickle</span>
+<span class="kn">import</span> <span class="nn">jsonpickle.ext.numpy</span> <span class="kn">as</span> <span class="nn">jsonpickle_numpy</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="c1"># This allows us to play music in the browser. Works best on Firefox</span>
+<span class="kn">from</span> <span class="nn">audio_embed_master.audio_embed</span> <span class="kn">import</span> <span class="n">utilities</span>
+<span class="n">utilities</span><span class="o">.</span><span class="n">apply_style</span><span class="p">()</span>
+
+</pre></div>
+
+</div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
 
 
 <div class="output_area">
-<div class="prompt"> </div>
+<div class="prompt"></div>
+
 
 <div class="output_html rendered_html output_subarea ">
 
@@ -11817,18 +11846,48 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="AudioSignal">AudioSignal<a class="anchor-link" href="#AudioSignal">&#182;</a></h1><p>The <code>AudioSignal</code> object is the entryway to using <code>****</code>. It provides an easy way to import an audio file into <code>****</code>. If you have <code>ffmpeg</code> installed, you can open many types of files in <code>****</code>.</p>
+<h1 id="AudioSignal">AudioSignal<a class="anchor-link" href="#AudioSignal">&#182;</a></h1><p>The <code>AudioSignal</code> object is the entryway to using <code>nussl</code>. It provides an easy way to import an audio file into <code>nussl</code>. If you have <code>ffmpeg</code> installed, you can open many types of files in <code>nussl</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">nussl</span>  <span class="c1"># this is kind of important to do first...</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt"></div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">path_to_source1</span> <span class="o">=</span> <span class="s2">&quot;demo_files/drums.wav&quot;</span>
-<span class="n">source1</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">AudioSignal</span><span class="p">(</span><span class="n">path_to_source1</span><span class="p">)</span>
+<span class="n">source1</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">AudioSignal</span><span class="p">(</span><span class="n">path_to_source1</span><span class="p">)</span>
 <span class="n">source1</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;mixture&quot;</span>  <span class="c1"># We can label this signal as a mixture or whatever else we want</span>
 
 <span class="n">utilities</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="n">source1</span><span class="o">.</span><span class="n">audio_data</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">source1</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
@@ -11866,14 +11925,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That's it! Now the audio is loaded into <code>****</code> and stored in an <code>AudioSignal</code> object. We can explore other aspects of this file with the <code>AudioSignal</code> object as well...</p>
+<p>That's it! Now the audio is loaded into <code>nussl</code> and stored in an <code>AudioSignal</code> object. We can explore other aspects of this file with the <code>AudioSignal</code> object as well...</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Path to file: {}&quot;</span>              <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source1</span><span class="o">.</span><span class="n">path_to_input_file</span><span class="p">))</span>
@@ -11939,24 +11998,15 @@ source1.audio_data.shape = (1, 441000)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But, <code>stft</code> has no data stft yet. Because we haven't actually computed the STFT. Let's do that:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can calculate an STFT very easily from our <code>AudioSignal</code> object:</p>
+<p>But, <code>source1</code> has no stft data yet. Because we haven't actually computed the STFT.
+We can calculate an STFT very easily from our <code>AudioSignal</code> object. Let's do that:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># This returns stft data...</span>
@@ -11964,7 +12014,7 @@ source1.audio_data.shape = (1, 441000)
 
 <span class="c1"># ...but it&#39;s still stored in the AudioSignal object</span>
 <span class="k">print</span><span class="p">(</span><span class="n">source1</span><span class="o">.</span><span class="n">stft_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;(num FFT bins, num time bins, num channels)&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;(# FFT bins, # time bins, # channels)&#39;</span><span class="p">)</span>
 <span class="n">mag</span> <span class="o">=</span> <span class="n">source1</span><span class="o">.</span><span class="n">magnitude_spectrogram_data</span>  <span class="c1"># np.abs(source1.stft_data)</span>
 <span class="n">psd</span> <span class="o">=</span> <span class="n">source1</span><span class="o">.</span><span class="n">power_spectrogram_data</span>      <span class="c1"># np.pow(source1.stft_data, 2)</span>
 </pre></div>
@@ -11982,7 +12032,7 @@ source1.audio_data.shape = (1, 441000)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(1025, 863, 1)
-(num FFT bins, num time bins, num channels)
+(# FFT bins, # time bins, # channels)
 </pre>
 </div>
 </div>
@@ -12019,7 +12069,7 @@ source1.audio_data.shape = (1, 441000)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">mixture_path</span> <span class="o">=</span> <span class="s1">&#39;demo_files/HistoryRepeating_PropellorHeads.wav&#39;</span>
@@ -12032,17 +12082,17 @@ source1.audio_data.shape = (1, 441000)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Step 0 - load a new mixture</span>
-<span class="n">mixture</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">AudioSignal</span><span class="p">(</span><span class="n">mixture_path</span><span class="p">)</span>
+<span class="n">mixture</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">AudioSignal</span><span class="p">(</span><span class="n">mixture_path</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Mixture&#39;</span><span class="p">)</span>
 <span class="n">utilities</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="n">mixture</span><span class="o">.</span><span class="n">audio_data</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">mixture</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
 
 <span class="c1"># Step 1 - initialize a Repet object</span>
-<span class="n">repet_sim</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">(</span><span class="n">mixture</span><span class="p">)</span>
+<span class="n">repet_sim</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">(</span><span class="n">mixture</span><span class="p">)</span>
 
 <span class="c1"># Step 2 - run the algorithm</span>
 <span class="n">repet_sim</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
@@ -12146,7 +12196,7 @@ source1.audio_data.shape = (1, 441000)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Importantly, <strong>this is an API</strong>! Every algorithm in <code>****</code> is written to this API, so any algorithm works like this!</p>
+<p>Importantly, <strong>this is an API</strong>! Every algorithm in <code>nussl</code> is written to this API, so any algorithm works like this!</p>
 <p>We can run a bunch of algorithms in a loop, like so:</p>
 
 </div>
@@ -12154,12 +12204,12 @@ source1.audio_data.shape = (1, 441000)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Run three disparate algorithms</span>
-<span class="n">separation_algorithms</span> <span class="o">=</span> <span class="p">[</span><span class="n">lib</span><span class="o">.</span><span class="n">HPSS</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">RPCA</span><span class="p">]</span>
-<span class="n">mixture</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">AudioSignal</span><span class="p">(</span><span class="n">mixture_path</span><span class="p">)</span>
+<span class="n">separation_algorithms</span> <span class="o">=</span> <span class="p">[</span><span class="n">nussl</span><span class="o">.</span><span class="n">HPSS</span><span class="p">,</span> <span class="n">nussl</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">,</span> <span class="n">nussl</span><span class="o">.</span><span class="n">RPCA</span><span class="p">]</span>
+<span class="n">mixture</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">AudioSignal</span><span class="p">(</span><span class="n">mixture_path</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">alg</span> <span class="ow">in</span> <span class="n">separation_algorithms</span><span class="p">:</span>
     
@@ -12351,17 +12401,17 @@ RPCA foreground estimation:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here's a list of all of the algorithm's in <code>****</code> that are currently built to the API spec:</p>
+<p>Here's a list of all of the algorithm's in <code>nussl</code> that are currently built to the API spec:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">a</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">lib</span><span class="o">.</span><span class="n">all_separation_algorithms</span><span class="p">]))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">a</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">nussl</span><span class="o">.</span><span class="n">all_separation_algorithms</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -12402,7 +12452,7 @@ DeepClustering
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Dataset-Integration">Dataset Integration<a class="anchor-link" href="#Dataset-Integration">&#182;</a></h1><p>While <code>****</code> does not ship with any data sets, it does integrate with many common source separation data sets, such as <code>MIR-1K</code>, <code>iKala</code>, and <code>MUSDB18</code> (the new combination of SiSEC's <code>DSD100</code> and <code>MedleyDB</code>).</p>
+<h1 id="Dataset-Integration">Dataset Integration<a class="anchor-link" href="#Dataset-Integration">&#182;</a></h1><p>While <code>nussl</code> does not ship with any data sets, it does integrate with many common source separation data sets, such as <code>MIR-1K</code>, <code>iKala</code>, and <code>MUSDB18</code> (the new combination of SiSEC's <code>DSD100</code> and <code>MedleyDB</code>).</p>
 <p>The dataset integrations take the form of python generator functions. They spit out a new set of <code>AudioSignal</code> objects every loop. Only one set of files is in memory at a time. The syntax for all of the supported datasets is the same.</p>
 <p>Here's an example with <code>MIR-1K</code>:</p>
 
@@ -12411,15 +12461,18 @@ DeepClustering
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mir1k_path</span> <span class="o">=</span> <span class="s1">&#39;demo_files/MIR-1K&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mir1k_path</span> <span class="o">=</span> <span class="s1">&#39;/Users/ethanmanilow/Documents/Github/SourceSeparationPyCharm/demo_files/MIR-1K&#39;</span>
 
 <span class="c1"># THIS is the generator</span>
-<span class="c1"># there are lots of options, some are standard (check_hash, shuffle)</span>
-<span class="c1"># But some are specific to the dataset (undivided -&gt; use the undivided MIR-1K files)</span>
-<span class="n">mir1k</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mir1k</span><span class="p">(</span><span class="n">mir1k_path</span><span class="p">,</span> <span class="n">check_hash</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">undivided</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>  
+<span class="c1"># there are lots of options, some are standardized</span>
+<span class="c1"># But some are specific to the dataset </span>
+<span class="n">mir1k</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mir1k</span><span class="p">(</span><span class="n">mir1k_path</span><span class="p">,</span> 
+                             <span class="n">check_hash</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c1"># &lt;-- part of API standard, this can be skipped to save time</span>
+                             <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>    <span class="c1"># &lt;-- also part of API standard</span>
+                             <span class="n">undivided</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>  <span class="c1"># &lt;-- specific to MIR-1k (undivided -&gt; use the undivided MIR-1K files)</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">max_</span> <span class="o">=</span> <span class="mi">5</span>
@@ -12481,7 +12534,7 @@ Label: mixture,			 Name: abjones_2_01.wav
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Evaluation">Evaluation<a class="anchor-link" href="#Evaluation">&#182;</a></h1><p>In addition to running source separation algorithms, researchers can also evaluate algorithms in the library. There is support for common evaluation measures. Though the most frequently used are the BSS-Eval metrics, <code>****</code> also has support for calculating the precision, recall, f-score, and accuracy of binary masks. All evaluation classes are build to an <strong>API</strong>, and thus extensible if more evaluation measures are needed in the future.</p>
+<h1 id="Evaluation">Evaluation<a class="anchor-link" href="#Evaluation">&#182;</a></h1><p>In addition to running source separation algorithms, researchers can also evaluate algorithms in the library. There is support for common evaluation measures. Though the most frequently used are the BSS-Eval metrics, <code>nussl</code> also has support for calculating the precision, recall, f-score, and accuracy of binary masks. All evaluation classes are build to an <strong>API</strong>, and thus extensible if more evaluation measures are needed in the future.</p>
 <p>Here's a simple example of using <code>BSS-Eval</code> (a more complex version is below):</p>
 
 </div>
@@ -12489,7 +12542,7 @@ Label: mixture,			 Name: abjones_2_01.wav
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Let&#39;s just load the next example from MIR-1K</span>
@@ -12497,12 +12550,12 @@ Label: mixture,			 Name: abjones_2_01.wav
 <span class="n">mixture</span><span class="o">.</span><span class="n">to_mono</span><span class="p">(</span><span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># &quot;Mix&quot; the left and right channels together</span>
 
 <span class="c1"># Run Repet</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">Repet</span><span class="p">(</span><span class="n">mixture</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">Repet</span><span class="p">(</span><span class="n">mixture</span><span class="p">)</span>
 <span class="n">r</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="n">bg_est</span><span class="p">,</span> <span class="n">fg_est</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">make_audio_signals</span><span class="p">()</span>
 
 <span class="c1"># Run evaluation using the new BSS-Eval v4 from museval</span>
-<span class="n">bss</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocals</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span><span class="p">])</span>
+<span class="n">bss</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocals</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span><span class="p">])</span>
 <span class="n">bss_scores</span> <span class="o">=</span> <span class="n">bss</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
 <span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">bss_scores</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
 </pre></div>
@@ -12527,72 +12580,82 @@ Label: mixture,			 Name: abjones_2_01.wav
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 3.57979, 
-              &#34;SAR&#34;: 8.28094, 
-              &#34;SDR&#34;: 3.08629, 
-              &#34;SIR&#34;: 10.99941
+              &#34;ISR&#34;: 5.40605, 
+              &#34;SAR&#34;: 13.71148, 
+              &#34;SDR&#34;: 5.18704, 
+              &#34;SIR&#34;: 11.64299
             }, 
             &#34;time&#34;: 0.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.38508, 
-              &#34;SAR&#34;: 9.71059, 
-              &#34;SDR&#34;: 3.69606, 
-              &#34;SIR&#34;: 7.83662
+              &#34;ISR&#34;: 4.76254, 
+              &#34;SAR&#34;: 11.77479, 
+              &#34;SDR&#34;: 4.46345, 
+              &#34;SIR&#34;: 11.05936
             }, 
             &#34;time&#34;: 1.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.55159, 
-              &#34;SAR&#34;: 9.96835, 
-              &#34;SDR&#34;: 4.43719, 
-              &#34;SIR&#34;: 10.09483
+              &#34;ISR&#34;: 4.2699, 
+              &#34;SAR&#34;: 6.27273, 
+              &#34;SDR&#34;: 2.31715, 
+              &#34;SIR&#34;: 2.91437
             }, 
             &#34;time&#34;: 2.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 3.9231, 
-              &#34;SAR&#34;: 9.46441, 
-              &#34;SDR&#34;: 3.52162, 
-              &#34;SIR&#34;: 9.95677
+              &#34;ISR&#34;: 4.68023, 
+              &#34;SAR&#34;: 9.83511, 
+              &#34;SDR&#34;: 3.88338, 
+              &#34;SIR&#34;: 7.8577
             }, 
             &#34;time&#34;: 3.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.26572, 
-              &#34;SAR&#34;: 10.29139, 
-              &#34;SDR&#34;: 4.06518, 
-              &#34;SIR&#34;: 12.80617
+              &#34;ISR&#34;: 4.53392, 
+              &#34;SAR&#34;: 9.75797, 
+              &#34;SDR&#34;: 3.92779, 
+              &#34;SIR&#34;: 7.18636
             }, 
             &#34;time&#34;: 4.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.12077, 
-              &#34;SAR&#34;: 10.95711, 
-              &#34;SDR&#34;: 3.89126, 
-              &#34;SIR&#34;: 13.51349
+              &#34;ISR&#34;: 2.59845, 
+              &#34;SAR&#34;: 2.69449, 
+              &#34;SDR&#34;: -4.55581, 
+              &#34;SIR&#34;: -12.24
             }, 
             &#34;time&#34;: 5.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.36187, 
-              &#34;SAR&#34;: 10.02562, 
-              &#34;SDR&#34;: 4.12372, 
-              &#34;SIR&#34;: 8.44849
+              &#34;ISR&#34;: 5.08128, 
+              &#34;SAR&#34;: 14.01803, 
+              &#34;SDR&#34;: 4.70037, 
+              &#34;SIR&#34;: 9.8839
             }, 
             &#34;time&#34;: 6.0
+          }, 
+          {
+            &#34;duration&#34;: 1.0, 
+            &#34;metrics&#34;: {
+              &#34;ISR&#34;: 5.22223, 
+              &#34;SAR&#34;: 15.96569, 
+              &#34;SDR&#34;: 5.08601, 
+              &#34;SIR&#34;: 15.52648
+            }, 
+            &#34;time&#34;: 7.0
           }
         ], 
         &#34;name&#34;: &#34;vocals&#34;
@@ -12602,72 +12665,82 @@ Label: mixture,			 Name: abjones_2_01.wav
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.37947, 
-              &#34;SAR&#34;: 8.8065, 
-              &#34;SDR&#34;: 3.28895, 
-              &#34;SIR&#34;: 5.57007
+              &#34;ISR&#34;: 4.3288, 
+              &#34;SAR&#34;: 10.94245, 
+              &#34;SDR&#34;: 4.01278, 
+              &#34;SIR&#34;: 17.02252
             }, 
             &#34;time&#34;: 0.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.12812, 
-              &#34;SAR&#34;: 10.82224, 
-              &#34;SDR&#34;: 3.98327, 
-              &#34;SIR&#34;: 11.48608
+              &#34;ISR&#34;: 4.74751, 
+              &#34;SAR&#34;: 11.47582, 
+              &#34;SDR&#34;: 4.5532, 
+              &#34;SIR&#34;: 13.68594
             }, 
             &#34;time&#34;: 1.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 3.92349, 
-              &#34;SAR&#34;: 7.93912, 
-              &#34;SDR&#34;: 3.25017, 
-              &#34;SIR&#34;: 8.18928
+              &#34;ISR&#34;: 4.73922, 
+              &#34;SAR&#34;: 12.6182, 
+              &#34;SDR&#34;: 4.66326, 
+              &#34;SIR&#34;: 17.18464
             }, 
             &#34;time&#34;: 2.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.64458, 
-              &#34;SAR&#34;: 11.90095, 
-              &#34;SDR&#34;: 4.50756, 
-              &#34;SIR&#34;: 9.63071
+              &#34;ISR&#34;: 4.39604, 
+              &#34;SAR&#34;: 10.50303, 
+              &#34;SDR&#34;: 4.21215, 
+              &#34;SIR&#34;: 14.61655
             }, 
             &#34;time&#34;: 3.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.22012, 
-              &#34;SAR&#34;: 8.25647, 
-              &#34;SDR&#34;: 3.65071, 
-              &#34;SIR&#34;: 6.04627
+              &#34;ISR&#34;: 4.43586, 
+              &#34;SAR&#34;: 11.41924, 
+              &#34;SDR&#34;: 4.00206, 
+              &#34;SIR&#34;: 15.32435
             }, 
             &#34;time&#34;: 4.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.6883, 
-              &#34;SAR&#34;: 10.79291, 
-              &#34;SDR&#34;: 4.35636, 
-              &#34;SIR&#34;: 7.45924
+              &#34;ISR&#34;: 4.79837, 
+              &#34;SAR&#34;: 14.13146, 
+              &#34;SDR&#34;: 4.92691, 
+              &#34;SIR&#34;: 25.10135
             }, 
             &#34;time&#34;: 5.0
           }, 
           {
             &#34;duration&#34;: 1.0, 
             &#34;metrics&#34;: {
-              &#34;ISR&#34;: 4.20335, 
-              &#34;SAR&#34;: 11.08412, 
-              &#34;SDR&#34;: 3.88537, 
-              &#34;SIR&#34;: 10.67303
+              &#34;ISR&#34;: 3.89986, 
+              &#34;SAR&#34;: 10.85379, 
+              &#34;SDR&#34;: 3.4744, 
+              &#34;SIR&#34;: 14.60514
             }, 
             &#34;time&#34;: 6.0
+          }, 
+          {
+            &#34;duration&#34;: 1.0, 
+            &#34;metrics&#34;: {
+              &#34;ISR&#34;: 4.75904, 
+              &#34;SAR&#34;: 11.64283, 
+              &#34;SDR&#34;: 4.46616, 
+              &#34;SIR&#34;: 13.83126
+            }, 
+            &#34;time&#34;: 7.0
           }
         ], 
         &#34;name&#34;: &#34;accompaniment&#34;
@@ -12676,16 +12749,16 @@ Label: mixture,			 Name: abjones_2_01.wav
   }, 
   &#34;sdr_means&#34;: {
     &#34;&#39;vocals&#34;: {
-      &#34;ISR&#34;: 4.17, 
-      &#34;SAR&#34;: 9.814, 
-      &#34;SDR&#34;: 3.832, 
-      &#34;SIR&#34;: 10.522
+      &#34;ISR&#34;: 4.569, 
+      &#34;SAR&#34;: 10.504, 
+      &#34;SDR&#34;: 3.126, 
+      &#34;SIR&#34;: 6.729
     }, 
     &#34;accompaniment&#34;: {
-      &#34;ISR&#34;: 4.312, 
-      &#34;SAR&#34;: 9.943, 
-      &#34;SDR&#34;: 3.846, 
-      &#34;SIR&#34;: 8.436
+      &#34;ISR&#34;: 4.513, 
+      &#34;SAR&#34;: 11.698, 
+      &#34;SDR&#34;: 4.289, 
+      &#34;SIR&#34;: 16.421
     }
   }
 }
@@ -12702,7 +12775,7 @@ Label: mixture,			 Name: abjones_2_01.wav
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Deep-Learning-Models">Deep Learning Models<a class="anchor-link" href="#Deep-Learning-Models">&#182;</a></h1>
+<h1 id="Deep-Learning-Models-and-the-External-File-Zoo-(EFZ)">Deep Learning Models and the External File Zoo (EFZ)<a class="anchor-link" href="#Deep-Learning-Models-and-the-External-File-Zoo-(EFZ)">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12711,18 +12784,18 @@ Label: mixture,			 Name: abjones_2_01.wav
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>While <code>****</code> does not ship with any pre-trained models, it has the ability to download pre-trained models stored on the <code>****</code> servers.</p>
-<p>The process for submitting your own trained models for use with <code>****</code> will be finalized soon.</p>
+<p>While <code>nussl</code> does not ship with any pre-trained models, it has the ability to download pre-trained models stored on the <code>nussl</code> servers. The <code>nussl</code> servers are called the <em>External File Zoo (EFZ)</em> and a companion website is located <a href="http://nussl.ci.northwestern.edu/">here</a>.
+To see what models are currently available on the <code>nussl</code> EFZ, use this utility function:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lib</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">print_available_trained_models</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nussl</span><span class="o">.</span><span class="n">efz_utils</span><span class="o">.</span><span class="n">print_available_trained_models</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12738,12 +12811,9 @@ Label: mixture,			 Name: abjones_2_01.wav
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>File Name                                For Class            Size       Description                                       
-deep_clustering_model.h5                 DeepClustering       48.1MiB    example Deep Clustering Keras model               
-deep_clustering_vocal_44k_long.model     DeepClustering       90.2MiB    trained DC model for vocal extraction             
-
-Last updated 2018-03-06
-To download one of these files insert the file name as the first parameter to lib.download_trained_model, like so: 
- &gt;&gt;&gt; lib.download_trained_model(&#39;deep_clustering_model.h5&#39;)
+deep_clustering_vocals_44k_long.model    DeepClustering       90.2MiB    Deep clustering for vocal separation trained on augmented DSD100.
+To download one of these files insert the file name as the first parameter to nussl.download_trained_model, like so: 
+ &gt;&gt;&gt; nussl.efz_utils.download_trained_model(&#39;deep_clustering_model.h5&#39;)
 </pre>
 </div>
 </div>
@@ -12757,7 +12827,40 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>...</p>
+<p>There's only one up there at the time of this writing. More are coming soon...</p>
+<p>Once we know the file name of the model we want, we can download it like so:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nussl</span><span class="o">.</span><span class="n">efz_utils</span><span class="o">.</span><span class="n">download_trained_model</span><span class="p">(</span><span class="s1">&#39;deep_clustering_vocals_44k_long.model&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Contributing-to-nussl">Contributing to <code>nussl</code><a class="anchor-link" href="#Contributing-to-nussl">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In addition to trained deep learning models, the EFZ also houses example audio files and benchmark files for unit testing in <code>nussl</code>. As such, it is a crucial part of contributing to <code>nussl</code>. The developers of <code>nussl</code> are committed to accepting contributions, so we encourage researchers to submit their algorithms (with or without models). For more details please see the contributions section on the <code>nussl</code> github page.</p>
 
 </div>
 </div>
@@ -12767,7 +12870,7 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Novel-Uses-of-****">Novel Uses of ****<a class="anchor-link" href="#Novel-Uses-of-****">&#182;</a></h1>
+<h1 id="Example-Uses-of-nussl">Example Uses of <code>nussl</code><a class="anchor-link" href="#Example-Uses-of-nussl">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12776,7 +12879,7 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we showcase a lot of the features of <code>****</code> by exploring some novel use cases.</p>
+<p>Here we showcase a lot of the features of <code>nussl</code> by exploring some novel use cases.</p>
 
 </div>
 </div>
@@ -12793,7 +12896,7 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">weiner_filter_masks</span><span class="p">(</span><span class="n">mask1</span><span class="p">,</span> <span class="n">mask2</span><span class="p">):</span>
@@ -12801,7 +12904,7 @@ To download one of these files insert the file name as the first parameter to li
 <span class="sd">    Simple weiner filtering method, helper function for cascading code (below)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">den</span> <span class="o">=</span> <span class="n">mask1</span> <span class="o">+</span> <span class="n">mask2</span>
-    <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">separation</span><span class="o">.</span><span class="n">SoftMask</span><span class="p">(</span><span class="n">mask1</span> <span class="o">/</span> <span class="n">den</span><span class="p">),</span> <span class="n">lib</span><span class="o">.</span><span class="n">separation</span><span class="o">.</span><span class="n">SoftMask</span><span class="p">(</span><span class="n">mask2</span> <span class="o">/</span> <span class="n">den</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nussl</span><span class="o">.</span><span class="n">separation</span><span class="o">.</span><span class="n">SoftMask</span><span class="p">(</span><span class="n">mask1</span> <span class="o">/</span> <span class="n">den</span><span class="p">),</span> <span class="n">nussl</span><span class="o">.</span><span class="n">separation</span><span class="o">.</span><span class="n">SoftMask</span><span class="p">(</span><span class="n">mask2</span> <span class="o">/</span> <span class="n">den</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12811,7 +12914,7 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">parallel</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">alg1</span><span class="p">,</span> <span class="n">alg2</span><span class="p">,</span> <span class="n">bg_weight</span><span class="p">,</span> <span class="n">fg_weight</span><span class="p">,</span>
@@ -12856,7 +12959,7 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">alg1</span><span class="p">,</span> <span class="n">alg2</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span>
@@ -12864,6 +12967,9 @@ To download one of these files insert the file name as the first parameter to li
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Running alg1 and alg2 in series, weighing their output masks, and combining</span>
 <span class="sd">    masks with a simple weiner filter.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Any optional parameters?</span>
     <span class="n">alg1_kwargs</span> <span class="o">=</span> <span class="n">alg1_kwargs</span> <span class="k">if</span> <span class="n">alg1_kwargs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="k">else</span> <span class="p">{}</span>
@@ -12903,17 +13009,21 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">run_cascading</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This will take a LOOOOONG time to run. It took between 36-48 hours on my machine!</span>
+<span class="sd">    Runs the </span>
+<span class="sd">    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="sd">    WARNING: This will take a LOOOOONG time to run!!!!</span>
+<span class="sd">    It took between ~36-48 hours on my machine!!!!!!</span>
+<span class="sd">    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">mir1k_dir</span> <span class="o">=</span> <span class="s1">&#39;demo_files/MIR-1K&#39;</span>
     <span class="n">output_dir</span> <span class="o">=</span> <span class="s1">&#39;cascade_results&#39;</span>
 
-    <span class="n">separation_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">lib</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">FT2D</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">RPCA</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">Melodia</span><span class="p">]</span>
+    <span class="n">separation_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">nussl</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">,</span> <span class="n">nussl</span><span class="o">.</span><span class="n">FT2D</span><span class="p">,</span> <span class="n">nussl</span><span class="o">.</span><span class="n">RPCA</span><span class="p">,</span> <span class="n">nussl</span><span class="o">.</span><span class="n">Melodia</span><span class="p">]</span>
     <span class="n">separation_combinations</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">separation_classes</span><span class="p">,</span> <span class="n">separation_classes</span><span class="p">)]</span>
     <span class="n">p_bg_w</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># parallel background mask weight</span>
     <span class="n">p_fg_w</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># parallel foreground mask weight</span>
@@ -12922,7 +13032,7 @@ To download one of these files insert the file name as the first parameter to li
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">checkpoint_scores</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">mixture</span><span class="p">,</span> <span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span> <span class="ow">in</span> <span class="n">lib</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mir1k</span><span class="p">(</span><span class="n">mir1k_dir</span><span class="p">,</span> <span class="n">undivided</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">mixture</span><span class="p">,</span> <span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span> <span class="ow">in</span> <span class="n">nussl</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mir1k</span><span class="p">(</span><span class="n">mir1k_dir</span><span class="p">,</span> <span class="n">undivided</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;~*&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Working on {}. {}/110&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mixture</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;~*&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
@@ -12947,7 +13057,7 @@ To download one of these files insert the file name as the first parameter to li
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span> <span class="o">=</span> <span class="n">parallel</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="n">alg1</span><span class="p">,</span> <span class="n">alg2</span><span class="p">,</span> <span class="n">p_bg_w</span><span class="p">,</span> <span class="n">p_fg_w</span><span class="p">)</span>
                 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">Computing BSS-Eval&#39;</span><span class="p">)</span>
-                <span class="n">bss</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span><span class="p">])</span>
+                <span class="n">bss</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span><span class="p">])</span>
                 <span class="n">bss_scores</span> <span class="o">=</span> <span class="n">bss</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
                 <span class="k">if</span> <span class="s1">&#39;parallel&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">checkpoint_scores</span><span class="p">[</span><span class="n">n1</span><span class="p">][</span><span class="n">n2</span><span class="p">]:</span>
                     <span class="n">checkpoint_scores</span><span class="p">[</span><span class="n">n1</span><span class="p">][</span><span class="n">n2</span><span class="p">][</span><span class="s1">&#39;parallel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -12962,7 +13072,7 @@ To download one of these files insert the file name as the first parameter to li
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span> <span class="o">=</span> <span class="n">series</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="n">alg1</span><span class="p">,</span> <span class="n">alg2</span><span class="p">,</span> <span class="n">series_w</span><span class="p">)</span>
                 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">Computing BSS-Eval&#39;</span><span class="p">)</span>
-                <span class="n">bss</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span><span class="p">])</span>
+                <span class="n">bss</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg_est</span><span class="p">,</span> <span class="n">bg_est</span><span class="p">])</span>
                 <span class="n">bss_scores</span> <span class="o">=</span> <span class="n">bss</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
                 <span class="k">if</span> <span class="s1">&#39;series&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">checkpoint_scores</span><span class="p">[</span><span class="n">n1</span><span class="p">][</span><span class="n">n2</span><span class="p">]:</span>
                     <span class="n">checkpoint_scores</span><span class="p">[</span><span class="n">n1</span><span class="p">][</span><span class="n">n2</span><span class="p">][</span><span class="s1">&#39;series&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13011,7 +13121,7 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The code for this is much simpler, as <code>OverlapAdd</code> already exists as a class in <code>****</code>.</p>
+<p>The code for this is much simpler, as <code>OverlapAdd</code> already exists as a class in <code>nussl</code>.</p>
 <p>For this experiment, we tested three different window sizes--10, 20, 30 seconds--using two different algorithms--RepetSim, and 2DFT (called <code>FT2D</code> in the library). Click the arrows to expand the functions and see the code.</p>
 
 </div>
@@ -13019,11 +13129,11 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">run_overlap_add</span><span class="p">():</span>
-    <span class="n">separation_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">lib</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">,</span> <span class="n">lib</span><span class="o">.</span><span class="n">FT2D</span><span class="p">]</span>
+    <span class="n">separation_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">nussl</span><span class="o">.</span><span class="n">RepetSim</span><span class="p">,</span> <span class="n">nussl</span><span class="o">.</span><span class="n">FT2D</span><span class="p">]</span>
 
     <span class="n">mir1k_dir</span> <span class="o">=</span> <span class="s1">&#39;demo_files/MIR-1K&#39;</span>
     <span class="n">output_dir</span> <span class="o">=</span> <span class="s1">&#39;demo_files/output&#39;</span>
@@ -13032,7 +13142,7 @@ To download one of these files insert the file name as the first parameter to li
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">checkpoint_scores</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">mixture</span><span class="p">,</span> <span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span> <span class="ow">in</span> <span class="n">lib</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mir1k</span><span class="p">(</span><span class="n">mir1k_dir</span><span class="p">,</span> <span class="n">undivided</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">mixture</span><span class="p">,</span> <span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span> <span class="ow">in</span> <span class="n">nussl</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mir1k</span><span class="p">(</span><span class="n">mir1k_dir</span><span class="p">,</span> <span class="n">undivided</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;~*&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Working on {}. {}/110&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mixture</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
         <span class="k">print</span><span class="p">(</span><span class="s1">&#39;~*&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
@@ -13047,13 +13157,13 @@ To download one of these files insert the file name as the first parameter to li
                 <span class="n">checkpoint_scores</span><span class="p">[</span><span class="n">m_name</span><span class="p">][</span><span class="n">a_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
             <span class="k">for</span> <span class="n">win</span> <span class="ow">in</span> <span class="n">window_sizes</span><span class="p">:</span>
-                <span class="n">ola</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">OverlapAdd</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="n">alg</span><span class="p">,</span> <span class="n">overlap_window_size</span><span class="o">=</span><span class="n">win</span><span class="p">,</span>
+                <span class="n">ola</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">OverlapAdd</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="n">alg</span><span class="p">,</span> <span class="n">overlap_window_size</span><span class="o">=</span><span class="n">win</span><span class="p">,</span>
                                      <span class="n">overlap_hop_size</span><span class="o">=</span><span class="n">win</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span>
-                                     <span class="n">overlap_window_type</span><span class="o">=</span><span class="n">lib</span><span class="o">.</span><span class="n">WINDOW_DEFAULT</span><span class="p">)</span>
+                                     <span class="n">overlap_window_type</span><span class="o">=</span><span class="n">nussl</span><span class="o">.</span><span class="n">WINDOW_DEFAULT</span><span class="p">)</span>
                 <span class="n">ola</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
                 <span class="n">bg</span><span class="p">,</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">ola</span><span class="o">.</span><span class="n">make_audio_signals</span><span class="p">()</span>
 
-                <span class="n">bss</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg</span><span class="p">,</span> <span class="n">bg</span><span class="p">])</span>
+                <span class="n">bss</span> <span class="o">=</span> <span class="n">nussl</span><span class="o">.</span><span class="n">evaluation</span><span class="o">.</span><span class="n">BSSEvalV4</span><span class="p">(</span><span class="n">mixture</span><span class="p">,</span> <span class="p">[</span><span class="n">vocal</span><span class="p">,</span> <span class="n">accompaniment</span><span class="p">],</span> <span class="p">[</span><span class="n">fg</span><span class="p">,</span> <span class="n">bg</span><span class="p">])</span>
                 <span class="n">bss_scores</span> <span class="o">=</span> <span class="n">bss</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
 
                 <span class="k">if</span> <span class="n">win</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">checkpoint_scores</span><span class="p">[</span><span class="n">m_name</span><span class="p">][</span><span class="n">a_name</span><span class="p">]:</span>
@@ -13088,6 +13198,16 @@ To download one of these files insert the file name as the first parameter to li
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
 
 </div>
     </div>
