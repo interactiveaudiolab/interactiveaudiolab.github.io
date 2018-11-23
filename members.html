@@ -1,0 +1,23 @@
+---
+layout: default
+title: Members
+permalink: /members/
+---
+
+<header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+</header>
+
+<ul>
+  {% for member in site.members %}
+
+    <li>
+
+        <h2><a herf="{{ member.url | relative_url }}">{{ member.name }}</a></h2>
+        <h3>{{ member.position }}</h3>
+        <p>{{ member.content | markdownify }}</p>
+
+    </li>
+
+  {% endfor %}
+</ul>
