@@ -1,7 +1,7 @@
 ---
 name: Demo Jones
 position: Professor
-categories: collaborator
+category: collaborator
 email: demojones@sample.edu
 website: google.com
 image: image.jpg

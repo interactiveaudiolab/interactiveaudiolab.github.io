@@ -1,7 +1,7 @@
 ---
 name: Sample Smith
 position: PhD Student
-categories: current
+category: current
 email: samplesmith@sample.edu
 website: google.com
 image: image.jpg

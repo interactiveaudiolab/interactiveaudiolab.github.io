@@ -8,7 +8,8 @@ permalink: /members/
     <h1 class="post-title">{{ page.title | escape }}</h1>
 </header>
 
-<ul class="post-list">
+<!-- below just iterates through the members without sorting -->
+<!-- <ul class="post-list">
   {% for member in site.members %}
     <li>
         <h2><a href="{{ member.url }}">{{ member.name }}</a></h2>
@@ -16,19 +17,19 @@ permalink: /members/
         <p>{{ member.content | markdownify }}</p>
     </li>
   {% endfor %}
-</ul>
+</ul> -->
 
-<!-- working through categories -- not working yet {% assign groups = site.members | group_by: "category" | sort: "name" %}
+    {% assign members = site.members | group_by: 'category' %}
 
-        {% for group in groups %}
-        <h1>{{ group.name }}</h1>
+    {% for cat in members %}
+        <h2>{{ cat.name | capitalize }}</h2>
         <ul class="post-list">
-            {% for member in group.members %}
-                <li>
-                    <h2><a href="{{ member.url }}">{{ member.name }}</a></h2>
-                    <h3>{{ member.position }}</h3>
-                    <p>{{ member.content | markdownify }}</p>
-                </li>
-            {% endfor %}
-      </ul>
-      {% endfor %} -->
+        {% assign items = cat.items | sort: 'order' %}
+        {% for item in items %}
+            <li>
+                <h3><a href="{{ item.url }}">{{ item.name }}</a>, {{ item.position }}</h3>
+                <p>{{ item.content | markdownify }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
