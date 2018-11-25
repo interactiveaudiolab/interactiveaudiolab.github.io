@@ -29,10 +29,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# tells jekyll to recognize the listed folders as colections.
+# output:true generates pages for each item in the collection.
 collections:
   members:
     output: true
+collections_dir: collections
 
+#defines what layout each type of collection displays as, as well as its path display.
 defaults:
   - scope:
       path: ""

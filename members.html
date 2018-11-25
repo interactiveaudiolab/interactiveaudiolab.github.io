@@ -24,12 +24,12 @@ permalink: /members/
     {% for cat in members %}
         <h2>{{ cat.name | capitalize }}</h2>
         <ul class="post-list">
-        {% assign items = cat.items | sort: 'order' %}
-        {% for item in items %}
-            <li>
-                <h3><a href="{{ item.url }}">{{ item.name }}</a>, {{ item.position }}</h3>
-                <p>{{ item.content | markdownify }}</p>
-            </li>
-        {% endfor %}
+            {% assign items = cat.items | sort: 'order' %}
+            {% for item in items %}
+                <li>
+                    <h3><a href="{{ item.url }}">{{ item.name }}</a>, {{ item.position }}</h3>
+                    <p>{{ item.content | markdownify }}</p>
+                </li>
+            {% endfor %}
         </ul>
     {% endfor %}
