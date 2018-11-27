@@ -30,14 +30,31 @@ plugins:
   - jekyll-seo-tag
 
 # tells jekyll to recognize the listed folders as colections.
-# output:true generates pages for each item in the collection.
+# output:true generates individual pages for each item in the collection.
 collections:
+  datasets:
+    output: false
+  demos:
+    output: true
   members:
     output: true
+  projects:
+    output: true
+#tells jekyll the directory where all collections are located
 collections_dir: collections
 
 #defines what layout each type of collection displays as, as well as its path display.
+#the file name of the 
 defaults:
+# - scope:
+      # path: ""
+      # type: "datasets"
+  - scope:
+      path: ""
+      type: "demos"
+    values:
+      layout: "demo"
+      permalink: /Research/Demos/:name.html
   - scope:
       path: ""
       type: "members"
@@ -48,6 +65,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      permalink: /Research/Projects/:name.html
   - scope:
       path: ""
     values:

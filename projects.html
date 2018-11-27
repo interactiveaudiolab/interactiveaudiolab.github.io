@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Members
-permalink: /members/
+title: Projects
+permalink: /Research/Projects
 ---
 
 <header class="post-header">
@@ -9,17 +9,21 @@ permalink: /members/
 </header>
 
 <!-- below just iterates through the members without sorting -->
-<!-- <ul class="post-list">
-  {% for member in site.members %}
+<ul class="post-list">
+  {% for project in site.projects %}
     <li>
-        <h2><a href="{{ member.url }}">{{ member.name }}</a></h2>
-        <h3>{{ member.position }}</h3>
-        <p>{{ member.content | markdownify }}</p>
+        <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+        <h3>{{ project.creators }}</h3>
+        {% if project.funding %}
+            <p>Funding: {{project.funding }}</p>
+        {% endif %}
+
+        <p>{{ project.content | markdownify }}</p>
     </li>
   {% endfor %}
-</ul> -->
+</ul>
 
-    {% assign members = site.members | group_by: 'category' %}
+    <!-- {% assign projects = site.projects | group_by: 'category' %}
 
     <h3>
     {% for cat in members %}
@@ -38,4 +42,4 @@ permalink: /members/
                 </li>
             {% endfor %}
         </ul>
-    {% endfor %}
+    {% endfor %} -->
