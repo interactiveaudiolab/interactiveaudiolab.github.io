@@ -13,7 +13,11 @@ permalink: /Research/Demos
   {% for demo in site.demos %}
     <li>
         <h2><a href="{{ demo.url }}">{{ demo.name }}</a></h2>
-        <h3>{{ demo.creators }}</h3>
+        <h3>
+            {% for creator in demo.creators %}
+                {{ creator }}
+            {% endfor %}
+        </h3>
 
         <p>{{ demo.content | markdownify }}</p>
 

@@ -3,7 +3,13 @@ layout: default
 ---
 
 <h1>{{ page.name }}</h1>
-<h2>{{ page.creators }}</h2>
+
+<h2>{% for creator in page.creators %}
+    {{ creator }}
+{% endfor %}
+</h2>
+
+
 {% if page.funding %}
 <h3>{{page.funding }}</h3>
 {% endif %}

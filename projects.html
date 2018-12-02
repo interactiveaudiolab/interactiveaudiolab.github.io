@@ -13,7 +13,11 @@ permalink: /Research/Projects
   {% for project in site.projects %}
     <li>
         <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
-        <h3>{{ project.creators }}</h3>
+        <h3>
+            {% for creator in project.creators %}
+                {{ creator }}
+            {% endfor %}
+        </h3>
         {% if project.funding %}
             <p>Funding: {{project.funding }}</p>
         {% endif %}
