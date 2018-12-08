@@ -1,0 +1,22 @@
+main:
+  - page: Research
+    url: /research/
+  - page: Resources
+    url: /resources/
+  - page: Members
+    url: /members/
+
+research:
+  - page: Projects
+    url: /research/projects.html
+  - page: Papers
+    url: /research/papers.html
+  - page: Demos
+    url: /research/demos.html
+
+resources:
+    - page: Data Sets
+      url: /resources/datasets.html
+    - page: Source Code
+      url: /resources/sourcecode.html
+

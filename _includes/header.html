@@ -2,10 +2,30 @@
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
-    {%- if page_paths -%}
+    <!-- displays main nav on every page -->
+    <nav class="site-nav">
+      {% for item in site.data.navigation.main %}
+        <a class="page-link" href="{{ item.url }}">
+          {{ item.page | escape}}
+        </a>        
+      {% endfor %}
+    </nav>
+
+    <!-- lists subpages if the page has a navigation listed -->
+    {% if page.navigation %}
+      <nav class="site-nav">
+        {% for item in site.data.navigation[page.navigation] %}
+          <a class="page-link" href="{{ item.url }}">
+            {{ item.page | escape}}
+          </a>
+        {% endfor %}
+      </nav>
+    {% endif %}
+
+
+    <!-- {%- if page_paths -%}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -25,6 +45,6 @@
           {%- endfor -%}
         </div>
       </nav>
-    {%- endif -%}
+    {%- endif -%} -->
   </div>
 </header>
