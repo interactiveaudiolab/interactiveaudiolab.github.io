@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1>{{ page.name }}</h1>
+
+<h2>
+    {% for creator in page.creators %}
+        {{ creator }}
+    {% endfor %}
+</h2>
+
+{% if page.external-url %}
+    <a href="{{page.external-url}}">View the dataset</a>
+{% endif %}
+
+{% if page.funding %}
+<h3>{{page.funding }}</h3>
+{% endif %}
+
+{{ content }}

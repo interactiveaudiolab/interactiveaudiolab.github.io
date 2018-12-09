@@ -46,15 +46,18 @@ collections_dir: collections
 #defines what layout each type of collection displays as, as well as its path display.
 #the file name of the 
 defaults:
-# - scope:
-      # path: ""
-      # type: "datasets"
+  - scope:
+      path: ""
+      type: "datasets"
+    values:
+      layout: "dataset"
+      permalink: /resources/datasets/:name.html
   - scope:
       path: ""
       type: "demos"
     values:
       layout: "demo"
-      permalink: /Research/Demos/:name.html
+      permalink: /research/demos/:name.html
   - scope:
       path: ""
       type: "members"
@@ -70,7 +73,7 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-      permalink: /Research/Projects/:name.html
+      permalink: /research/projects/:name.html
   - scope:
       path: ""
     values:

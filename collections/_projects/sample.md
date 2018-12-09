@@ -6,6 +6,7 @@ related-papers:
 related-projects:
 image:
 funding: NSF
+navigation: research
 
 #put full content below the dashed line. full markdown is supported.
 ---
