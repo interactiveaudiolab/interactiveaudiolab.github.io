@@ -40,6 +40,8 @@ collections:
     output: true
   projects:
     output: true
+  sourcecode:
+    output: true
 #tells jekyll the directory where all collections are located
 collections_dir: collections
 
@@ -74,6 +76,12 @@ defaults:
     values:
       layout: "project"
       permalink: /research/projects/:name.html
+  - scope:
+      path: ""
+      type: "sourcecode"
+    values:
+      layout: "sc"
+      permalink: /resources/sourcecode/:name.html
   - scope:
       path: ""
     values:

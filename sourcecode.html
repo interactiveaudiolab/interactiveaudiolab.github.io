@@ -1,27 +1,29 @@
 ---
 layout: default
-title: Demos
-permalink: /Research/Demos
-navigation: research
+title: Source Code
+permalink: /resources/sourcecode.html
+navigation: resources
 ---
 
 <header class="post-header">
     <h1 class="post-title">{{ page.title | escape }}</h1>
 </header>
 
-<!-- below just iterates through the members without sorting -->
+<!-- below just iterates through the collection without sorting -->
 <ul class="post-list">
-  {% for demo in site.demos %}
+  {% for sc in site.sourcecode %}
     <li>
-        <h2><a href="{{ demo.url }}">{{ demo.name }}</a></h2>
+        <h2><a href="{{ sc.url }}">{{ sc.name }}</a></h2>
         <h3>
-            {% for creator in demo.creators %}
+            {% for creator in project.creators %}
                 {{ creator }}
             {% endfor %}
         </h3>
+        {% if sc.external-url %}
+            <a href="{{sc.external-url}}">external link</a>
+        {% endif %}
 
-        <p>{{ demo.content | markdownify }}</p>
-
+        <p>{{ sc.content | markdownify }}</p>
     </li>
   {% endfor %}
 </ul>
