@@ -42,11 +42,14 @@ collections:
     output: true
   sourcecode:
     output: true
+  papers:
+    output: false
 #tells jekyll the directory where all collections are located
 collections_dir: collections
 
 #defines what layout each type of collection displays as, as well as its path display.
-#the file name of the 
+#the file name of the individual item determines the name of the html path
+#note that papers is not listed here because its individual pages aren't linked
 defaults:
   - scope:
       path: ""
