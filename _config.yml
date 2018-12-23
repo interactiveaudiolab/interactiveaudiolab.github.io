@@ -24,10 +24,11 @@ github_username:  interactiveaudiolab
 
 # Build settings
 markdown: kramdown
-# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+sass:
+  sass_dir: css
 
 # tells jekyll to recognize the listed folders as colections.
 # output:true generates individual pages for each item in the collection.

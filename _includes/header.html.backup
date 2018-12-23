@@ -1,0 +1,29 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+
+    <nav class="site-nav">
+      {% for item in site.data.navigation.main %}
+        <a class="page-link" href="{{ item.url }}">
+          {{ item.page | escape}}
+        </a>        
+      {% endfor %}
+    </nav>
+
+
+    {% if page.navigation %}
+      <nav class="site-nav">
+        {% for item in site.data.navigation[page.navigation] %}
+          <a class="page-link" href="{{ item.url }}">
+            {{ item.page | escape}}
+          </a>
+        {% endfor %}
+      </nav>
+    {% endif %}
+
+
+  </div>
+</header>
