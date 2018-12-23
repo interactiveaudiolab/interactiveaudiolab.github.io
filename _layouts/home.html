@@ -4,7 +4,7 @@ layout: default
 
   <div class="">
     {%- if page.title -%}
-      <h1 class="">{{ page.title }}</h1>
+      <h1 class="display-4">{{ page.title }}</h1>
     {%- endif -%}
 
     {{ content }}
@@ -13,7 +13,7 @@ layout: default
         {%- if site.posts.size > 0 -%}
           
             <h2 class="">{{ page.list_title | default: "News" }}</h2>
-            <ul class="">
+            <ul class="list-unstyled">
               {%- for post in site.posts -%}
               <li>
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

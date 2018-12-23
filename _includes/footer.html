@@ -1,21 +1,22 @@
-<footer class="bg-light">
-  <data class="" href="{{ "/" | relative_url }}"></data>
+<footer class="footer bg-light">
+  <!-- <data class="" href="{{ "/" | relative_url }}"></data> -->
 
-    <div class="row">
+    <div class="container">
 
-      <div class="col offset-md-3">
-        <h6 class="">{{ site.title | escape }}</h6>
-        <ul class="">
+      <div class="">
+        <h6 class="text-muted"> &copy; {{ site.title | escape }}</h6>
+        <!-- <ul class="">
             {%- if site.email -%}
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {%- endif -%}
-        </ul>
+        </ul> -->
       </div>
 
-      <div class="col">
+      <!-- <div class="col">
         <p>{{- site.description | escape -}}</p>
       </div>
-    </div>
+     -->
+     </div>
 
 </footer>
 
