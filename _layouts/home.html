@@ -17,12 +17,12 @@ layout: default
               {%- for post in site.posts -%}
               <li>
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                <h6>{{ post.date | date: date_format }}</h6>
-                <h3>
+                <h6 class="text-muted">{{ post.date | date: date_format }}</h6>
+                <h4>
                   <a class="" href="{{ post.url | relative_url }}">
                     {{ post.title | escape }}
                   </a>
-                </h3>
+                </h4>
                 {%- if site.show_excerpts -%}
                   {{ post.excerpt }}
                 {%- endif -%}
@@ -37,7 +37,7 @@ layout: default
         {% if site.demos.size > 0 %}
         <h2 class="">{{ page.list_title | default: "Demos" }}</h2>
           {% for demo in site.demos %}
-            <h3><a href="{{ demo.url}}">{{ demo.name }}</a></h3>
+            <h4><a href="{{ demo.url}}">{{ demo.name }}</a></h4>
           {% endfor %}
         {% endif %}
       </div>
