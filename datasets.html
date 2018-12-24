@@ -6,24 +6,29 @@ navigation: resources
 ---
 
 <header class="">
-    <h1 class="display-4">{{ page.title | escape }}</h1>
-</header>
-
-<!-- below just iterates through the collection without sorting -->
-<ul class="list-unstyled">
-  {% for dataset in site.datasets %}
-    <li>
-        <h2><a href="{{ dataset.url }}">{{ dataset.name }}</a></h2>
-        <h3>
-            {% for creator in project.creators %}
-                {{ creator }}
-            {% endfor %}
-        </h3>
-        {% if dataset.external-url %}
-            <a href="{{dataset.external-url}}">View the dataset</a>
-        {% endif %}
-
-        <p>{{ dataset.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-</ul>
+        <h1 class="display-5">{{ page.title | upcase }}</h1>
+    </header>
+    
+    <div class="row">
+      {% for item in site.datasets %}
+        <div class="media category-list">
+            {% if item.image %}
+            <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+            {% endif %}
+            <div class="media-body">
+                <h2 class="mt-0"><a href="{{ item.url }}">{{ item.name }}</a></h2>
+                <h5 class="text-muted">
+                    {% for creator in item.creators %}
+                        {% if forloop.last == true %}
+                            {{ creator | escape}}
+                        {% else %}
+                            {{ creator | escape}},
+                        {% endif %}
+                    {% endfor %}
+                </h5>
+    
+                <p>{{ item.excerpt | markdownify }}</p>
+            </div>
+        </div>
+      {% endfor %}
+    </div>

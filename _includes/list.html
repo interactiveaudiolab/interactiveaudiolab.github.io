@@ -1,0 +1,33 @@
+<header class="">
+        <h1 class="">{{ page.title | escape }}</h1>
+    </header>
+    
+    <!-- below just iterates through the members without sorting -->
+
+    <!-- <h1>{{ page.collection }} </h1> -->
+
+
+    {% for category in site.collections%}
+        {% if category.label == page.collection %}
+            {% for item in category %}
+                {{ item.name }}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    <!-- <ul class="list-unstyled">
+      {% for item in site.collections %}
+        <li>
+            <h2><a href="{{ item.url }}">{{ item.name }}</a></h2>
+            <h3>
+                {% for creator in item.creators %}
+                    {{ creator }}
+                {% endfor %}
+
+            </h3>
+    
+            <p>{{ demo.content | markdownify }}</p>
+    
+        </li>
+      {% endfor %}
+    </ul> -->

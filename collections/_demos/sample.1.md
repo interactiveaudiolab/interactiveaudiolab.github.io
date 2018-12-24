@@ -1,6 +1,6 @@
 ---
-name: Sample Demo
-creators: [Demo Jones, Example Brown]
+name: Another Sample Demo
+creators: [Demo Jones, Example Brown, Sample Smith]
 external-url: http://tunebot.cs.northwestern.edu/
 related-papers:
 related-projects:

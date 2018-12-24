@@ -4,37 +4,38 @@ title: Members
 permalink: /members/
 ---
 
-<header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-</header>
+{% assign members = site.members | group_by: 'category' %}
 
-<!-- below just iterates through the members without sorting -->
-<!-- <ul class="post-list">
-  {% for member in site.members %}
-    <li>
-        <h2><a href="{{ member.url }}">{{ member.name }}</a></h2>
-        <h3>{{ member.position }}</h3>
-        <p>{{ member.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-</ul> -->
+<header class="">
+    <h1 class="display-5">{{ page.title | escape }}: 
 
-    {% assign members = site.members | group_by: 'category' %}
-
-    <h3>
     {% for cat in members %}
         <a href="#{{ cat.name }}"> {{ cat.name }} </a> 
     {% endfor %}
-    </h3>
+    </h1>
+</header>
 
+
+
+
+
+
+    <br></br>
+    
     {% for cat in members %}
-        <h2><a name="{{ cat.name }}"></a>{{ cat.name | capitalize }}</h2>
-        <ul class="post-list">
+        <h2 class="display-6"><a name="{{ cat.name }}"></a>{{ cat.name | capitalize }}</h2>
+        <ul class="list-unstyled">
             {% assign items = cat.items | sort: 'order' %}
             {% for item in items %}
-                <li>
-                    <h3><a href="{{ item.url }}">{{ item.name }}</a>, {{ item.position }}</h3>
-                    <p>{{ item.content | markdownify }}</p>
+                <li class="media category-list">
+                    {% if item.image %}
+                        <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                    {% endif %}
+                    <div class="media-body">
+                        <h3 class="mt-0"><a href="{{ item.url }}">{{ item.name }}</a></h3>
+                        <h5 class="text-muted">{{ item.position }}</h5>
+                        <p>{{ item.excerpt | markdownify }}</p>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
