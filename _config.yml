@@ -91,6 +91,28 @@ defaults:
     values:
       layout: "default"
 
+# jekyll-scholar settings
+scholar:
+  style: assets\bibliography\ieee-with-url.csl
+  locale: en
+
+  sort_by: year
+  order: descending
+  bibliography_list_tag: ul
+
+  source: _bibliography
+  # repository: pdf
+  bibliography: references.bib
+  bibliography_template: publications-list
+
+  replace_strings: true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
