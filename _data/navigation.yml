@@ -9,8 +9,8 @@ main:
 research:
   - page: Projects
     url: /research/projects.html
-  - page: Papers
-    url: /research/papers.html
+  - page: Publications
+    url: /research/publications.html
   - page: Demos
     url: /research/demos.html
 
@@ -19,4 +19,11 @@ resources:
       url: /resources/datasets.html
     - page: Source Code
       url: /resources/sourcecode.html
+
+members:
+  - page: Collaborators
+    url: /members/#collaborators
+  - page: Current
+    url: /members/#current
+
 

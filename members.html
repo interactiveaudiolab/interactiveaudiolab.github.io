@@ -2,16 +2,17 @@
 layout: default
 title: Members
 permalink: /members/
+navigation: members
 ---
 
 {% assign members = site.members | group_by: 'category' %}
 
 <header class="">
-    <h1 class="display-5">{{ page.title | escape }}: 
+    <h1 class="display-5">{{ page.title | upcase }}
 
-    {% for cat in members %}
+    <!-- {% for cat in members %}
         <a href="#{{ cat.name }}"> {{ cat.name }} </a> 
-    {% endfor %}
+    {% endfor %} -->
     </h1>
 </header>
 

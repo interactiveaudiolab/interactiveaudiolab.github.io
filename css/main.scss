@@ -3,7 +3,7 @@
 
 @import 'bootstrap/bootstrap';
 
-.container .page-content {
+.container main {
     padding-top: $spacer;
 }
 
@@ -30,6 +30,7 @@
 
   .subnav {
       padding: map-get($spacers, 0) $spacer map-get($spacers, 0) $spacer;
+      min-height: $spacer * 2.5;
   }
 
 // list
