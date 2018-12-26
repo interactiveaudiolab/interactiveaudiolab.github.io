@@ -1,29 +1,29 @@
 main:
-  - page: Research
+  - page: research
     url: /research/
-  - page: Resources
+  - page: resources
     url: /resources/
-  - page: Members
+  - page: members
     url: /members/
 
 research:
-  - page: Projects
+  - page: projects
     url: /research/projects.html
-  - page: Publications
+  - page: publications
     url: /research/publications.html
-  - page: Demos
+  - page: demos
     url: /research/demos.html
 
 resources:
-    - page: Data Sets
+    - page: data sets
       url: /resources/datasets.html
-    - page: Source Code
+    - page: source code
       url: /resources/sourcecode.html
 
 members:
-  - page: Collaborators
+  - page: collaborators
     url: /members/#collaborators
-  - page: Current
+  - page: current
     url: /members/#current
 
 
