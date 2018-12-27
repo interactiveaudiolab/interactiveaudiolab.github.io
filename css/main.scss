@@ -43,8 +43,13 @@
     overflow-wrap: normal;
 
     img {
-        width: $spacer * 6;
+        // width: $spacer * 6;
+        max-width:100%;
     }
+}
+
+.member-category-header {
+    margin: map-get($spacers, 5) auto $spacer auto;
 }
 
 /* Sticky footer styles for bootstrap */

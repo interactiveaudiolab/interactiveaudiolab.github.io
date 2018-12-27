@@ -11,18 +11,20 @@ navigation: resources
     
     <div class="row">
       {% for item in site.datasets %}
-        <div class="media category-list">
+        <div class="category-list row">
             {% if item.image %}
-            <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+            <div class="col-md-3 col-sm-12">
+                <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
+            </div>
             {% endif %}
-            <div class="media-body">
-                <h2 class="mt-0"><a href="{{ item.url }}">{{ item.name }}</a></h2>
+            <div class="col">
+                <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
                 <h5 class="text-muted">
                     {% for creator in item.creators %}
                         {% if forloop.last == true %}
-                            {{ creator | escape}}
+                            {{ creator }}
                         {% else %}
-                            {{ creator | escape}},
+                            {{ creator }},
                         {% endif %}
                     {% endfor %}
                 </h5>

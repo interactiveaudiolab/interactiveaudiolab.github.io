@@ -4,7 +4,7 @@ position: Professor
 category: current
 email: ex-brown@example.edu
 website: google.com
-image: https://via.placeholder.com/150
+image: 
 
 #full description of member goes below the dashed line
 ---

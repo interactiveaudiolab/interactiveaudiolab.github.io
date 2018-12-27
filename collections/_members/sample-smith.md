@@ -4,7 +4,7 @@ position: PhD Student
 category: current
 email: samplesmith@sample.edu
 website: google.com
-image: 
+image: https://via.placeholder.com/500
 
 #full description of member goes below the dashed line
 ---
