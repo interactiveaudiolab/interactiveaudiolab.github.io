@@ -6,11 +6,14 @@ navigation: research
 collection: demos
 ---
 
-<header class="">
+<!-- <header class="">
         <h1 class="display-5">{{ page.title | upcase }}</h1>
-    </header>
+    </header> -->
+    {%- include title.html-%}
+
+    {%- include list.html -%}
     
-    <div class="row">
+    <!-- <div class="row">
       {% for item in site.demos %}
         <div class="category-list row col-md-6">
             {% if item.image %}
@@ -34,4 +37,4 @@ collection: demos
             </div>
         </div>
       {% endfor %}
-    </div>
+    </div> -->
