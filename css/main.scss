@@ -31,12 +31,20 @@
   .subnav {
       padding: map-get($spacers, 0) $spacer map-get($spacers, 0) $spacer;
       min-height: $spacer * 2.5;
+
+      button {
+          border: none;
+      }
   }
 
 // list
 .category-list {
     padding: map-get($spacers, 3);
     overflow-wrap: normal;
+
+    img {
+        width: $spacer * 6;
+    }
 }
 
 /* Sticky footer styles for bootstrap */

@@ -7,17 +7,17 @@ main:
     url: /members/
 
 research:
-  - page: projects
+  - page: Projects
     url: /research/projects.html
-  - page: publications
+  - page: Publications
     url: /research/publications.html
-  - page: demos
+  - page: Demos
     url: /research/demos.html
 
 resources:
-    - page: data sets
+    - page: Data Sets
       url: /resources/datasets.html
-    - page: source code
+    - page: Source Code
       url: /resources/sourcecode.html
 
 members:

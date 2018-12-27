@@ -12,7 +12,7 @@ collection: demos
     
     <div class="row">
       {% for item in site.demos %}
-        <div class="media category-list">
+        <div class="media category-list col-md-6">
             {% if item.image %}
             <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
             {% endif %}

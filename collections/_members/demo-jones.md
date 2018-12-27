@@ -4,7 +4,7 @@ position: Professor
 category: collaborators
 email: demojones@sample.edu
 website: google.com
-image: image.jpg
+image: https://via.placeholder.com/150
 
 #full description of member goes below the dashed line
 ---
