@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<header class="">
+        <h1 class="display-5">{{ page.title | upcase }}</h1>
+</header>
+{{ content }}
+
+<div class="row">
+        {% for item in site.[page.collection] %}
+            <div class="category-list row col-md-6">
+                {% if item.image %}
+                    <div class="col-md-3 col-sm-12">
+                        <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                    </div>
+                {% endif %}
+                
+                <div class="col">
+                    <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
+                    <h5 class="text-muted">
+                        {% for creator in item.creators %}
+                            {% if forloop.last == true %}
+                                {{ creator }}
+                            {% else %}
+                                {{ creator }},
+                            {% endif %}
+                        {% endfor %}
+                    </h5>
+    
+                    <p>{{ item.excerpt | markdownify }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>

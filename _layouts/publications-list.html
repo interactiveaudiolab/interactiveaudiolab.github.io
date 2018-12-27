@@ -4,26 +4,49 @@ title:
 ---
 {{reference}}
 
-<div id="{{key}}-materials">
-  <ul class="list-unstyled">
-    {% if entry.abstract %}
-    <li><a data-toggle="collapse" href="#{{key}}-abstract">Abstract</a></li>
-    {% endif %}
-    <li><a data-toggle="collapse" href="javascript:toggleDiv('{{key}}-bibtex')">BibTeX</a></li>
-    <div id="{{key}}-bibtex" style="display:none;">
-    <pre class="collapse">{{entry.bibtex}}</pre>
-    </div>
+<div class="{{key}}-materials row">
+    <ul class="bibliography-details">
+      {% if entry.abstract %}
+      <li><a data-toggle="collapse" href="#{{key}}-abstract">Abstract</a></li>
+      {% endif %}
 
-    {% if link %}
-    <li><a href="{{link}}">Download</a></li>
-    {% endif %}
-    {% if entry.doi %}
-    <li>DOI: <a href="http://dx.doi.org/{{entry.doi}}">{{entry.doi}}</a></li>
-    {% endif %}
-  </ul>
+      {% if entry.doi %}
+      <li>DOI: <a href="http://dx.doi.org/{{entry.doi}}">{{entry.doi}}</a></li>
+      {% endif %}
 
-  {% if entry.abstract %}
-  <p id="{{key}}-abstract" class="collapse">{{entry.abstract}}</p>
-  {% endif %}
+      {% if entry.bibtex%}
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{key}}-bibtex">
+          BibTeX
+        </button>
+          
+          <!-- Modal -->
+        <div class="modal fade" id="{{key}}-bibtex" tabindex="-1" role="dialog" aria-labelledby="{{key}}-bibtex" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">BibTeX</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <pre class="">{{entry.bibtex}}</pre>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-</div>
+      {% endif%}
+
+      {% if entry.link %}
+        <button type="button" class="btn btn-secondary" href="{{entry.link}}">
+          Download
+        </button>
+      {% endif %}
+
+    </ul>
+  </div>

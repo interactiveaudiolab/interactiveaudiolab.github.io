@@ -48,6 +48,20 @@
     }
 }
 
+.bibliography, .bibliography-details {
+    list-style: none;
+    padding-left: $spacer;
+    font-size: $font-size-lg;
+}
+
+.bibliography > li{
+    padding-top: $spacer;
+}
+
+.bibliography-details {
+    padding-left: 15px;
+}
+
 .member-category-header {
     margin: map-get($spacers, 5) auto $spacer auto;
 }
