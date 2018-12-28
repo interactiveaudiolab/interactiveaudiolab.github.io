@@ -6,3 +6,76 @@ navigation: research
 ---
 
 {%- include title.html -%}
+
+<div class="row">
+    <div class="col-md-6">
+
+            <h2>Projects</h2>
+            {% for item in site.projects %}
+                {% if forloop.index < 3 %}
+                    <div class="category-list row">
+                            {% if item.image %}
+                                <div class="col-md-3 col-sm-12">
+                                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                                </div>
+                            {% endif %}
+                            <div class="col">
+                                <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
+                                <h5 class="text-muted">
+                                    {% for creator in item.creators %}
+                                        {% if forloop.last == true %}
+                                            {{ creator }}
+                                        {% else %}
+                                            {{ creator }},
+                                        {% endif %}
+                                    {% endfor %}
+                                </h5>
+                    
+                                <p>{{ item.excerpt | markdownify }}</p>
+                            </div>
+                        </div>
+                {% endif %}
+            {% endfor %}
+    
+            <div class="row">
+                    <a href="/research/projects">full list of projects</a>
+            </div>
+    
+        </div>
+
+    <div class="col-md-6">
+
+        <h2>Demos</h2>
+        {% for item in site.demos %}
+            {% if forloop.index < 3 %}
+                <div class="category-list row">
+                        {% if item.image %}
+                            <div class="col-md-3 col-sm-12">
+                                <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                            </div>
+                        {% endif %}
+                        <div class="col">
+                            <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
+                            <h5 class="text-muted">
+                                {% for creator in item.creators %}
+                                    {% if forloop.last == true %}
+                                        {{ creator }}
+                                    {% else %}
+                                        {{ creator }},
+                                    {% endif %}
+                                {% endfor %}
+                            </h5>
+                
+                            <p>{{ item.excerpt | markdownify }}</p>
+                        </div>
+                    </div>
+            {% endif %}
+        {% endfor %}
+
+        <div class="row">
+                <a href="/research/demos">full list of demos</a>
+        </div>
+
+    </div>
+
+</div>
