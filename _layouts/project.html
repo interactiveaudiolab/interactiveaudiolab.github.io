@@ -4,14 +4,20 @@ layout: default
 
 <h1>{{ page.name }}</h1>
 
-<h2>
+<h2 class="text-muted">
     {% for creator in page.creators %}
-        {{ creator }}
+        {% if forloop.last == true %}
+            {{ creator }}
+        {% else %}
+            {{ creator }},
+        {% endif %}
     {% endfor %}
 </h2>
 
 {% if page.funding %}
-<h3>{{page.funding }}</h3>
+<h3 class="text-muted">{{page.funding }}</h3>
 {% endif %}
+
+<hr>
 
 {{ content }}
