@@ -28,7 +28,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 sass:
-  sass_dir: css
+  sass_dir: assets/css
 
 # tells jekyll to recognize the listed folders as colections.
 # output:true generates individual pages for each item in the collection.
@@ -100,8 +100,8 @@ scholar:
   order: descending
   bibliography_list_tag: ul
 
-  source: _bibliography
-  # repository: pdf
+  source: _data
+  # repository: http://music.cs.northwestern.edu/publications/
   bibliography: references.bib
   bibliography_template: publications-list
 

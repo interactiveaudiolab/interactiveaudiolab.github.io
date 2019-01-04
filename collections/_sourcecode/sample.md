@@ -7,6 +7,7 @@ related-projects:
 image:
 #funding
 navigation: resources
+collection: sourcecode
 #put full description of the project/demo below the dashed line. full markdown is supported.
 ---
 
