@@ -1,6 +1,6 @@
 main:
   - page: research
-    url: /research/
+    url: /Research/
   - page: resources
     url: /resources/
   - page: members
@@ -8,11 +8,11 @@ main:
 
 research:
   - page: Projects
-    url: /research/projects.html
+    url: /Research/projects.html
   - page: Publications
-    url: /research/publications.html
+    url: /Research/publications.html
   - page: Demos
-    url: /research/demos.html
+    url: /Research/Demos.html
 
 resources:
     - page: Data Sets
