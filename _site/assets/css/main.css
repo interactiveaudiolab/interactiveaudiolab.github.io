@@ -6503,16 +6503,42 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   width: 1px; }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
 .primary-nav {
+  padding-bottom: 0;
   border-bottom: 0.25rem solid #E69EC7; }
   .primary-nav .navbar-brand {
     font-family: "Oswald"; }
+  .primary-nav .navbar-nav .nav-link:hover {
+    background-color: #E69EC7;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: #5D1840; }
+  .primary-nav .navbar-nav .nav-link .active {
+    background-color: #A63673;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: #fff; }
 
 .subnav {
-  padding: 0 1rem 0 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
   min-height: 2.5rem; }
   .subnav button {
     border: none; }
+  .subnav .navbar-nav .nav-link:hover {
+    background-color: #E69EC7;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #5D1840; }
+  .subnav .navbar-nav .nav-link .active {
+    background-color: #5D1840;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: #fff; }
 
 .category-list {
   margin: 1.5rem 0;

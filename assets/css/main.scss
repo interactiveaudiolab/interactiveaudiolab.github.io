@@ -20,29 +20,60 @@
 }
 
 // navigation
-  .primary-nav {
-      border-bottom: map-get($spacers, 1) solid $secondary;
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
+  .primary-nav {
+      padding-bottom: 0;
+      border-bottom: map-get($spacers, 1) solid $secondary;
 
       .navbar-brand {
           font-family: $headings-font-family,
       }
+
+    //   .navbar-brand .nav-link {
+    //       padding-bottom: map-get($spacers, 4);
+    //   }
+
+      .navbar-nav .nav-link:hover {
+        background-color: $secondary;
+        border-top-left-radius: map-get($spacers, 3);
+        border-top-right-radius: map-get($spacers, 3);
+        color: $dark;
+      }
+
+      .navbar-nav .nav-link .active {
+        background-color: $primary;
+        border-top-left-radius: map-get($spacers, 3);
+        border-top-right-radius: map-get($spacers, 3);
+        color: $white;
+      }
   }
 
   .subnav {
-      padding: map-get($spacers, 0) $spacer map-get($spacers, 0) $spacer;
+      padding-top: map-get($spacers, 0);
+      padding-bottom: map-get($spacers, 0);
       min-height: $spacer * 2.5;
 
       button {
           border: none;
       }
 
-    //   .nav-item:hover {
-    //     background-color: $secondary;
-    //     border-bottom-left-radius: map-get($spacers, 3);
-    //     border-bottom-right-radius: map-get($spacers, 3);
-    //     color: $dark;
-    //   }
+      .navbar-nav .nav-link:hover {
+        background-color: $secondary;
+        border-bottom-left-radius: map-get($spacers, 3);
+        border-bottom-right-radius: map-get($spacers, 3);
+        color: $dark;
+      }
+
+      .navbar-nav .nav-link .active {
+        background-color: $dark;
+        border-top-left-radius: map-get($spacers, 3);
+        border-top-right-radius: map-get($spacers, 3);
+        color: $white;
+      }
 
     
     //   .nav-link:active {
