@@ -34,7 +34,7 @@ sass:
 # output:true generates individual pages for each item in the collection.
 collections:
   datasets:
-    output: false
+    output: true
   demos:
     output: true
   members:
@@ -43,8 +43,6 @@ collections:
     output: true
   sourcecode:
     output: true
-  papers:
-    output: false
 #tells jekyll the directory where all collections are located
 collections_dir: collections
 
@@ -56,13 +54,13 @@ defaults:
       path: ""
       type: "datasets"
     values:
-      layout: "dataset"
+      layout: "detail"
       permalink: /resources/datasets/:name.html
   - scope:
       path: ""
       type: "demos"
     values:
-      layout: "demo"
+      layout: "detail"
       permalink: /research/demos/:name.html
   - scope:
       path: ""
@@ -78,13 +76,13 @@ defaults:
       path: ""
       type: "projects"
     values:
-      layout: "project"
+      layout: "detail"
       permalink: /research/projects/:name.html
   - scope:
       path: ""
       type: "sourcecode"
     values:
-      layout: "sc"
+      layout: "detail"
       permalink: /resources/sourcecode/:name.html
   - scope:
       path: ""

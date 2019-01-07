@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="row">
+    <header class="col">
+        <h1 class="display-5">{{ page.name }}</h1>
+    </header>
+</div>
+
+<div class="row">
+    <!-- {% if page.image %}
+        <div class="col-md-3 col-sm-12">
+            <img class="img-fluid" src="{{ page.image }}" alt="{{ page.altdescription }}">
+        </div>
+    {% endif %} -->
+
+    <div class="col">
+        <h2 class="text-muted">
+            {% for creator in page.creators %}
+                {% if forloop.last == true %}
+                    {{ creator }}
+                {% else %}
+                    {{ creator }},
+                {% endif %}
+            {% endfor %}
+        </h2>
+
+        {% if page.external-url%}
+            <h3><a href="{{ page.external-url }}">{{ page.external-url-text }}</a></h3>
+        {% endif %}
+
+        {% if page.funding %}
+            <h3>{{page.funding }}</h3>
+        {% endif %}
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        {{ content | markdownify }}
+    </div> 
+</div>

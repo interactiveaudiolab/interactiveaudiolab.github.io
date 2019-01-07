@@ -15,7 +15,7 @@ research:
     url: /research/demos.html
 
 resources:
-    - page: Data Sets
+    - page: Datasets
       url: /resources/datasets.html
     - page: Source Code
       url: /resources/sourcecode.html

@@ -1,8 +1,31 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-<h2>{{ page.position }}</h2>
-<h3>{{page.email}} | {{page.website}}</h3>
 
-{{ content }}
+<div class="row">
+    {% if page.image %}
+        <div class="col-md-3 col-sm-12">
+            <img class="img-fluid" src="{{ page.image }}" alt="{{ page.altdescription }}">
+        </div>
+    {% endif %}
+
+    <header class="col align-items-center">
+        <h1 class="display-5">{{ page.name }}</h1>
+        <h2>{{ page.position }}</h2>
+        {% if page.website %}
+            <h3><a href="{{page.website}}">Website</a></h3>
+        {% endif %}
+
+        {% if page.email %}
+            <h3><a href="{{page.email}}">Email</a></h3>
+        {% endif %}
+    </header>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        {{ content }}
+    </div>
+</div>

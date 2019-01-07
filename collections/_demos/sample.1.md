@@ -2,8 +2,9 @@
 name: Another Sample Demo
 creators: [Demo Jones, Example Brown, Sample Smith]
 external-url: http://tunebot.cs.northwestern.edu/
-related-papers:
-related-projects:
+external-url-text: Check out the video
+# related-papers:
+# related-projects:
 image: https://via.placeholder.com/700
 altdescription: Placeholder image #alt description of image for screen readers
 #funding

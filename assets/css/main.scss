@@ -23,6 +23,7 @@
   .primary-nav {
       border-bottom: map-get($spacers, 1) solid $secondary;
 
+
       .navbar-brand {
           font-family: $headings-font-family,
       }
@@ -35,7 +36,22 @@
       button {
           border: none;
       }
+
+    //   .nav-item:hover {
+    //     background-color: $secondary;
+    //     border-bottom-left-radius: map-get($spacers, 3);
+    //     border-bottom-right-radius: map-get($spacers, 3);
+    //     color: $dark;
+    //   }
+
+    
+    //   .nav-link:active {
+    //       background-color: $secondary;
+    //       color: $dark;
+    //   }
   }
+
+
 
 // list
 .category-list {
@@ -48,6 +64,7 @@
     }
 }
 
+//publications
 .bibliography, .bibliography-details {
     list-style: none;
     padding-left: $spacer;
@@ -65,6 +82,7 @@
 .member-category-header {
     margin: map-get($spacers, 5) auto $spacer auto;
 }
+
 
 /* Sticky footer styles for bootstrap */
 html {
