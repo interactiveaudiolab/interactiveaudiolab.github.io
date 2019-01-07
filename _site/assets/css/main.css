@@ -6515,7 +6515,7 @@ a.text-dark:hover, a.text-dark:focus {
     border: none; }
 
 .category-list {
-  padding: 1rem;
+  margin: 1.5rem 0;
   overflow-wrap: normal; }
   .category-list img {
     max-width: 100%; }

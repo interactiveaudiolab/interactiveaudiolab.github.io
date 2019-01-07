@@ -5,65 +5,33 @@ permalink: /members/
 navigation: members
 ---
 
-{% assign members = site.members | group_by: 'category' %}
+{% assign members = site.members | group_by: 'category' | sort: 'category' %}
 
-<header class="">
-    <h1 class="display-5">{{ page.title | upcase }}
-    <!-- {% for cat in members %}
-        <a href="#{{ cat.name }}"> {{ cat.name }} </a> 
-    {% endfor %} -->
-    </h1>
-</header>
-    
+{%- include title.html -%}
+   
+<div class="col">
     {% for cat in members %}
         <h2 class="display-6 member-category-header"><a name="{{ cat.name }}"></a>{{ cat.name | capitalize }}</h2>
 
-        <ul class="list-unstyled">
+        <div class="row">
             {% assign items = cat.items | sort: 'order' %}
             {% for item in items %}
-                <div class="row"> 
+                <div class=" category-list row"> 
+                    
+                    {% if item.image %}
                     <div class="col-md-3 col-sm-6">
-                            {% if item.image %}
-                            <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
-                            {% endif %}
+                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
                     </div>
-                   
+                    {% endif %}
+
                     <div class="col">
                         <h3 class="mt-0"><a href="{{ item.url }}">{{ item.name }}</a></h3>
                         <p class="text-muted">{{ item.position }}</p>
                         <p>{{ item.excerpt | markdownify }}</p>
                     </div>
-                </li>
+                </div>
             {% endfor %}
-        </ul>
-    {% endfor %}
-<!-- 
-    <header class="">
-            <h1 class="display-5">{{ page.title | upcase }}</h1>
-        </header>
-        
-        <div class="row">
-          {% for item in site.demos %}
-            <div class="category-list row col-md-6">
-                {% if item.image %}
-                <div class="col-md-3 col-sm-12">
-                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
-                </div>
-                {% endif %}
-                <div class="col">
-                    <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-                    <h5 class="text-muted">
-                        {% for creator in item.creators %}
-                            {% if forloop.last == true %}
-                                {{ creator }}
-                            {% else %}
-                                {{ creator }},
-                            {% endif %}
-                        {% endfor %}
-                    </h5>
-        
-                    <p>{{ item.excerpt | markdownify }}</p>
-                </div>
             </div>
-          {% endfor %}
-        </div> -->
+    {% endfor %}
+
+</div>

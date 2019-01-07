@@ -3,14 +3,17 @@ layout: default
 title: Research
 permalink: /research/
 navigation: research
+
 ---
 
 {%- include title.html -%}
 
+
 <div class="row">
     <div class="col-md-6">
 
-            <h2>Projects</h2>
+            <div class="col"><h2>Projects</h2></div>
+
             {% for item in site.projects %}
                 {% if forloop.index < 3 %}
                     <div class="category-list row">
@@ -37,7 +40,7 @@ navigation: research
                 {% endif %}
             {% endfor %}
     
-            <div class="row">
+            <div class="col">
                     <a href="/research/projects">full list of projects</a>
             </div>
     
@@ -45,7 +48,8 @@ navigation: research
 
     <div class="col-md-6">
 
-        <h2>Demos</h2>
+        <div class="col"><h2>Demos</h2></div>
+
         {% for item in site.demos %}
             {% if forloop.index < 3 %}
                 <div class="category-list row">
@@ -72,7 +76,7 @@ navigation: research
             {% endif %}
         {% endfor %}
 
-        <div class="row">
+        <div class="col">
                 <a href="/research/demos">full list of demos</a>
         </div>
 

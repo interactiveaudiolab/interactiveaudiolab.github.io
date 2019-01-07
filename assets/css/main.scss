@@ -39,7 +39,7 @@
 
 // list
 .category-list {
-    padding: map-get($spacers, 3);
+    margin: map-get($spacers, 4) 0;
     overflow-wrap: normal;
 
     img {

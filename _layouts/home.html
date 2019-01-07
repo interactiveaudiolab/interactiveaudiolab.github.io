@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
   {%- if page.title -%}
     {%- include title.html-%}
   {%- endif -%}
@@ -12,13 +11,13 @@ layout: default
 <hr>
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md">
       {%- if site.posts.size > 0 -%}
         
           <h2 class="">{{ page.list_title | default: "News" }}</h2>
           <ul class="list-unstyled">
             {%- for post in site.posts -%}
-            <li>
+            <li class="category-list">
               {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
               <h6 class="text-muted">{{ post.date | date: date_format }}</h6>
               <h4>
@@ -35,9 +34,9 @@ layout: default
       {%- endif -%}
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md">
 
-        <h2>Demos</h2>
+        <div class="col"><h2>Demos</h2></div>
         {% for item in site.demos %}
             {% if forloop.index < 3 %}
                 <div class="category-list row">
@@ -64,7 +63,7 @@ layout: default
             {% endif %}
         {% endfor %}
 
-        <div class="row">
+        <div class="col">
                 <a href="/research/demos">full list of demos</a>
         </div>
 
