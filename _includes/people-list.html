@@ -1,21 +1,14 @@
----
-layout: default
-title: Members
-permalink: /members/
-navigation: members
----
+<!-- collection, title, and anchor-tag needs to be passed into this to work -->
+{% assign collection = include.collection %}
+{% assign title = include.title %}
+{% assign anchor-tag = include.anchor-tag %}
 
-{% assign members = site.members | group_by: 'category' | sort: 'category' %}
-
-{%- include title.html -%}
-   
 <div class="col">
-    {% for cat in members %}
-        <h2 class="display-6 member-category-header"><a name="{{ cat.name }}"></a>{{ cat.name | capitalize }}</h2>
+
+        <h2 class="display-6 member-category-header"><a name="{{ anchor-tag }}"></a>{{ title | upcase }}</h2>
 
         <div class="row">
-            {% assign items = cat.items | sort: 'order' %}
-            {% for item in items %}
+            {% for item in collection %}
                 <div class=" category-list row"> 
                     
                     {% if item.image %}
@@ -31,7 +24,6 @@ navigation: members
                     </div>
                 </div>
             {% endfor %}
-            </div>
-    {% endfor %}
+        </div>
 
 </div>

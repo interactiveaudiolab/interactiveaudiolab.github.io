@@ -35,13 +35,13 @@ sass:
 collections:
   datasets:
     output: true
-  demos:
+  people-current:
     output: true
-  members:
+  people-collaborators:
+    output: true
+  people-alumni:
     output: true
   projects:
-    output: true
-  sourcecode:
     output: true
 #tells jekyll the directory where all collections are located
 collections_dir: collections
@@ -58,15 +58,19 @@ defaults:
       permalink: /resources/datasets/:name.html
   - scope:
       path: ""
-      type: "demos"
+      type: "people-alumni"
     values:
-      layout: "detail"
-      permalink: /research/demos/:name.html
+      layout: "person"
   - scope:
       path: ""
-      type: "members"
+      type: "people-current"
     values:
-      layout: "member"
+      layout: "person"
+  - scope:
+      path: ""
+      type: "people-collaborators"
+    values:
+      layout: "person"
   - scope:
       path: ""
       type: "posts"
@@ -78,12 +82,6 @@ defaults:
     values:
       layout: "detail"
       permalink: /research/projects/:name.html
-  - scope:
-      path: ""
-      type: "sourcecode"
-    values:
-      layout: "detail"
-      permalink: /resources/sourcecode/:name.html
   - scope:
       path: ""
     values:

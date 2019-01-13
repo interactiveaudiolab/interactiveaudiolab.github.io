@@ -1,7 +1,13 @@
-<div class="row">
-    <div class="col"><h2>{{ include.content }}</h2></div>
+<!-- collection, title, and anchor-tag needs to be passed into this to work -->
+{% assign collection = include.collection %}
+{% assign title = include.title %} 
+{% assign link = include.link %} 
 
-    {% for item in site.{{ include.content }} %}
+<div class="col category-list-title"><h2>{{ title | upcase }}</h2></div>
+<div class="col">
+<div class="row">
+    {% for item in collection %}
+        {% if forloop.index < 3 %}
         <div class="category-list row">
             {% if item.image %}
                 <div class="col-md-3 col-sm-12">
@@ -20,12 +26,21 @@
                     {% endfor %}
                 </h5>
     
-                <p>{{ item.excerpt | markdownify }}</p>
             </div>
+
+            
         </div>
+        {% endif %}
+
+        
+
     {% endfor %}
+
+
 </div>
 
-<div class="col">
-        <a href="/research/demos">full list of demos</a>
+<div class="row col category-list-view-more-link">
+        <h5><a href="{{link}}">More >></a></h5>
+</div>
+
 </div>

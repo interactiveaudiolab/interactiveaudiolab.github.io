@@ -1,7 +1,6 @@
 ---
 name: Example Brown
 position: Professor
-category: current
 email: ex-brown@example.edu
 website: google.com
 image: 

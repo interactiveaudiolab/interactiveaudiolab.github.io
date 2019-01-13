@@ -1,31 +1,29 @@
 main:
-  - page: research
-    url: /research/
+  - page: projects
+    url: /projects/
   - page: Publications
-    url: publications.html
+    url: /publications/
   - page: resources
     url: /resources/
-  - page: members
-    url: /members/
-
-research:
-  - page: Projects
-    url: /research/projects.html
-  - page: Demos
-    url: /research/demos.html
+  - page: people
+    url: /people/
 
 resources:
     - page: Datasets
       url: /resources/datasets.html
-    - page: Source Code
-      url: /resources/sourcecode.html
+    - page: GitHub
+      url: https://github.com/interactiveaudiolab
+    - page: YouTube
+      url: https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw
+    - page: Teaching
+      url: #
 
-members:
+people:
   - page: current
-    url: /members/#current
+    url: /people/#current
   - page: collaborators
-    url: /members/#collaborators
-  - page: emeritus
-    url: /members/#emeritus
+    url: /people/#collaborators
+  - page: alumni
+    url: /people/#alumni
 
 

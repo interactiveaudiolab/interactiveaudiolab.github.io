@@ -1,7 +1,6 @@
 ---
 name: E. G. Huang
 position: Associate Professor
-category: emeritus
 email: eg-huang@example.edu
 website: google.com
 image: 

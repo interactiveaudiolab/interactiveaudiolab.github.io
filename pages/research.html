@@ -1,85 +1,19 @@
 ---
 layout: default
 title: Research
-permalink: /research/
+permalink: /research-test
 navigation: research
 
 ---
 
 {%- include title.html -%}
 
-
 <div class="row">
     <div class="col-md-6">
-
-            <div class="col category-list-title"><h2>PROJECTS</h2></div>
-
-            {% for item in site.projects %}
-                {% if forloop.index < 3 %}
-                    <div class="category-list row">
-                            {% if item.image %}
-                                <div class="col-md-3 col-sm-12">
-                                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
-                                </div>
-                            {% endif %}
-                            <div class="col">
-                                <h3 class=""><a href="{{ item.url }}">{{ item.name }}</a></h3>
-                                <h4 class="text-muted">
-                                    {% for creator in item.creators %}
-                                        {% if forloop.last == true %}
-                                            {{ creator }}
-                                        {% else %}
-                                            {{ creator }},
-                                        {% endif %}
-                                    {% endfor %}
-                                </h4>
-                    
-                                <p>{{ item.excerpt | markdownify }}</p>
-                            </div>
-                        </div>
-                {% endif %}
-            {% endfor %}
-    
-            <div class="col category-list-view-more-link">
-                    <h5><a href="/research/projects">Full list of projects >></a></h5>
-            </div>
-    
-        </div>
-
-    <div class="col-md-6">
-
-        <div class="col category-list-title"><h2>DEMOS</h2></div>
-
-        {% for item in site.demos %}
-            {% if forloop.index < 3 %}
-                <div class="category-list row">
-                        {% if item.image %}
-                            <div class="col-md-3 col-sm-12">
-                                <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
-                            </div>
-                        {% endif %}
-                        <div class="col">
-                            <h3 class=""><a href="{{ item.url }}">{{ item.name }}</a></h3>
-                            <h4 class=" h5 text-muted">
-                                {% for creator in item.creators %}
-                                    {% if forloop.last == true %}
-                                        {{ creator }}
-                                    {% else %}
-                                        {{ creator }},
-                                    {% endif %}
-                                {% endfor %}
-                            </h4>
-                
-                            <p>{{ item.excerpt | markdownify }}</p>
-                        </div>
-                    </div>
-            {% endif %}
-        {% endfor %}
-
-        <div class="col category-list-view-more-link">
-                <h5><a href="/research/demos">Full list of demos >></a></h5>
-        </div>
-
+        {% include preview-list.html collection=site.projects title="Projects" link="research/projects.html" %}
     </div>
 
+    <div class="col-md-6">
+        {% include preview-list.html collection=site.demos title="Demos" link="research/demos.html" %}
+    </div>
 </div>

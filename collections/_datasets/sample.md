@@ -2,6 +2,9 @@
 name: Sample Dataset
 creators: [Demo Jones, Example Brown]
 external-url: http://tunebot.cs.northwestern.edu/
+external-url-text: Tunebot
+image: #
+altdescription:
 related-papers:
 related-projects:
 image:
