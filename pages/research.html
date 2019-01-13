@@ -12,7 +12,7 @@ navigation: research
 <div class="row">
     <div class="col-md-6">
 
-            <div class="col"><h2>Projects</h2></div>
+            <div class="col category-list-title"><h2>PROJECTS</h2></div>
 
             {% for item in site.projects %}
                 {% if forloop.index < 3 %}
@@ -23,8 +23,8 @@ navigation: research
                                 </div>
                             {% endif %}
                             <div class="col">
-                                <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-                                <h5 class="text-muted">
+                                <h3 class=""><a href="{{ item.url }}">{{ item.name }}</a></h3>
+                                <h4 class="text-muted">
                                     {% for creator in item.creators %}
                                         {% if forloop.last == true %}
                                             {{ creator }}
@@ -32,7 +32,7 @@ navigation: research
                                             {{ creator }},
                                         {% endif %}
                                     {% endfor %}
-                                </h5>
+                                </h4>
                     
                                 <p>{{ item.excerpt | markdownify }}</p>
                             </div>
@@ -40,15 +40,15 @@ navigation: research
                 {% endif %}
             {% endfor %}
     
-            <div class="col">
-                    <a href="/research/projects">full list of projects</a>
+            <div class="col category-list-view-more-link">
+                    <h5><a href="/research/projects">Full list of projects >></a></h5>
             </div>
     
         </div>
 
     <div class="col-md-6">
 
-        <div class="col"><h2>Demos</h2></div>
+        <div class="col category-list-title"><h2>DEMOS</h2></div>
 
         {% for item in site.demos %}
             {% if forloop.index < 3 %}
@@ -59,8 +59,8 @@ navigation: research
                             </div>
                         {% endif %}
                         <div class="col">
-                            <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-                            <h5 class="text-muted">
+                            <h3 class=""><a href="{{ item.url }}">{{ item.name }}</a></h3>
+                            <h4 class=" h5 text-muted">
                                 {% for creator in item.creators %}
                                     {% if forloop.last == true %}
                                         {{ creator }}
@@ -68,7 +68,7 @@ navigation: research
                                         {{ creator }},
                                     {% endif %}
                                 {% endfor %}
-                            </h5>
+                            </h4>
                 
                             <p>{{ item.excerpt | markdownify }}</p>
                         </div>
@@ -76,8 +76,8 @@ navigation: research
             {% endif %}
         {% endfor %}
 
-        <div class="col">
-                <a href="/research/demos">full list of demos</a>
+        <div class="col category-list-view-more-link">
+                <h5><a href="/research/demos">Full list of demos >></a></h5>
         </div>
 
     </div>

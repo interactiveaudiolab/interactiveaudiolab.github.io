@@ -6544,7 +6544,16 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 1.5rem 0;
   overflow-wrap: normal; }
   .category-list img {
-    max-width: 100%; }
+    max-width: 100%;
+    padding-bottom: 0.5rem; }
+  .category-list .row {
+    padding-bottom: 1rem; }
+
+.category-list-title h2 {
+  padding-top: 1rem; }
+
+.category-list-view-more-link {
+  margin-bottom: 3rem; }
 
 .bibliography, .bibliography-details {
   list-style: none;
