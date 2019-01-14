@@ -4,6 +4,8 @@ position: Professor
 email: ex-brown@example.edu
 website: google.com
 image: 
+altdescription:
+navigation: people
 
 #full description of member goes below the dashed line
 ---

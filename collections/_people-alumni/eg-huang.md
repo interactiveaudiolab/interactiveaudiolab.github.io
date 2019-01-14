@@ -3,7 +3,9 @@ name: E. G. Huang
 position: Associate Professor
 email: eg-huang@example.edu
 website: google.com
-image: 
+image: https://via.placeholder.com/700
+altdescription: 700 pixel square placeholder image
+navigation: people
 
 #full description of member goes below the dashed line
 ---

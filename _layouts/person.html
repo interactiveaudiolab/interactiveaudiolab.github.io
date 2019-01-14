@@ -4,12 +4,12 @@ layout: default
 
 <div class="row">
     {% if page.image %}
-        <div class="col-md-3 col-sm-12">
+        <div class="col-lg-3">
             <img class="img-fluid" src="{{ page.image }}" alt="{{ page.altdescription }}">
         </div>
     {% endif %}
 
-    <header class="col align-items-center">
+    <header class="col-md-auto align-items-center">
         <h1 class="display-5">{{ page.name }}</h1>
         <h2>{{ page.position }}</h2>
         {% if page.website %}

@@ -5,10 +5,6 @@ external-url: http://tunebot.cs.northwestern.edu/
 external-url-text: Tunebot
 image: #
 altdescription:
-related-papers:
-related-projects:
-image:
-#funding
 navigation: resources
 
 #put full description of the project/demo below the dashed line. full markdown is supported.
