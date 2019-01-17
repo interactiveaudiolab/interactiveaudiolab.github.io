@@ -13,8 +13,10 @@ resources:
       url: /resources/datasets.html
     - page: GitHub
       url: https://github.com/interactiveaudiolab
+      external: yes
     - page: YouTube
       url: https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw
+      external: yes
     - page: Teaching
       url: #
 

@@ -29,6 +29,10 @@ hr {
     padding-right: 1rem;
 }
 
+button {
+    border: none;
+}
+
   .primary-nav {
       padding-bottom: 0;
       border-bottom: map-get($spacers, 1) solid $secondary;
@@ -41,21 +45,27 @@ hr {
     //       padding-bottom: map-get($spacers, 4);
     //   }
 
-      .navbar-nav .nav-link:hover {
-        background-color: $secondary;
-        border-top-left-radius: map-get($spacers, 3);
-        border-top-right-radius: map-get($spacers, 3);
-        color: $dark;
+      .navbar-nav {
+
+        .nav-link .active {
+            background-color: $primary;
+            border-top-left-radius: map-get($spacers, 3);
+            border-top-right-radius: map-get($spacers, 3);
+            color: $white;
+          }
+
+        .nav-link:hover {
+            background-color: $secondary;
+            border-top-left-radius: map-get($spacers, 3);
+            border-top-right-radius: map-get($spacers, 3);
+            color: $dark;
+          }
+
       }
 
-      .navbar-nav .nav-link .active {
-        background-color: $primary;
-        border-top-left-radius: map-get($spacers, 3);
-        border-top-right-radius: map-get($spacers, 3);
-        color: $white;
-      }
   }
 
+//   subnavigation
   .subnav {
       padding-top: map-get($spacers, 0);
       padding-bottom: map-get($spacers, 0);
@@ -77,6 +87,10 @@ hr {
         border-top-left-radius: map-get($spacers, 3);
         border-top-right-radius: map-get($spacers, 3);
         color: $white;
+      }
+
+      .navbar-nav .nav-link a img{
+        stroke: $white;
       }
 
     

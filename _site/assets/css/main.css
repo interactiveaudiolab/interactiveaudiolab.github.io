@@ -6510,21 +6510,24 @@ hr {
   padding-left: 1rem;
   padding-right: 1rem; }
 
+button {
+  border: none; }
+
 .primary-nav {
   padding-bottom: 0;
   border-bottom: 0.25rem solid #E69EC7; }
   .primary-nav .navbar-brand {
     font-family: "Oswald"; }
-  .primary-nav .navbar-nav .nav-link:hover {
-    background-color: #E69EC7;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    color: #5D1840; }
   .primary-nav .navbar-nav .nav-link .active {
     background-color: #A63673;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     color: #fff; }
+  .primary-nav .navbar-nav .nav-link:hover {
+    background-color: #E69EC7;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: #5D1840; }
 
 .subnav {
   padding-top: 0;
@@ -6542,6 +6545,8 @@ hr {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     color: #fff; }
+  .subnav .navbar-nav .nav-link a img {
+    stroke: #fff; }
 
 .category-list {
   margin: 1.5rem 0;
