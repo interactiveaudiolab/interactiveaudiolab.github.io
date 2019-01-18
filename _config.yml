@@ -99,7 +99,6 @@ scholar:
   bibliography_list_tag: ul
 
   source: _data
-  # repository: http://music.cs.northwestern.edu/publications/
   bibliography: references.bib
   bibliography_template: publications-list
 
