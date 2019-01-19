@@ -18,7 +18,7 @@ resources:
       url: https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw
       external: yes
     - page: Teaching
-      url: #
+      url: /resources/teaching.html
 
 people:
   - page: current

@@ -33,6 +33,8 @@ sass:
 # tells jekyll to recognize the listed folders as colections.
 # output:true generates individual pages for each item in the collection.
 collections:
+  courses:
+    output: true
   datasets:
     output: true
   people-current:
@@ -50,6 +52,12 @@ collections_dir: collections
 #the file name of the individual item determines the name of the html path
 #note that papers is not listed here because its individual pages aren't linked
 defaults:
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "detail"
+      permalink: /resources/teaching/:name.html
   - scope:
       path: ""
       type: "datasets"
