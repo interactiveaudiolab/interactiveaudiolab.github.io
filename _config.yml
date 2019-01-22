@@ -95,6 +95,7 @@ defaults:
     values:
       layout: "default"
 
+      
 # jekyll-scholar settings
 scholar:
   style: assets\bibliography\ieee-with-url.csl

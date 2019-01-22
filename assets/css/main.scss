@@ -7,17 +7,11 @@
     padding-top: $spacer;
 }
 
-// for accessibility features
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
+// adds an image to indicate exteran links for accessibility.
+a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
+    margin-left: 3px;
+    content: url(/assets/images/icons/external-link-dark.svg)
+    }
 
 hr {
     border-top: 1px solid rgba( 230, 158, 199, 1);
@@ -33,77 +27,82 @@ button {
     border: none;
 }
 
-  .primary-nav {
-      padding-bottom: 0;
-      border-bottom: map-get($spacers, 1) solid $secondary;
+.primary-nav {
+    padding-bottom: 0;
+    border-bottom: map-get($spacers, 1) solid $secondary;
 
-      .navbar-brand {
-          font-family: $headings-font-family,
-      }
+    .navbar-brand {
+        font-family: $headings-font-family,
+    }
 
-    //   .navbar-brand .nav-link {
-    //       padding-bottom: map-get($spacers, 4);
-    //   }
+//   .navbar-brand .nav-link {
+//       padding-bottom: map-get($spacers, 4);
+//   }
 
-      .navbar-nav {
+    .navbar-nav {
 
-        .nav-link .active {
-            background-color: $primary;
-            border-top-left-radius: map-get($spacers, 3);
-            border-top-right-radius: map-get($spacers, 3);
-            color: $white;
-          }
-
-        .nav-link:hover {
-            background-color: $secondary;
-            border-top-left-radius: map-get($spacers, 3);
-            border-top-right-radius: map-get($spacers, 3);
-            color: $dark;
-          }
-
-      }
-
-  }
-
-//   subnavigation
-  .subnav {
-      padding-top: map-get($spacers, 0);
-      padding-bottom: map-get($spacers, 0);
-      min-height: $spacer * 2.5;
-
-      button {
-          border: none;
-      }
-
-      .navbar-nav .nav-link:hover {
-        background-color: $secondary;
-        border-bottom-left-radius: map-get($spacers, 3);
-        border-bottom-right-radius: map-get($spacers, 3);
-        color: $dark;
-      }
-
-      .navbar-nav .nav-link .active {
-        background-color: $dark;
+    .nav-link .active {
+        background-color: red;
         border-top-left-radius: map-get($spacers, 3);
         border-top-right-radius: map-get($spacers, 3);
         color: $white;
-      }
+        }
 
-      .navbar-nav .nav-link a img{
-        stroke: $white;
-      }
+    .nav-link:hover {
+        background-color: $secondary;
+        border-top-left-radius: map-get($spacers, 3);
+        border-top-right-radius: map-get($spacers, 3);
+        color: $dark;
+        }
 
-    
-    //   .nav-link:active {
-    //       background-color: $secondary;
-    //       color: $dark;
-    //   }
-  }
+    }
+
+}
+
+//   subnavigation
+.subnav {
+    padding-top: map-get($spacers, 0);
+    padding-bottom: map-get($spacers, 0);
+    min-height: $spacer * 2.5;
+
+    a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
+        margin-left: 3px;
+        content: url(/assets/images/icons/external-link-light.svg)
+        }
+    button {
+        border: none;
+    }
+
+    .navbar-nav .nav-link:hover {
+    background-color: $secondary;
+    border-bottom-left-radius: map-get($spacers, 3);
+    border-bottom-right-radius: map-get($spacers, 3);
+    color: $dark;
+    }
+
+    .navbar-nav .nav-link .active {
+    background-color: red;
+    border-top-left-radius: map-get($spacers, 3);
+    border-top-right-radius: map-get($spacers, 3);
+    color: $white;
+    }
+
+    .navbar-nav .nav-link a img{
+    stroke: $white;
+    }
+
+
+//   .nav-link:active {
+//       background-color: $secondary;
+//       color: $dark;
+//   }
+}
 
 // list
 .category-list {
     margin: map-get($spacers, 4) 0;
     overflow-wrap: normal;
+    list-style: none;
 
 
     img {
@@ -149,16 +148,29 @@ button {
 html {
     position: relative;
     min-height: 100%;
-  }
-  body {
+}
+
+body {
     margin-bottom: 45px; /* Margin bottom by footer height */
-  }
-  .footer {
+}
+.footer {
     position: absolute;
     padding-top: map-get($spacers, 3);
     bottom: 0;
     width: 100%;
     height: map-get($spacers, 5); /* Set the fixed height of the footer here */
     line-height: map-get($spacers, 5); /* Vertically center the text there */
-  }
-  
+}
+
+
+// for accessibility features
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}

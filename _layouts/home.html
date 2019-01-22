@@ -19,12 +19,12 @@ layout: default
             {%- for post in site.posts -%}
             <li class="category-list">
               {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-              <h6 class="text-muted">{{ post.date | date: date_format }}</h6>
-              <h4>
+              <h3>
                 <a class="" href="{{ post.url | relative_url }}">
                   {{ post.title | escape }}
                 </a>
-              </h4>
+              </h3>
+              <h4 class="text-muted">{{ post.date | date: date_format }}</h4>
               {%- if site.show_excerpts -%}
                 {{ post.excerpt }}
               {%- endif -%}

@@ -1,4 +1,5 @@
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-nav" aria-label="primary">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-nav" aria-label="primary navigation">
     <div class="container">
       <a class="navbar-brand display" href="{{ "/" | relative_url }}">{{ site.title | upcase }}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +49,7 @@
                 </a>
                 {% elsif item.external  %}
                 <a target="_blank" rel="noopener noreferrer" class="nav-link" href="{{ item.url }}">
-                    {{ item.page | capitalize }} <img src="/assets/images/icons/external-link.svg">
+                    {{ item.page | capitalize }}
                 </a>
                 {% else %}
                 <a class="nav-link" href="{{ item.url }}">
@@ -63,4 +64,5 @@
       {% endif %}
     </div>
   </nav>
+</header>
 

@@ -1,6 +1,6 @@
-<div class="row">
+<ul class="list-group">
     {% for item in site.[page.collection] %}
-        <div class="category-list row">
+        <li class="category-list row">
             {% if item.image %}
                 <div class="col-md-3 col-sm-12">
                     <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
@@ -8,7 +8,7 @@
             {% endif %}
             <div class="col">
                 <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-                <h5 class="text-muted">
+                <h3 class="text-muted">
                     <!-- checks for course-number to display course-only information -->
                     {% if item.course-number %}
                     {{ item.university }}, {{ item.course-number }} {{ item.quarter-held }}
@@ -25,11 +25,12 @@
                         {% endfor %}
                     {% endif %}
 
-                </h5>
-
-    
-                <p>{{ item.excerpt | markdownify }}</p>
+                </h3>
+                <!-- checking for creators because courses should not list an excerpt -->
+                {% if item.creators %}
+                    <p>{{ item.excerpt | markdownify }}</p>
+                {% endif %}
             </div>
-        </div>
+        </li>
     {% endfor %}
-</div>
+        </ul>

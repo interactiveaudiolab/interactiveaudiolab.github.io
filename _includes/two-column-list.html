@@ -1,6 +1,6 @@
-<div class="row">
+<ul class="list-group">
     {% for item in site.[page.collection] %}
-        <div class="category-list row col-md-6">
+        <li class="category-list row col-md-6">
             {% if item.image %}
                 <div class="col-md-3 col-sm-12">
                     <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
@@ -21,6 +21,6 @@
 
                 <p>{{ item.excerpt | markdownify }}</p>
             </div>
-        </div>
+        </li>
     {% endfor %}
-</div>
+</ul>
