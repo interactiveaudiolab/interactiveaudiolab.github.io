@@ -3,11 +3,11 @@
 
 @import 'bootstrap/bootstrap';
 
-.container main {
+main {
     padding-top: $spacer;
 }
 
-// adds an image to indicate exteran links for accessibility.
+// adds an image to external links and opens in new tab for accessibility.
 a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
     margin-left: 3px;
     content: url(/assets/images/icons/external-link-dark.svg)
@@ -17,16 +17,17 @@ hr {
     border-top: 1px solid rgba( 230, 158, 199, 1);
 }
 
+button {
+    border: none;
+}
+
 // navigation
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-button {
-    border: none;
-}
-
+// primary (upper) navigation
 .primary-nav {
     padding-bottom: 0;
     border-bottom: map-get($spacers, 1) solid $secondary;
@@ -35,25 +36,20 @@ button {
         font-family: $headings-font-family,
     }
 
-//   .navbar-brand .nav-link {
-//       padding-bottom: map-get($spacers, 4);
-//   }
-
     .navbar-nav {
+        .nav-link .active {
+            background-color: red;
+            border-top-left-radius: map-get($spacers, 3);
+            border-top-right-radius: map-get($spacers, 3);
+            color: $white;
+            }
 
-    .nav-link .active {
-        background-color: red;
-        border-top-left-radius: map-get($spacers, 3);
-        border-top-right-radius: map-get($spacers, 3);
-        color: $white;
-        }
-
-    .nav-link:hover {
-        background-color: $secondary;
-        border-top-left-radius: map-get($spacers, 3);
-        border-top-right-radius: map-get($spacers, 3);
-        color: $dark;
-        }
+        .nav-link:hover {
+            background-color: $secondary;
+            border-top-left-radius: map-get($spacers, 3);
+            border-top-right-radius: map-get($spacers, 3);
+            color: $dark;
+            }
 
     }
 
@@ -69,33 +65,24 @@ button {
         margin-left: 3px;
         content: url(/assets/images/icons/external-link-light.svg)
         }
-    button {
-        border: none;
+
+    .navbar-nav {
+            .nav-link:hover {
+        background-color: $secondary;
+        border-bottom-left-radius: map-get($spacers, 3);
+        border-bottom-right-radius: map-get($spacers, 3);
+        color: $dark;
+        }
+
+        .nav-link .active {
+        background-color: red;
+        border-top-left-radius: map-get($spacers, 3);
+        border-top-right-radius: map-get($spacers, 3);
+        color: $white;
+        }
+
     }
 
-    .navbar-nav .nav-link:hover {
-    background-color: $secondary;
-    border-bottom-left-radius: map-get($spacers, 3);
-    border-bottom-right-radius: map-get($spacers, 3);
-    color: $dark;
-    }
-
-    .navbar-nav .nav-link .active {
-    background-color: red;
-    border-top-left-radius: map-get($spacers, 3);
-    border-top-right-radius: map-get($spacers, 3);
-    color: $white;
-    }
-
-    .navbar-nav .nav-link a img{
-    stroke: $white;
-    }
-
-
-//   .nav-link:active {
-//       background-color: $secondary;
-//       color: $dark;
-//   }
 }
 
 // list
@@ -106,7 +93,6 @@ button {
 
 
     img {
-        // width: $spacer * 6;
         max-width: 100%;
         padding-bottom: map-get($spacers, 2);
     }
@@ -127,20 +113,17 @@ button {
 //publications
 .bibliography, .bibliography-details {
     list-style: none;
-    padding-left: $spacer;
+    padding-left: 0px;
     font-size: $font-size-lg;
+
 }
 
 .bibliography > li{
     padding-top: $spacer;
 }
 
-.bibliography-details {
-    padding-left: 15px;
-}
-
-.member-category-header {
-    margin: map-get($spacers, 5) auto $spacer auto;
+.bibliography, .bibtitle {
+    padding-left: 1rem;
 }
 
 
@@ -162,6 +145,15 @@ body {
     line-height: map-get($spacers, 5); /* Vertically center the text there */
 }
 
+.skip-link {
+    left: -100%;
+    position: absolute;
+    color: $white;
+}
+
+.skip-link:focus{
+    left: 50%;
+}
 
 // for accessibility features
 .visuallyhidden {
@@ -174,3 +166,25 @@ body {
 	position: absolute;
 	width: 1px;
 }
+
+a.offscreen {
+    position:absolute;
+    left:-100%;
+    top:-100%;
+    width:1px;
+    height:1px;
+    text-align: left; 
+    overflow:hidden;
+    // background-color: papayawhip;
+    }
+
+    a.offscreen:focus, a.offscreen:active, a.offscreen:hover { 
+        position:absolute; 
+        left:0; 
+        top:0; 
+        width:auto; 
+        height:auto; 
+        overflow:visible;
+        background-color:#FF3;
+        border: 1px dotted #000;
+        }

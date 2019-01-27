@@ -5,11 +5,11 @@
 
 <div class="col">
 
-        <h2 class="display-6 member-category-header"><a name="{{ anchor-tag }}"></a>{{ title }}</h2>
+        <h2 class="display-6 people-header col"><a name="{{ anchor-tag }}"></a>{{ title }}</h2>
 
-        <div class="row">
+        <ul class="list-group">
             {% for item in collection %}
-                <div class=" category-list row"> 
+                <li class=" category-list row"> 
                     
                     {% if item.image %}
                     <div class="col-md-3 col-sm-6">
@@ -22,8 +22,7 @@
                         <h4 class=" h5 text-muted">{{ item.position }}</h4>
                         <p>{{ item.excerpt | markdownify }}</p>
                     </div>
-                </div>
+                </li>
             {% endfor %}
-        </div>
-
+        </ul>
 </div>

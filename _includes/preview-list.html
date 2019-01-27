@@ -2,9 +2,8 @@
 {% assign collection = include.collection %}
 {% assign title = include.title %} 
 {% assign link = include.link %} 
-
 <div class="col">
-    <h2>{{ title }}</h2>
+    <h2 class="col">{{ title }}</h2>
     <ul class="list-group">
         {% for item in collection %}
             {% if forloop.index < 3 %}
@@ -42,5 +41,4 @@
     <div class="row col category-list-view-more-link">
             <h5><a href="{{link}}">Full List of {{title}}</a></h5>
     </div>
-
 </div>

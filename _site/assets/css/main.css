@@ -6490,7 +6490,7 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
-.container main {
+main {
   padding-top: 1rem; }
 
 a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
@@ -6500,12 +6500,12 @@ a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_bla
 hr {
   border-top: 1px solid #e69ec7; }
 
+button {
+  border: none; }
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-left: 1rem;
   padding-right: 1rem; }
-
-button {
-  border: none; }
 
 .primary-nav {
   padding-bottom: 0;
@@ -6530,8 +6530,6 @@ button {
   .subnav a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, .subnav a[target="_blank"]:after {
     margin-left: 3px;
     content: url(/assets/images/icons/external-link-light.svg); }
-  .subnav button {
-    border: none; }
   .subnav .navbar-nav .nav-link:hover {
     background-color: #E69EC7;
     border-bottom-left-radius: 1rem;
@@ -6542,8 +6540,6 @@ button {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     color: #fff; }
-  .subnav .navbar-nav .nav-link a img {
-    stroke: #fff; }
 
 .category-list {
   margin: 1.5rem 0;
@@ -6563,17 +6559,14 @@ button {
 
 .bibliography, .bibliography-details {
   list-style: none;
-  padding-left: 1rem;
+  padding-left: 0px;
   font-size: 1.25rem; }
 
 .bibliography > li {
   padding-top: 1rem; }
 
-.bibliography-details {
-  padding-left: 15px; }
-
-.member-category-header {
-  margin: 3rem auto 1rem auto; }
+.bibliography, .bibtitle {
+  padding-left: 1rem; }
 
 /* Sticky footer styles for bootstrap */
 html {
@@ -6594,6 +6587,14 @@ body {
   line-height: 3rem;
   /* Vertically center the text there */ }
 
+.skip-link {
+  left: -100%;
+  position: absolute;
+  color: #fff; }
+
+.skip-link:focus {
+  left: 50%; }
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -6603,3 +6604,22 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+a.offscreen {
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  width: 1px;
+  height: 1px;
+  text-align: left;
+  overflow: hidden; }
+
+a.offscreen:focus, a.offscreen:active, a.offscreen:hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background-color: #FF3;
+  border: 1px dotted #000; }

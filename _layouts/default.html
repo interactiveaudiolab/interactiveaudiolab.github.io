@@ -4,10 +4,10 @@
   {%- include head.html -%}
 
   <body>
-    <a href="#main" class="visuallyhidden">Skip to main content</a>
+    <a href="#maincontent" class="visuallyhidden">Skip to main content</a>
     {%- include header.html -%}
     <div class="container">
-    <main role="page-content" aria-label="Content">
+    <main id="maincontent" class="maincontent" tabindex=-1 aria-label="Content">
         {{ content }}
     </main>
   </div>
