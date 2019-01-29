@@ -89,7 +89,7 @@ defaults:
       type: "projects"
     values:
       layout: "detail"
-      permalink: /projects/:name.html
+      permalink: /project/:name.html
   - scope:
       path: ""
     values:
