@@ -1,6 +1,6 @@
 ---
 layout: two-column-list
 title: Projects
-permalink: /projects
-collection: projects
+permalink: /projects/
+# collection: projects
 ---
