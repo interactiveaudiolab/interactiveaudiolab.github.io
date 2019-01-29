@@ -6497,6 +6497,10 @@ a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_bla
   margin-left: 3px;
   content: url(/assets/images/icons/external-link-dark.svg); }
 
+a:focus {
+  outline-color: #5D1840;
+  outline-width: 1em; }
+
 hr {
   border-top: 1px solid #e69ec7; }
 
@@ -6507,21 +6511,27 @@ button {
   padding-left: 1rem;
   padding-right: 1rem; }
 
+.navbar-dark .navbar-brand:focus {
+  outline-color: #fff; }
+
 .primary-nav {
   padding-bottom: 0;
   border-bottom: 0.25rem solid #E69EC7; }
   .primary-nav .navbar-brand {
     font-family: "Oswald"; }
-  .primary-nav .navbar-nav .nav-link .active {
+    .primary-nav .navbar-brand a:focus {
+      outline-color: aqua; }
+  .primary-nav .navbar-nav .navlink .active {
     background-color: red;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     color: #fff; }
-  .primary-nav .navbar-nav .nav-link:hover {
+  .primary-nav .navbar-nav .nav-link:hover, .primary-nav .navbar-nav .nav-link:focus {
     background-color: #E69EC7;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    color: #5D1840; }
+    color: #5D1840;
+    outline-color: #fff; }
 
 .subnav {
   padding-top: 0;
@@ -6535,11 +6545,12 @@ button {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     color: #5D1840; }
-  .subnav .navbar-nav .nav-link .active {
-    background-color: red;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    color: #fff; }
+
+.navbar-dark .navbar-nav .nav-link .active {
+  background-color: red;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: #fff; }
 
 .category-list {
   margin: 1.5rem 0;
@@ -6607,8 +6618,8 @@ body {
 
 a.offscreen {
   position: absolute;
-  left: -100%;
-  top: -100%;
+  left: -1000px;
+  top: -1000px;
   width: 1px;
   height: 1px;
   text-align: left;

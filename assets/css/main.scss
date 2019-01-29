@@ -13,6 +13,11 @@ a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_bla
     content: url(/assets/images/icons/external-link-dark.svg)
     }
 
+a:focus {
+    outline-color: $dark;
+    outline-width: 1em;
+}
+
 hr {
     border-top: 1px solid rgba( 230, 158, 199, 1);
 }
@@ -27,30 +32,38 @@ button {
     padding-right: 1rem;
 }
 
+.navbar-dark .navbar-brand:focus {
+    outline-color:$white;
+}
+
 // primary (upper) navigation
 .primary-nav {
     padding-bottom: 0;
     border-bottom: map-get($spacers, 1) solid $secondary;
 
     .navbar-brand {
-        font-family: $headings-font-family,
+        font-family: $headings-font-family;
+
+        a:focus {
+            outline-color: aqua;
+        }
     }
 
     .navbar-nav {
-        .nav-link .active {
+        .navlink .active {
             background-color: red;
             border-top-left-radius: map-get($spacers, 3);
             border-top-right-radius: map-get($spacers, 3);
             color: $white;
             }
 
-        .nav-link:hover {
+        .nav-link:hover, .nav-link:focus {
             background-color: $secondary;
             border-top-left-radius: map-get($spacers, 3);
             border-top-right-radius: map-get($spacers, 3);
             color: $dark;
+            outline-color: $white;
             }
-
     }
 
 }
@@ -73,16 +86,14 @@ button {
         border-bottom-right-radius: map-get($spacers, 3);
         color: $dark;
         }
-
-        .nav-link .active {
-        background-color: red;
-        border-top-left-radius: map-get($spacers, 3);
-        border-top-right-radius: map-get($spacers, 3);
-        color: $white;
-        }
-
     }
+}
 
+.navbar-dark .navbar-nav .nav-link .active {
+    background-color: red;
+    border-top-left-radius: map-get($spacers, 3);
+    border-top-right-radius: map-get($spacers, 3);
+    color: $white;
 }
 
 // list
@@ -169,22 +180,21 @@ body {
 
 a.offscreen {
     position:absolute;
-    left:-100%;
-    top:-100%;
+    left:-1000px;
+    top:-1000px;
     width:1px;
     height:1px;
     text-align: left; 
     overflow:hidden;
-    // background-color: papayawhip;
     }
-
+    
     a.offscreen:focus, a.offscreen:active, a.offscreen:hover { 
-        position:absolute; 
-        left:0; 
-        top:0; 
-        width:auto; 
-        height:auto; 
-        overflow:visible;
-        background-color:#FF3;
-        border: 1px dotted #000;
-        }
+    position:absolute; 
+    left:0; 
+    top:0; 
+    width:auto; 
+    height:auto; 
+    overflow:visible;
+    background-color:#FF3;
+    border: 1px dotted #000;
+    }
