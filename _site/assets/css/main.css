@@ -6570,8 +6570,7 @@ button {
 
 .bibliography, .bibliography-details {
   list-style: none;
-  padding-left: 0px;
-  font-size: 1.25rem; }
+  padding-left: 0px; }
 
 .bibliography > li {
   padding-top: 1rem; }
