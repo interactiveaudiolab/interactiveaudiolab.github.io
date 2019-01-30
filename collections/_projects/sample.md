@@ -1,9 +1,7 @@
 ---
-name: Sample project
+name: Project Sample
 creators: [Demo Jones, Sample Smith]
 external-url: http://tunebot.cs.northwestern.edu/
-related-papers:
-related-projects:
 image: https://via.placeholder.com/150
 altdescription: Placeholder image #alt description of image for screen readers
 funding: NSF

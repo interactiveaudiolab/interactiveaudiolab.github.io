@@ -6593,9 +6593,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  /* Set the fixed height of the footer here */
-  line-height: 3rem;
-  /* Vertically center the text there */ }
+  /* Set the fixed height of the footer here */ }
 
 .skip-link {
   left: -100%;

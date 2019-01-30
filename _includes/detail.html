@@ -1,12 +1,14 @@
 <div class="row">
     <h2 class="text-muted">
-        {% for creator in page.creators %}
-            {% if forloop.last == true %}
-                {{ creator }}
-            {% else %}
-                {{ creator }},
-            {% endif %}
-        {% endfor %}
+        {% if page.creators%}
+            {% for creator in page.creators %}
+                {% if forloop.last == true %}
+                    {{ creator }}
+                {% else %}
+                    {{ creator }},
+                {% endif %}
+            {% endfor %}
+        {% endif %}
     </h2>
 
     {% if page.external-url %}
