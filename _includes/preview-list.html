@@ -2,7 +2,7 @@
 {% assign collection = include.collection %}
 {% assign title = include.title %} 
 {% assign link = include.link %} 
-<div class="col">
+<div>
     <h2 class="col">{{ title }}</h2>
     <ul class="list-group">
         {% for item in collection %}
@@ -16,13 +16,21 @@
                 <div class="col">
                     <h3 class=""><a href="{{ item.url }}">{{ item.name }}</a></h3>
                     <h4 class="text-muted">
-                        {% for creator in item.creators %}
-                            {% if forloop.last == true %}
-                                {{ creator }}
-                            {% else %}
-                                {{ creator }},
+                            <!-- check for course number -->
+                            {% if item.course-number %}
+                            {{ item.university }}, {{ item.course-number }} {{ item.quarter-held }}
                             {% endif %}
-                        {% endfor %}
+    
+                            <!-- checks for creators -->
+                            {% if item.creators %}
+                                {% for creator in item.creators %}
+                                    {% if forloop.last == true %}
+                                        {{ creator }}
+                                    {% else %}
+                                        {{ creator }},
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                     </h4>
         
                 </div>
@@ -38,7 +46,7 @@
 
         </ul>
 
-    <div class="row col category-list-view-more-link">
+    <div class="col category-list-view-more-link">
             <h5><a href="{{link}}">Full List of {{title}}</a></h5>
     </div>
 </div>
