@@ -6521,17 +6521,14 @@ button {
     font-family: "Oswald"; }
     .primary-nav .navbar-brand a:focus {
       outline-color: aqua; }
-  .primary-nav .navbar-nav .navlink .active {
-    background-color: red;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    color: #fff; }
   .primary-nav .navbar-nav .nav-link:hover, .primary-nav .navbar-nav .nav-link:focus {
     background-color: #E69EC7;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     color: #5D1840;
     outline-color: #fff; }
+  .primary-nav .navbar-nav .nav-link .active {
+    background-color: turquoise; }
 
 .subnav {
   padding-top: 0;
@@ -6545,12 +6542,6 @@ button {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     color: #5D1840; }
-
-.navbar-dark .navbar-nav .nav-link .active {
-  background-color: red;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  color: #fff; }
 
 .category-list {
   margin: 1.5rem 0;
@@ -6578,6 +6569,9 @@ button {
 .bibliography, .bibtitle {
   padding-left: 1rem; }
 
+.people-list {
+  margin-left: 0; }
+
 /* Sticky footer styles for bootstrap */
 html {
   position: relative;
@@ -6595,13 +6589,24 @@ body {
   height: 3rem;
   /* Set the fixed height of the footer here */ }
 
-.skip-link {
-  left: -100%;
+.skip-navigation {
   position: absolute;
-  color: #fff; }
-
-.skip-link:focus {
-  left: 50%; }
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0; }
+  .skip-navigation:active, .skip-navigation:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    clip-path: none; }
 
 .visuallyhidden {
   border: 0;
@@ -6612,22 +6617,3 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
-
-a.offscreen {
-  position: absolute;
-  left: -1000px;
-  top: -1000px;
-  width: 1px;
-  height: 1px;
-  text-align: left;
-  overflow: hidden; }
-
-a.offscreen:focus, a.offscreen:active, a.offscreen:hover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  background-color: #FF3;
-  border: 1px dotted #000; }

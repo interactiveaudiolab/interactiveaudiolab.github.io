@@ -50,13 +50,6 @@ button {
     }
 
     .navbar-nav {
-        .navlink .active {
-            background-color: red;
-            border-top-left-radius: map-get($spacers, 3);
-            border-top-right-radius: map-get($spacers, 3);
-            color: $white;
-            }
-
         .nav-link:hover, .nav-link:focus {
             background-color: $secondary;
             border-top-left-radius: map-get($spacers, 3);
@@ -64,6 +57,10 @@ button {
             color: $dark;
             outline-color: $white;
             }
+
+        .nav-link .active {
+            background-color: turquoise;
+        }
     }
 
 }
@@ -89,19 +86,11 @@ button {
     }
 }
 
-.navbar-dark .navbar-nav .nav-link .active {
-    background-color: red;
-    border-top-left-radius: map-get($spacers, 3);
-    border-top-right-radius: map-get($spacers, 3);
-    color: $white;
-}
-
-// list
+// list for one-column list, two-column-list, people-list
 .category-list {
     margin: map-get($spacers, 4) 0;
     overflow-wrap: normal;
     list-style: none;
-
 
     img {
         max-width: 100%;
@@ -125,8 +114,6 @@ button {
 .bibliography, .bibliography-details {
     list-style: none;
     padding-left: 0px;
-    // font-size: $font-size-lg;
-
 }
 
 .bibliography > li{
@@ -137,6 +124,9 @@ button {
     padding-left: 1rem;
 }
 
+.people-list {
+    margin-left:0;
+}
 
 /* Sticky footer styles for bootstrap */
 html {
@@ -156,14 +146,11 @@ body {
     // line-height: map-get($spacers, 5); /* Vertically center the text there */
 }
 
-.skip-link {
-    left: -100%;
-    position: absolute;
-    color: $white;
-}
 
-.skip-link:focus{
-    left: 50%;
+// Usage as a mixin
+.skip-navigation {
+    @include sr-only;
+    @include sr-only-focusable;
 }
 
 // for accessibility features
@@ -177,24 +164,3 @@ body {
 	position: absolute;
 	width: 1px;
 }
-
-a.offscreen {
-    position:absolute;
-    left:-1000px;
-    top:-1000px;
-    width:1px;
-    height:1px;
-    text-align: left; 
-    overflow:hidden;
-    }
-    
-    a.offscreen:focus, a.offscreen:active, a.offscreen:hover { 
-    position:absolute; 
-    left:0; 
-    top:0; 
-    width:auto; 
-    height:auto; 
-    overflow:visible;
-    background-color:#FF3;
-    border: 1px dotted #000;
-    }

@@ -13,7 +13,7 @@
     
           {% for item in site.data.navigation.main %} 
             <li class="nav-item">
-              {% if item.page == page.navigation %}
+              {% if item.url == page.url %}
                 <a class="nav-link active" href="{{ item.url }}">
                   {{ item.page | capitalize }}
                 </a>

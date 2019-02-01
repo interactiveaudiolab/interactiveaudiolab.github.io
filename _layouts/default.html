@@ -4,10 +4,10 @@
   {%- include head.html -%}   
 
   <body>
-    <a href="#maincontent" class="offscreen">Skip to main content</a>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
     {%- include header.html -%}
     <div class="container">
-    <main id="maincontent" class="maincontent" tabindex=-1 aria-label="Content">
+    <main id="content" class="content" tabindex=-1 aria-label="Content">
         {{ content }}
     </main>
   </div>

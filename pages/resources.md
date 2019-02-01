@@ -15,10 +15,10 @@ navigation: resources
 </div> -->
 
 <div class="row">
-    <div class="col">
+    <div class="col-md">
             {% include preview-list.html collection=site.courses title="Course Materials" link="resources/teaching.html" %}
     </div>
-    <div class="col">
+    <div class="col-md">
         {% include preview-list.html collection=site.datasets title="Datasets" link="resources/datasets.html" %}
     </div>
 </div>

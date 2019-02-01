@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css""><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Interactive Audio Lab" /></head>
 <body>
-    <a href="#maincontent" class="offscreen">Skip to main content</a><header>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-nav" aria-label="primary navigation">
     <div class="container">
       <a class="navbar-brand display" href="/">INTERACTIVE AUDIO LAB</a>
@@ -74,12 +74,13 @@
 </header>
 
 <div class="container">
-    <main id="maincontent" class="maincontent" tabindex=-1 aria-label="Content">
-        <h1 id="welcome">Welcome!</h1>
+    <main id="content" class="content" tabindex=-1 aria-label="Content">
+        <div class="row"><h1 id="welcome">Welcome!</h1>
 
 <p>We develop technologies that automatically find, label and manipulate perceptually-important structures in sound, with a focus on music as a problem domain.  We pioneer advances in audio source separation (extracting the sound of one instrument from a string quartet recording), audio database search (matching a sung melody to a Mozart piece available on Amazon.com) and mapping human audio perception to machine-quantifiable measures.</p>
 
-  
+</div>
+
 <hr>
 
   <div class="row">
