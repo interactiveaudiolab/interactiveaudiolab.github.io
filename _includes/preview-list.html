@@ -2,8 +2,7 @@
 {% assign collection = include.collection %}
 {% assign title = include.title %} 
 {% assign link = include.link %} 
-<div>
-    <h2 class="">{{ title }}</h2>
+    <h2 class="h1 pt-2 pb-3">{{ title }}</h2>
 
     <ul class="list-group">
         {% for item in collection %}
@@ -12,8 +11,5 @@
             {% endif %}
         {% endfor %}
     </ul>
-
-    <div class="category-list-view-more-link">
-            <h5><a href="{{link}}">Full List of {{title}}</a></h5>
-    </div>
-</div>
+    
+    <h5 class= "h3 pt-3 mb-3"><a href="{{link}}">Full List of {{title}}</a></h5>

@@ -11,10 +11,6 @@ main:
 resources:
     - page: Datasets
       url: /resources/datasets.html
-    - page: GitHub
-      url: https://github.com/interactiveaudiolab
-    - page: YouTube
-      url: https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw
     - page: Teaching
       url: /resources/teaching.html
 

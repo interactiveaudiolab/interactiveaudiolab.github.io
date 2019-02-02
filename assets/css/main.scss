@@ -105,9 +105,6 @@ button {
     padding-top: $spacer;
 }
 
-.category-list-view-more-link {
-    margin-bottom: map-get($spacers, 5);
-}
 
 .preview-list img {
     max-width: 8rem;
@@ -115,17 +112,13 @@ button {
 }
 
 //publications
-.bibliography, .bibliography-details {
+.bibliography, .bibliography-details, .bibtitle {
     list-style: none;
     padding-left: 0px;
 }
 
 .bibliography > li{
     padding-top: $spacer;
-}
-
-.bibliography, .bibtitle {
-    padding-left: 0rem;
 }
 
 

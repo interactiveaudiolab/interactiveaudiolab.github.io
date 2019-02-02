@@ -6555,22 +6555,16 @@ button {
 .category-list-title h2 {
   padding-top: 1rem; }
 
-.category-list-view-more-link {
-  margin-bottom: 3rem; }
-
 .preview-list img {
   max-width: 8rem;
   max-height: 8rem; }
 
-.bibliography, .bibliography-details {
+.bibliography, .bibliography-details, .bibtitle {
   list-style: none;
   padding-left: 0px; }
 
 .bibliography > li {
   padding-top: 1rem; }
-
-.bibliography, .bibtitle {
-  padding-left: 0rem; }
 
 /* Sticky footer styles for bootstrap */
 html {
