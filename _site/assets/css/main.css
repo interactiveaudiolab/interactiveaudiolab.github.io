@@ -6493,10 +6493,6 @@ a.text-dark:hover, a.text-dark:focus {
 main {
   padding-top: 1rem; }
 
-a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
-  margin-left: 3px;
-  content: url(/assets/images/icons/external-link-dark.svg); }
-
 a:focus {
   outline-color: #5D1840;
   outline-width: 1em; }
@@ -6529,6 +6525,11 @@ button {
     outline-color: #fff; }
   .primary-nav .navbar-nav .nav-link .active {
     background-color: turquoise; }
+  .primary-nav .navbar-nav .social-link:hover {
+    background-color: transparent;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: none;
+    color: #E69EC7; }
 
 .subnav {
   padding-top: 0;
@@ -6581,7 +6582,15 @@ body {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  /* Set the fixed height of the footer here */ }
+  /* Set the fixed height of the footer here */
+  line-height: 1rem;
+  /* Vertically center the text there */ }
+
+.social-link {
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+  padding-bottom: 0.25rem;
+  line-height: 1rem; }
 
 .skip-navigation {
   position: absolute;

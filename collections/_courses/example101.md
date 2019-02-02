@@ -18,22 +18,30 @@ This course is approved for the Breadth Interfaces & project requirement in the 
 
 Prior programming experience sufficient to be able to do laboratory assignments in PYTHON, implementing algorithms and using libraries without being taught to do so (there is no language instruction on Python). Having taken EECS 211 and 214 would demonstrate this experience.
 
+* * *
+
 ## Course Textbook
 
-[Fundamentals of Music Processing](https://www.springer.com/gp/book/9783319219448) 
+<a class="external-link" href="https://www.springer.com/gp/book/9783319219448" target="_blank">Fundamentals of Music Processing <span class="fas fa-external-link-alt" title="link opens in a new window"></span><span class="sr-only">opens in a new window</span></a>
+
+* * *
 
 ## Time & Place
 Lecture: Monday, Wednesday, Friday 3:00PM - 3:50PM Tech L361
 
+* * *
+
 ## Instructors, Office Hours, Online help
 
-[Prof. Bryan Pardo](http://bryanpardo.com/)  Office Hours & Location: Wednesday 4pm - 5pm, Mudd 3115
+<a class="external-link" href="http://bryanpardo.com/" target="_blank" title="Bryan Pardo's Homepage">Prof. Bryan Pardo <span class="fas fa-external-link-alt" title="link opens in a new window"></span><span class="sr-only">opens in a new window</span></a> Office Hours & Location: Wednesday 4pm - 5pm, Mudd 3115
 
-TA [Fatemeh Pishdadian](http://fatemehpishdadian.com/) Office Hours & Location: Monday 4pm - 5pm, Mudd 3534
+TA <a class="external-link" href="http://fatemehpishdadian.com/" target="_blank" title="Fatemeh Pishdadian's Homepage">Fatemeh Pishdadian <span class="fas fa-external-link-alt" title="link opens in a new window"></span><span class="sr-only">opens in a new window</span></a> Office Hours & Location: Monday 4pm - 5pm, Mudd 3534
 
-TA [Bongjun Kim](http://www.bongjunkim.com/) Office Hours & Location: Friday 2pm - 3pm, Mudd 3534
+TA <a class="external-link" href="http://www.bongjunkim.com/" target="_blank" title="Bongjun Kim's Homepage">Bongjun Kim <span class="fas fa-external-link-alt" title="link opens in a new window"></span><span class="sr-only">opens in a new window</span></a> Office Hours & Location: Friday 2pm - 3pm, Mudd 3534
 
-We’ll be using [this piazza page](http://piazza.com/northwestern/winter2019/eecs352/home) for course discussion and online help.
+We’ll be using <a class="external-link" href="http://piazza.com/northwestern/winter2019/eecs352/home" target="_blank" title="Piazza page for this class">this piazza page <span class="fas fa-external-link-alt" title="link opens in a new window"></span><span class="sr-only">opens in a new window</span></a> for course discussion and online help.
+
+* * *
 
 ## Policies
 
@@ -48,6 +56,8 @@ Do your own work. Academic dishonesty will be dealt with as laid out in the stud
 
 ### Attendance
 Attendance is not graded.
+
+* * *
 
 ## Course Calendar
 <!-- http://www.tablesgenerator.com/markdown_tables might be useful for creating more tavbles in the future -->

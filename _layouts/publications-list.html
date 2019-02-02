@@ -18,7 +18,7 @@ title:
 
       {% if entry.bibtex%}
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{key}}-bibtex">
+        <button type="button" class="btn btn-outline-primary mr-2" data-toggle="modal" data-target="#{{key}}-bibtex">
           BibTeX
         </button>
           
@@ -45,7 +45,8 @@ title:
       {% endif%}
 
       {% if entry.url %}
-        <a href="{{entry.url}}" target="_blank">Full text (PDF)</a> 
+      <a class="external-link" href="{{entry.url}}" target="_blank">Full text (PDF) <span class="fas fa-external-link-alt" title="PDF opens in a new window"></span><span class="sr-only">PDF opens in a new window</span></a>
+        <!-- <a href="{{entry.url}}" target="_blank">Full text (PDF)</a>  -->
       {% endif %}
 
     </ul>

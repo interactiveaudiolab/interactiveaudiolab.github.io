@@ -15,7 +15,7 @@ layout: default
     <div class="col-md">
       {%- if site.posts.size > 0 -%}
         
-          <h2 class="h1">{{ page.list_title | default: "News" }}</h2>
+          <h2 class="h1">{{ page.list_title | default: "Latest News" }}</h2>
           <ul class="list-unstyled">
             {%- for post in site.posts -%}
             <li class="category-list">
