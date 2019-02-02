@@ -5,24 +5,21 @@
 
 <div>
 
-        <h2 class="display-6 people-header"><a name="{{ anchor-tag }}"></a>{{ title }}</h2>
+    <h2 class="display-6 people-header"><a name="{{ anchor-tag }}"></a>{{ title }}</h2>
 
-        <ul class="list-group people-list">
-            {% for item in collection %}
-                <li class=" category-list row"> 
-                    
-                    {% if item.image %}
-                    <div class="col-md-3 col-sm-6">
-                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
-                    </div>
-                    {% endif %}
+    <ul class="list-unstyled preview-list">
+        {% for item in collection %}
+            <li class="media"> 
+                {% if item.image %}
+                <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                {% endif %}
 
-                    <div class="col">
-                        <h3 class="mt-0"><a href="{{ item.url }}">{{ item.name }}</a></h3>
-                        <h4 class=" h5 text-muted">{{ item.position }}</h4>
-                        <p>{{ item.excerpt | markdownify }}</p>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
+                <div class="mt-0 mb-1">
+                    <h3 class="mt-0"><a href="{{ item.url }}">{{ item.name }}</a></h3>
+                    <h4 class=" h5 text-muted">{{ item.position }}</h4>
+                    <p>{{ item.excerpt | markdownify }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 </div>

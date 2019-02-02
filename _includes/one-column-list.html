@@ -1,38 +1,7 @@
 <div class="">
-    <ul class="list-group">
+    <ul class="list-unstyled">
         {% for item in site.[page.collection] %}
-            <li class="category-list row">
-                {% if item.image %}
-                    <div class="col-md-3 col-sm-12 list-image">
-                        <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
-                    </div>
-                {% endif %}
-                <div class="col">
-                    <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-                    <h3 class="text-muted">
-                        <!-- checks for course-number to display course-only information -->
-                        {% if item.course-number %}
-                        {{ item.university }}, {{ item.course-number }} {{ item.quarter-held }}
-                        {% endif %}
-
-                        <!-- checks for creators -->
-                        {% if item.creators %}
-                            {% for creator in item.creators %}
-                                {% if forloop.last == true %}
-                                    {{ creator }}
-                                {% else %}
-                                    {{ creator }},
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-
-                    </h3>
-                    <!-- checking for creators because courses should not list an excerpt -->
-                    {% if item.creators %}
-                        <p>{{ item.excerpt | markdownify }}</p>
-                    {% endif %}
-                </div>
-            </li>
+            {% include list-item.html %}
         {% endfor %}
     </ul>
 </div>

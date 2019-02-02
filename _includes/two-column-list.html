@@ -1,26 +1,24 @@
-<ul class="list-group">
-    {% for item in site.[page.collection] %}
-        <li class="category-list row col-md-6">
-            {% if item.image %}
-                <div class="col-md-3 col-sm-12 list-image">
-                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.altdescription }}">
+<ul class="list-unstyled">
+        {% for item in site.[page.collection] %}
+            <li class="media">
+                {% if item.image %}
+                    <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                {% endif %}
+                
+                <div class="mt-0 mb-1">
+                    <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
+                    <h3 class="h4 text-muted">
+                        {% for creator in item.creators %}
+                            {% if forloop.last == true %}
+                                {{ creator }}
+                            {% else %}
+                                {{ creator }},
+                            {% endif %}
+                        {% endfor %}
+                    </h3>
+    
+                    <p>{{ item.excerpt | markdownify }}</p>
                 </div>
-            {% endif %}
-            
-            <div class="col">
-                <h2 class=""><a href="{{ item.url }}">{{ item.name }}</a></h2>
-                <h3 class="text-muted">
-                    {% for creator in item.creators %}
-                        {% if forloop.last == true %}
-                            {{ creator }}
-                        {% else %}
-                            {{ creator }},
-                        {% endif %}
-                    {% endfor %}
-                </h3>
-
-                <p>{{ item.excerpt | markdownify }}</p>
-            </div>
-        </li>
-    {% endfor %}
-</ul>
+            </li>
+        {% endfor %}
+    </ul>

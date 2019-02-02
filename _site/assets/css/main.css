@@ -6548,9 +6548,8 @@ button {
   overflow-wrap: normal;
   list-style: none; }
   .category-list img {
-    max-width: 100%;
     padding-bottom: 0.5rem; }
-  .category-list .row {
+  .category-list li {
     padding-bottom: 1rem; }
 
 .category-list-title h2 {
@@ -6558,6 +6557,10 @@ button {
 
 .category-list-view-more-link {
   margin-bottom: 3rem; }
+
+.preview-list img {
+  max-width: 8rem;
+  max-height: 8rem; }
 
 .bibliography, .bibliography-details {
   list-style: none;
@@ -6567,10 +6570,7 @@ button {
   padding-top: 1rem; }
 
 .bibliography, .bibtitle {
-  padding-left: 1rem; }
-
-.people-list {
-  margin-left: 0; }
+  padding-left: 0rem; }
 
 /* Sticky footer styles for bootstrap */
 html {

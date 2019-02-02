@@ -16,9 +16,9 @@ navigation: resources
 
 <div class="row">
     <div class="col-md">
-            {% include preview-list.html collection=site.courses title="Course Materials" link="resources/teaching.html" %}
+            {% include preview-list.html collection=site.courses title="Course Materials" link="teaching.html" %}
     </div>
     <div class="col-md">
-        {% include preview-list.html collection=site.datasets title="Datasets" link="resources/datasets.html" %}
+        {% include preview-list.html collection=site.datasets title="Datasets" link="datasets.html" %}
     </div>
 </div>
