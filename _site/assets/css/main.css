@@ -6557,6 +6557,11 @@ button {
 .bibliography > li {
   padding-top: 1rem; }
 
+.sub-nav {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e69ec7; }
+
 /* Sticky footer styles for bootstrap */
 html {
   position: relative;

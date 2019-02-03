@@ -1,7 +1,18 @@
 ---
 layout: default
 ---
-
 {%- include title.html -%}
+
+{% if page.navigation %}
+    <nav class="sub-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/{{page.navigation}}">Return to {{ page.navigation | capitalize }}</a>
+            </li>
+        </ul>
+    </nav>
+{% endif %}
+
+
 
 {%- include one-column-list.html -%}
