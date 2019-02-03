@@ -30,6 +30,7 @@ button {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1rem;
     padding-right: 1rem;
+    // color: $secondary;
 }
 
 .navbar-dark .navbar-brand:focus {
@@ -43,10 +44,6 @@ button {
 
     .navbar-brand {
         font-family: $headings-font-family;
-
-        a:focus {
-            outline-color: aqua;
-        }
     }
 
     .navbar-nav {
@@ -57,11 +54,8 @@ button {
             border-top-right-radius: map-get($spacers, 3);
             color: $dark;
             outline-color: $white;
-            }
-
-        .nav-link .active {
-            background-color: turquoise;
         }
+
 
         .social-link:hover {
             background-color: transparent;
@@ -74,26 +68,29 @@ button {
 
 }
 
-//   subnavigation
-.subnav {
-    padding-top: map-get($spacers, 0);
-    padding-bottom: map-get($spacers, 0);
-    min-height: $spacer * 2.5;
-
-    a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
-        margin-left: 3px;
-        content: url(/assets/images/icons/external-link-light.svg)
-        }
-
-    .navbar-nav {
-            .nav-link:hover {
-        background-color: $secondary;
-        border-bottom-left-radius: map-get($spacers, 3);
-        border-bottom-right-radius: map-get($spacers, 3);
-        color: $dark;
-        }
-    }
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: $secondary;
+    border-top-left-radius: map-get($spacers, 3);
+    border-top-right-radius: map-get($spacers, 3);
+    color: $dark;
+    outline-color: $white;
 }
+
+// //   subnavigation
+// .subnav {
+//     padding-top: map-get($spacers, 0);
+//     padding-bottom: map-get($spacers, 0);
+//     min-height: $spacer;
+
+//     .navbar-nav {
+//             .nav-link:hover {
+//         background-color: $secondary;
+//         border-bottom-left-radius: map-get($spacers, 3);
+//         border-bottom-right-radius: map-get($spacers, 3);
+//         color: $dark;
+//         }
+//     }
+// }
 
 // list for one-column list, two-column-list, people-list
 .category-list {
@@ -174,3 +171,4 @@ body {
 	position: absolute;
 	width: 1px;
 }
+

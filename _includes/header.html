@@ -18,7 +18,7 @@
                   {{ item.page | capitalize }}
                 </a>
               {% else %}
-                <a class="nav-link" href="{{ item.url }}">
+                <a class="nav-link " href="{{ item.url }}">
                   {{ item.page | capitalize }}
                 </a>
               {% endif %}
@@ -40,38 +40,6 @@
   </nav>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary subnav" aria-label="subnavigation">
-    <div class="container">
-      {% if page.navigation %}
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subNavigation" aria-controls="subNavigation" aria-expanded="false" aria-label="Toggle subnavigation">
-        <span class="navbar-toggler-icon"></span> {{ page.navigation | capitalize }}
-      </button>
-
-      
-      <div class="collapse navbar-collapse" id="subNavigation">
-        <ul class="navbar-nav mr-auto">
-          {% for item in site.data.navigation[page.navigation] %}
-            <li class="nav-item">
-              <!-- setting active link class for decoration -->
-              {% if item.page == page.title %}
-                <a class="nav-link active" href="{{ item.url }}">
-                  {{ item.page | capitalize }}
-                </a>
-                {% elsif item.external  %}
-                <a target="_blank" rel="noopener noreferrer" class="nav-link" href="{{ item.url }}">
-                    {{ item.page | capitalize }}
-                </a>
-                {% else %}
-                <a class="nav-link" href="{{ item.url }}">
-                  {{ item.page | capitalize }}
-                </a>
-              {% endif %}
-              
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-    </div>
   </nav>
 </header>
 
