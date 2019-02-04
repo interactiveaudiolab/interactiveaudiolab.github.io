@@ -6497,6 +6497,9 @@ a:focus {
   outline-color: #5D1840;
   outline-width: 1em; }
 
+.navbar-dark .navbar-brand:focus {
+  outline-color: #fff; }
+
 hr {
   border-top: 1px solid #e69ec7; }
 
@@ -6506,9 +6509,6 @@ button {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-left: 1rem;
   padding-right: 1rem; }
-
-.navbar-dark .navbar-brand:focus {
-  outline-color: #fff; }
 
 .primary-nav {
   padding-bottom: 0;
@@ -6556,6 +6556,15 @@ button {
 
 .bibliography > li {
   padding-top: 1rem; }
+
+.btn-bibliography {
+  width: 100%;
+  border-radius: 0; }
+  .btn-bibliography h2 {
+    color: #fff; }
+
+.card {
+  margin-bottom: 1rem; }
 
 .sub-nav {
   margin-bottom: 1rem;

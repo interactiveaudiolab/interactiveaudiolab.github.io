@@ -13,10 +13,16 @@ main {
 //     content: url(/assets/images/icons/external-link-dark.svg)
 //     }
 
+//update focus colors for visiblity
 a:focus {
     outline-color: $dark;
     outline-width: 1em;
 }
+
+.navbar-dark .navbar-brand:focus {
+    outline-color:$white;
+}
+
 
 hr {
     border-top: 1px solid rgba( 230, 158, 199, 1);
@@ -33,9 +39,6 @@ button {
     // color: $secondary;
 }
 
-.navbar-dark .navbar-brand:focus {
-    outline-color:$white;
-}
 
 // primary (upper) navigation
 .primary-nav {
@@ -68,6 +71,7 @@ button {
 
 }
 
+//highlight current page with tab
 .navbar-dark .navbar-nav .nav-link.active {
     background-color: $secondary;
     border-top-left-radius: map-get($spacers, 3);
@@ -75,22 +79,6 @@ button {
     color: $dark;
     outline-color: $white;
 }
-
-// //   subnavigation
-// .subnav {
-//     padding-top: map-get($spacers, 0);
-//     padding-bottom: map-get($spacers, 0);
-//     min-height: $spacer;
-
-//     .navbar-nav {
-//             .nav-link:hover {
-//         background-color: $secondary;
-//         border-bottom-left-radius: map-get($spacers, 3);
-//         border-bottom-right-radius: map-get($spacers, 3);
-//         color: $dark;
-//         }
-//     }
-// }
 
 // list for one-column list, two-column-list, people-list
 .category-list {
@@ -125,6 +113,21 @@ button {
 
 .bibliography > li{
     padding-top: $spacer;
+}
+
+.btn-bibliography {
+    width: 100%;
+    border-radius: 0;
+    // margin-bottom: $spacer;
+    
+    h2 {
+        color: $white;
+    }
+}
+
+.card {
+    margin-bottom: $spacer;
+    // border: none;
 }
 
 .sub-nav {
