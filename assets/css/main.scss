@@ -7,12 +7,6 @@ main {
     padding-top: $spacer;
 }
 
-// adds an image to external links and opens in new tab for accessibility.
-// a[href*="//"]:not([href*="interactiveaudiolab.github.io"]):after, a[target="_blank"]:after {
-//     margin-left: 3px;
-//     content: url(/assets/images/icons/external-link-dark.svg)
-//     }
-
 //update focus colors for visiblity
 a:focus {
     outline-color: $dark;
@@ -39,8 +33,6 @@ button {
     // color: $secondary;
 }
 
-
-// primary (upper) navigation
 .primary-nav {
     padding-bottom: 0;
     border-bottom: map-get($spacers, 1) solid $secondary;
@@ -50,7 +42,6 @@ button {
     }
 
     .navbar-nav {
-
         .nav-link:hover, .nav-link:focus {
             background-color: $secondary;
             border-top-left-radius: map-get($spacers, 3);
@@ -59,16 +50,14 @@ button {
             outline-color: $white;
         }
 
-
         .social-link:hover {
             background-color: transparent;
             border-bottom-left-radius: none;
             border-bottom-right-radius: none;
             color: $secondary;
-        }
-        
-    }
+        } 
 
+    }
 }
 
 //highlight current page with tab
@@ -99,13 +88,12 @@ button {
     padding-top: $spacer;
 }
 
-
 .preview-list img {
     max-width: 8rem;
     max-height: 8rem;
 }
 
-//publications
+//publications list
 .bibliography, .bibliography-details, .bibtitle {
     list-style: none;
     padding-left: 0px;
@@ -118,8 +106,7 @@ button {
 .btn-bibliography {
     width: 100%;
     border-radius: 0;
-    // margin-bottom: $spacer;
-    
+
     h2 {
         color: $white;
     }
@@ -127,7 +114,6 @@ button {
 
 .card {
     margin-bottom: $spacer;
-    // border: none;
 }
 
 .sub-nav {
@@ -155,6 +141,7 @@ body {
     line-height: map-get($spacers, 3); /* Vertically center the text there */
 }
 
+// social media link styling
 .social-link {
     padding-left: map-get($spacers, 4);
     font-size: $font-size-lg;
@@ -163,7 +150,7 @@ body {
     
 }
 
-// Usage as a mixin
+// Usage as a mixin for skip navigation
 .skip-navigation {
     @include sr-only;
     @include sr-only-focusable;

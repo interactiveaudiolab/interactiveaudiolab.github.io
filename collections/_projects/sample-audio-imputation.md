@@ -1,7 +1,8 @@
 ---
 name: Audio Imputation
 creators: [Jinyu Han, Gautham J. Mysore, Bryan Pardo]
-external-url: 
+external-url: http://tunebot.cs.northwestern.edu/
+external-url-text: Tunebot
 image: https://via.placeholder.com/150
 altdescription: Placeholder image #alt description of image for screen readers
 funding: NSF

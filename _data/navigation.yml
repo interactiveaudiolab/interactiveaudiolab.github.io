@@ -8,18 +8,3 @@ main:
   - page: people
     url: /people/
 
-resources:
-    - page: Datasets
-      url: /resources/datasets.html
-    - page: Teaching
-      url: /resources/teaching.html
-
-people:
-  - page: current
-    url: /people/#current
-  - page: collaborators
-    url: /people/#collaborators
-  - page: alumni
-    url: /people/#alumni
-
-

@@ -4,7 +4,7 @@ title: People
 permalink: /people/
 navigation: people
 ---
-<!-- NOTE: the anchor tags here need to match what's listed in the navigation.yml file -->
+
 {%- include title.html -%}
 
 {% assign anchors= "current,collaborators,alumni" | split: ","%}
@@ -18,7 +18,6 @@ navigation: people
     {% endfor %}
     </ul>
 </nav>
-
 
 {% include people-list.html collection=site.people-current title="Current Members" anchor-tag="current" %}
 

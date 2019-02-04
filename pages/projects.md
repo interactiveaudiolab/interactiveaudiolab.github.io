@@ -1,5 +1,5 @@
 ---
-layout: two-column-list
+layout: one-column-list
 title: Projects
 permalink: /projects/
 collection: projects

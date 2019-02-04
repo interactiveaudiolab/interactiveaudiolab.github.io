@@ -1,5 +1,4 @@
 ---
-# layout: post
 title:  "Another News Post!"
 date:   2018-12-28 10:55:02 -0600
 categories: 
