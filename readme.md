@@ -19,9 +19,9 @@
 +--- Collections: markdown files, essentially the content of the site, sorted by category.
 |   +--- _courses: teaching materials for courses
 |   +--- _datasets
-|   +--- _people-alumni 
-|   +--- _people-collaborators 
-|   +--- _people-current 
+|   +--- _people-alumni
+|   +--- _people-collaborators
+|   +--- _people-current
 |   +--- _posts: Posts is a category that is default to Jekyll, but this site will use it for news items
 |   +--- _projects
 +--- Old-demos: the content of the original site before the uplift
@@ -41,7 +41,7 @@
     - Current
     - Collaborators
     - Alumni
-	
+
 
 # Explanation of collections
 
@@ -54,9 +54,9 @@ Collections are Jekyll's way of grouping related content. The pages have a YAML 
 ```
 name: Machine Perception of Music and Audio
 university: Northwestern University
-course-number: CS 352 
+course-number: CS 352
 quarter-held: Winter 2019
-navigation: resources 
+navigation: resources
 ```
 
 ### Datasets
@@ -104,7 +104,7 @@ collection: projects
 ```
 
 These variables can be utilized within the markdown content with the syntax ``{{ page.variable }}``
-	
+
 ## Creating new items in a collection
 1. Create a new markdown file in the appropriate directory
     a. Ex. A new member in the lab would be created in collections/_people-current
@@ -112,10 +112,10 @@ These variables can be utilized within the markdown content with the syntax ``{{
 2. Add the YAML variables relevant to the item's collection category
     a. See the previous section for what variables are needed.
 3. Under the dashed line, add the content of the entry, styled with Markdown. Jekyll specifically uses Kramdown. A guide/cheat sheet to markdown can be found [here](https://guides.github.com/features/mastering-markdown/).
-    a. Most of the index pages for these collections utilize excerpts. This is a feature built into Jekyll that pulls, by default, the first paragraph of content as a preview to the full entry. 
+    a. Most of the index pages for these collections utilize excerpts. This is a feature built into Jekyll that pulls, by default, the first paragraph of content as a preview to the full entry.
 4. The exception to this process is Publications, which pulls information directly from a BibTeX bibliography with the help of jekyll-scholar. This file is located in _data/references.bib
     please note-- url's in the .bib file are intended to  point to an external link of the paper itself.
-    Another important note: the publications page queries years from an array of `publication_years` located in the `config.yaml` file. Unfortunately this will need to be updated for every year there are publications to show. 
+    Another important note: the publications page queries years from an array of `publication_years` located in the `config.yaml` file. Unfortunately this will need to be updated for every year there are publications to show.
 
 # Writing content for accessibility
 
@@ -124,13 +124,13 @@ A huge component of making a site accessible to all users is ensuring that the c
 Some helpful tips for this as you add content to this site:
 
 ## Images
-- Include alt text on all images! Good alt text describes the image in a way that explains both what the image actually depicts, but also indicates why it is there. If the point of the image is to evoke a feeling, for example, the alt text should try to do that too. 
-- If an image is purely decorative (like to divide content), use a blank alt tag so screen readers skip over it. 
+- Include alt text on all images! Good alt text describes the image in a way that explains both what the image actually depicts, but also indicates why it is there. If the point of the image is to evoke a feeling, for example, the alt text should try to do that too.
+- If an image is purely decorative (like to divide content), use a blank alt tag so screen readers skip over it.
 - In the same vein, putting text within an image is bad practice -- those who rely on screen readers, or can't load images, can't access that text to read it.
 
 ## Links
 - The text of a link should describe where the link will take the user. A link that says "Read More" can be confusing for a user skipping to the link with tab navigation. Part of the philosoplhy of creating accessible websites is creating sites that act predictably.
-- external links should have some indication that they take the user away from your site. It is sufficient to add within the writing that the link will open in a new window, but the follow code snippet can be used to construct a link that includes an image indicating it will open in a new window, and text saying as much for screen readers. This will work when added to Markdown as well: 
+- external links should have some indication that they take the user away from your site. It is sufficient to add within the writing that the link will open in a new window, but the follow code snippet can be used to construct a link that includes an image indicating it will open in a new window, and text saying as much for screen readers. This will work when added to Markdown as well:
 
 ```
 <a class="external-link" target="_blank" title="description of link with context" href="#">Description of link
@@ -141,24 +141,19 @@ Some helpful tips for this as you add content to this site:
 
 ## Headings
 - Maintain the hierarchy of header tags -- Don't skip from h2 to h5. This can throw off screen readers that use this structure to create an outline for previewing content.
-- On a similar note, when you are writing content you should start with h2, as h1 is set up on this site to display the title of the page.  
+- On a similar note, when you are writing content you should start with h2, as h1 is set up on this site to display the title of the page.
 
 ## Lists
-- If a piece of text is a list of items, or a table, use the semantic HTML markup for these formats. Things that look like a list that don't use the HTML syntax is difficult for a screen reader to navigate 
+- If a piece of text is a list of items, or a table, use the semantic HTML markup for these formats. Things that look like a list that don't use the HTML syntax is difficult for a screen reader to navigate
 
 # Deployment
 Deployment is admittedly a bit hacky at the moment given the already-existing history in this repo, and the limitations that GitHub has on plugins that can be used on their site.
 1. Once you're finished making changes in development, be sure to run ``jekyll serve`` to re-render the site. If you don't none of your changes will appear on the site.
 2. merge any changes you've made into the ``source`` branch. This is, for our purposes, the master repo, as the ``master`` branch is just for the rendered site. Deal with conflicts that arise.
-3. ``git checkout master``
-4. ``git reset --hard 3b5f899`` This resets your branch to the point before any new updates to the site were created. 
-5. ``git push -f origin master`` This will force the remote site to revert back to its original state. This means the site will go down at this time.
-6. ``git merge source`` Adding the new site back into the master branch.
-7. delete all folders except for ``_site``, as that's where the rendered website is located.
-8. move the contents of ``_site`` into the root.
-9. delete ``_site``
-10. ``git add .``
-11. ``git commit -m "merging source into master``
-12. ``git push``
+3. Checkout the master branch in a separate directory from the source branch you have been working on.
+4. Copy the content of `_site` from the source branch directory into the new directory, replacing any previous files in master with the newly generated build files.
+5. In your directory containing the master branch, add the new files to git with ``git add .``.
+6. Commit your changes with ``git commit -m "merging source into master``.
+7. Upload your changes to GitHub with ``git push``. This will trigger a re-render of the webpage.
 
 The site may take a minute to re-render and publish.
