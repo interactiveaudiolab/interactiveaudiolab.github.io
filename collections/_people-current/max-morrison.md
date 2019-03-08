@@ -2,7 +2,7 @@
 name: Max Morrison
 position: PhD Student
 email: maxrmorrison@gmail.com
-website: maxrmorrison.com
+website: http://maxrmorrison.com
 image: http://maxrmorrison.com/assets/images/self_square.jpg
 altdescription: Picture of Max Morrison
 navigation: people
