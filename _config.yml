@@ -100,7 +100,7 @@ defaults:
       
 # jekyll-scholar settings
 scholar:
-  style: assets\bibliography\ieee-with-url.csl
+  style: assets/bibliography/ieee-with-url.csl
   locale: en
 
   sort_by: year
