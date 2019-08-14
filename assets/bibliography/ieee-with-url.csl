@@ -170,10 +170,10 @@
     <choose>
       <if variable="URL">
         <group delimiter=". ">
-          <group delimiter=": ">
+          <!-- <group delimiter=": ">
             <text term="available at" text-case="capitalize-first"/>
             <text variable="URL"/>
-          </group>
+          </group> -->
           <group prefix="[" suffix="]" delimiter=": ">
             <text term="accessed" text-case="capitalize-first"/>
             <date variable="accessed">
@@ -329,9 +329,9 @@
           </else>
         </choose>
         <choose>
-          <if variable="URL">
+          <!-- <if variable="URL">
             <text value=" [Online]"/>
-          </if>
+          </if> -->
         </choose>
       </group>
       <text macro="access"/>
