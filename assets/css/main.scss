@@ -19,7 +19,7 @@ a:focus {
 
 
 hr {
-    border-top: 1px solid rgba( 230, 158, 199, 1);
+    border-top: 1px solid $secondary;
 }
 
 button {
@@ -44,8 +44,6 @@ button {
     .navbar-nav {
         .nav-link:hover, .nav-link:focus {
             background-color: $secondary;
-            border-top-left-radius: map-get($spacers, 3);
-            border-top-right-radius: map-get($spacers, 3);
             color: $dark;
             outline-color: $white;
         }
@@ -63,8 +61,6 @@ button {
 //highlight current page with tab
 .navbar-dark .navbar-nav .nav-link.active {
     background-color: $secondary;
-    border-top-left-radius: map-get($spacers, 3);
-    border-top-right-radius: map-get($spacers, 3);
     color: $dark;
     outline-color: $white;
 }
@@ -119,7 +115,7 @@ button {
 .sub-nav {
     margin-bottom: $spacer;
     padding-bottom: $spacer;
-    border-bottom: 1px solid rgba( 230, 158, 199, 1);
+    border-bottom: 1px solid $secondary;
 }
 
 
@@ -154,6 +150,11 @@ body {
 .skip-navigation {
     @include sr-only;
     @include sr-only-focusable;
+}
+
+//Style for people images
+.mr-3 {
+    border-radius:50%;
 }
 
 // for accessibility features

@@ -1,6 +1,6 @@
 ---
 name: Max Morrison
-position: PhD Student
+position: PhD Candidate
 email: maxrmorrison@gmail.com
 website: http://maxrmorrison.com
 image: /assets/images/max.jpg
