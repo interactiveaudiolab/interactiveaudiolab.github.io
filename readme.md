@@ -1,3 +1,68 @@
+# Quick Start
+The lab website is organized so that edits are made on the source branch, then
+compiled via Jekyll. The compiled files make up the master branch. Thus, the
+first step is to clone _both_ the source and master branches.
+
+```
+git clone -b source git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git interactiveaudiolab.github.io-source
+git clone git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git
+```
+
+Then, open the source branch. Where you perform edits depends on what edit you are making.
+- If you want to add a course, dataset, person, or project, find the `collections` directory.
+- If you want to add an image or paper, find the `assets` directory.
+- If you want to edit any of the other site text, find the `pages` directory.
+
+**Note**: Any edits to the readme.md file must be performed in both branches.
+
+
+Once you have finished your edits, you will need to do the following.
+
+1. Compile the website using Jekyll _into_ the master branch
+2. Push both the source and master branch to GitHub.
+
+
+### Compilation
+Compilation depends on Jekyll, which is a part of the Ruby ecosystem. Verify
+you have both Ruby and the gem package manager by running the following.
+
+```
+gem --version
+```
+
+Once you have done that, run the following to install jekyll as well as a
+package management tool called `bundler`.
+
+```
+gem install bundler jekyll
+```
+
+Then, navigate to the directory containing the source branch (it should have a file
+called `Gemfile`) and run the following.
+
+```
+bundler install
+```
+
+This installs the rest of the RubyGems (packages) we need. We can now compile the
+website to the directory containing the master branch.
+
+```
+jekyll serve --destination <master-branch-directory>
+```
+
+**Note**: Windows users may encounter a `Liquid Exception` complaining about Unicode
+Normalization. Fix this by running `chcp 65001` in your terminal.
+
+If compilation succeeded, the `_site` directory should now be populated with the
+newly-compiled site and your webpage will be locally visible at `http://localhost:4000`.
+
+
+### Deployment
+Website deployment is handled via GitHub. Simply push both branches to their respective
+remote branch and GitHub will render the `master` branch to `https://interactiveaudiolab.github.io`.
+
+
 # Dependencies
 - [Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar)
 - [Bootstrap 4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
