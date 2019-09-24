@@ -1,14 +1,15 @@
 # Quick Start
-The lab website is organized so that edits are made on the source branch, then
-compiled via Jekyll. The compiled files make up the master branch. Thus, the
-first step is to clone _both_ the source and master branches.
+The lab website is organized so that edits are made on the `source` branch, then
+compiled via Jekyll. The compiled files make up the `master` branch. Thus, the
+first step is to clone _both_ the `source` and `master` branches.
 
 ```
 git clone -b source git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git interactiveaudiolab.github.io-source
 git clone git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git
 ```
 
-Then, open the source branch. Where you perform edits depends on what edit you are making.
+Then, open the directory containing the `source` branch. Where you perform edits depends on
+what edits you are making.
 - If you want to add a course, dataset, person, or project, find the `collections` directory.
 - If you want to add an image or paper, find the `assets` directory.
 - If you want to edit any of the other site text, find the `pages` directory.
@@ -18,8 +19,8 @@ Then, open the source branch. Where you perform edits depends on what edit you a
 
 Once you have finished your edits, you will need to do the following.
 
-1. Compile the website using Jekyll _into_ the master branch
-2. Push both the source and master branch to GitHub.
+1. Compile the website using Jekyll _into_ the `master` branch
+2. Push both the `source` and `master` branch to GitHub.
 
 
 ### Compilation
@@ -30,7 +31,7 @@ you have both Ruby and the gem package manager by running the following.
 gem --version
 ```
 
-Once you have done that, run the following to install jekyll as well as a
+Once you have done that, run the following to install Jekyll as well as a
 package management tool called `bundler`.
 
 ```
