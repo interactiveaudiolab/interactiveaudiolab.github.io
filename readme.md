@@ -55,6 +55,9 @@ jekyll serve --destination <master-branch-directory>
 **Note**: Windows users may encounter a `Liquid Exception` complaining about Unicode
 Normalization. Fix this by running `chcp 65001` in your terminal.
 
+**Note**: If you receive an error, you may need to prefix the previous command with `bundle exec`
+(i.e., `bundle exec jekyll serve --destination <master-branch-directory>`).
+
 If compilation succeeded, the `_site` directory should now be populated with the
 newly-compiled site and your webpage will be locally visible at `http://localhost:4000`.
 
