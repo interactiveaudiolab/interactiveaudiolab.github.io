@@ -38,9 +38,6 @@ package management tool called `bundler`.
 gem install bundler jekyll
 ```
 
-Then, navigate to the directory containing the source branch (it should have a file
-called `Gemfile`) and run the following.
-
 **Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) you might experience 
 difficulties installing Jekyll by only running the above command.
 If you receive the following error message, you may find [this post](https://github.com/jekyll/jekyll/issues/7274#issuecomment-445499110) helpful in resolving the issue.
@@ -50,6 +47,8 @@ ERROR:  Error installing jekyll:
 ERROR: Failed to build gem native extension.
 ```
 
+Then, navigate to the directory containing the source branch (it should have a file
+called `Gemfile`) and run the following.
 
 ```
 bundler install
