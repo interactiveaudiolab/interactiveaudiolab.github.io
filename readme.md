@@ -38,6 +38,15 @@ package management tool called `bundler`.
 gem install bundler jekyll
 ```
 
+**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) you might experience 
+difficulties installing Jekyll by only running the above command.
+If you receive the following error message, you may find [this post](https://github.com/jekyll/jekyll/issues/7274#issuecomment-445499110) helpful in resolving the issue.
+
+```
+ERROR:  Error installing jekyll:
+ERROR: Failed to build gem native extension.
+```
+
 Then, navigate to the directory containing the source branch (it should have a file
 called `Gemfile`) and run the following.
 
@@ -58,12 +67,12 @@ Normalization. Fix this by running `chcp 65001` in your terminal.
 **Note**: If you receive an error, you may need to prefix the previous command with `bundle exec`
 (i.e., `bundle exec jekyll serve --destination <master-branch-directory>`).
 
-If compilation succeeded, the `_site` directory should now be populated with the
+If compilation succeeded, the `<master-branch-directory>` directory should now be populated with the
 newly-compiled site and your webpage will be locally visible at `http://localhost:4000`.
 
 
 ### Deployment
-Website deployment is handled via GitHub. Simply push both branches to their respective
+Website deployment is handled via GitHub. Simply push ALL the modified files in both branches to their respective
 remote branch and GitHub will render the `master` branch to `https://interactiveaudiolab.github.io`.
 
 
