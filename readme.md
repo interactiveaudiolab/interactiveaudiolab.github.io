@@ -45,9 +45,10 @@ called `Gemfile`) and run the following.
 difficulties installing Jekyll by only running the above command.
 If you receive the following error message, you may find [this post](https://github.com/jekyll/jekyll/issues/7274#issuecomment-445499110) helpful in resolving the issue.
 
+```
 ERROR:  Error installing jekyll:
 ERROR: Failed to build gem native extension.
-
+```
 
 
 ```
