@@ -31,7 +31,7 @@ Once you have finished your edits, you will need to do the following.
 
 ### Compilation
 Compilation depends on Jekyll, which is a part of the Ruby ecosystem. Verify
-you have both Ruby and the gem package manager by running the following.
+you have both Ruby and the gem package manager by running the following. Ruby 1.9 and newer ships with RubyGems built-in, so if the version you get is >= 1.9 you should be fine.
 
 ```
 gem --version
