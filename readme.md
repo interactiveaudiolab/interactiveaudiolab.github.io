@@ -7,12 +7,6 @@ first step is to clone _both_ the `source` and `master` branches.
 git clone -b source git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git interactiveaudiolab.github.io-source
 git clone git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git
 ```
-Alternately, if you don't have your keys set up right (you'll get an error message and will know) use the http version of this
-
-```
-git clone -b source  https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.git interactiveaudiolab.github.io-source
-git clone https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.git
-```
 
 Then, open the directory containing the `source` branch. Where you perform edits depends on
 what edits you are making.
@@ -31,7 +25,7 @@ Once you have finished your edits, you will need to do the following.
 
 ### Compilation
 Compilation depends on Jekyll, which is a part of the Ruby ecosystem. Verify
-you have both Ruby and the gem package manager by running the following. Ruby 1.9 and newer ships with RubyGems built-in, so if the version you get is >= 1.9 you should be fine.
+you have both Ruby and the gem package manager by running the following.
 
 ```
 gem --version
