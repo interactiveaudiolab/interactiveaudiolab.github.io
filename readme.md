@@ -8,6 +8,12 @@ git clone -b source git@github.com:interactiveaudiolab/interactiveaudiolab.githu
 git clone git@github.com:interactiveaudiolab/interactiveaudiolab.github.io.git
 ```
 
+If you prefer HTTPS then do it this way.
+```
+git clone -b source https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.git interactiveaudiolab.github.io-source
+git clone https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.git
+```
+
 Then, open the directory containing the `source` branch. Where you perform edits depends on
 what edits you are making.
 - If you want to add a course, dataset, person, or project, find the `collections` directory.
