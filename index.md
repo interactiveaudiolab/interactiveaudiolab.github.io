@@ -4,6 +4,8 @@
 
 layout: home
 ---
-# Welcome!
-
-We develop technologies that automatically find, label and manipulate perceptually-important structures in sound, with a focus on music as a problem domain.  We pioneer advances in audio source separation (e.g. extracting the sound of one instrument from a string quartet recording), audio database search (matching a sung melody to a Mozart piece available for purchase), new interfaces for audio production tools and more! 
+# Welcome to the Interactive Audio Lab! 
+<p></p>
+#### We develop new methods in **Machine Learning**, **Signal Processing** and **Human Computer Interaction** and apply these advances to problems in the audio domain. 
+<p></p>
+The lab is headed by [Prof. Bryan Pardo](https://users.cs.northwestern.edu/~pardo) and is based in the [Computer Science Department of Northwestern University](https://www.mccormick.northwestern.edu/computer-science/).  

@@ -3,7 +3,7 @@ name: Fatemeh Pishdadian
 position: PhD Candidate
 email: fpishdadian@u.northwestern.edu
 website: http://fatemehpishdadian.com
-image: /assets/images/fatemeh.jpg
+image: /assets/images/people/fatemeh.jpg
 altdescription: Picture of Fatemeh Pishdadian
 navigation: people
 

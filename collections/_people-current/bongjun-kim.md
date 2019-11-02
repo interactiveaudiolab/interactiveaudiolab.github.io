@@ -3,7 +3,7 @@ name: Bongjun Kim
 position: PhD Candidate
 email: prem@u.northwestern.edu
 website: https://www.bongjunkim.com
-image: /assets/images/bongjun.jpg
+image: /assets/images/people/bongjun.jpg
 altdescription: Picture of Bongjun Kim
 navigation: people
 

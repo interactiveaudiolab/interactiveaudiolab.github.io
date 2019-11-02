@@ -3,7 +3,7 @@ name: Ethan Manilow
 position: PhD Candidate
 email: ethanm@northwestern.edu
 website: http://www.ethanmanilow.com
-image: /assets/images/ethan.png
+image: /assets/images/people/ethan.png
 altdescription: Ethan Manilow in his natural habitat
 navigation: people
 

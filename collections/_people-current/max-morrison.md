@@ -3,7 +3,7 @@ name: Max Morrison
 position: PhD Candidate
 email: maxrmorrison@gmail.com
 website: http://maxrmorrison.com
-image: /assets/images/max.jpg
+image: /assets/images/people/max.jpg
 altdescription: Picture of Max Morrison
 navigation: people
 

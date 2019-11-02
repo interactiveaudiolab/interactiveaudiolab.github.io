@@ -3,7 +3,7 @@ name: Prem Seetharaman
 position: PhD Candidate
 email: prem@u.northwestern.edu
 website: http://prem.seeth.org
-image: /assets/images/prem.jpg
+image: /assets/images/people/prem.jpg
 altdescription: Picture of Prem Seetharaman
 navigation: people
 

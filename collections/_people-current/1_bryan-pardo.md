@@ -3,7 +3,7 @@ name: Bryan Pardo
 position: Professor
 email: pardo@northwestern.edu
 website: www.bryanpardo.com
-image: /assets/images/bryan.jpg
+image: /assets/images/people/bryan-150x150.jpg
 altdescription: Picture of Bryan Pardo
 navigation: people
 
