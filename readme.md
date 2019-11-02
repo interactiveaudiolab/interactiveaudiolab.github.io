@@ -14,8 +14,7 @@ git clone -b source https://github.com/interactiveaudiolab/interactiveaudiolab.g
 git clone https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.git
 ```
 
-
-Once you've cloned BOTH branches, open the directory containing the `source` branch. Where you perform edits depends on
+Then, open the directory containing the `source` branch. Where you perform edits depends on
 what edits you are making.
 - If you want to add a course, dataset, person, or project, find the `collections` directory.
 - If you want to add an image or paper, find the `assets` directory.
