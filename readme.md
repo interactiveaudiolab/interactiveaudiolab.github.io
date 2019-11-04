@@ -17,7 +17,8 @@ git clone https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.g
 Then, open the directory containing the `source` branch. Where you perform edits depends on
 what edits you are making.
 - If you want to add a course, dataset, person, or project, find the `collections` directory.
-- If you want to add an image or paper, find the `assets` directory.
+- If you want to add a paper, first find the `_data` directory and enter its bibtex into the `references.bib` file (please put it in the right place chronologically). Then you need to add the pdf of the paper in the `assets` directory.
+- If you want to add an image or the pdf of a paper, find the `assets` directory.
 - If you want to edit any of the other site text, find the `pages` directory.
 
 **Note**: Any edits to the readme.md file must be performed in both branches.
@@ -29,9 +30,8 @@ Once you have finished your edits, you will need to do the following.
 2. Push both the `source` and `master` branch to GitHub.
 
 
-### Compilation
-Compilation depends on Jekyll, which is a part of the Ruby ecosystem. Verify
-you have both Ruby and the gem package manager by running the following.
+### Making sure you're ready to compile the website
+Compilation of the website depends on Jekyll, which is a part of the Ruby ecosystem. Verify you have both Ruby and the gem package manager by running the following.
 
 ```
 gem --version
@@ -60,9 +60,11 @@ called `Gemfile`) and run the following.
 bundler install
 ```
 
-This installs the rest of the RubyGems (packages) we need. We can now compile the
-website to the directory containing the master branch.
+This installs the rest of the RubyGems (packages) we need. 
 
+### Compiling the website
+We can now compile the website to the directory containing the master branch.
+Navigate to the directory containing the source branch and execute the following command. 
 ```
 jekyll serve --destination <master-branch-directory>
 ```
@@ -78,8 +80,20 @@ newly-compiled site and your webpage will be locally visible at `http://localhos
 
 
 ### Deployment
-Website deployment is handled via GitHub. Simply push ALL the modified files in both branches to their respective
-remote branch and GitHub will render the `master` branch to `https://interactiveaudiolab.github.io`.
+Website deployment is handled via GitHub. You now need to take 3 steps to deploy: Add any new files you've created to git control. Then commit the changes to them. Then push to github. You need to do this for **both** the source and master branches. 
+
+```
+cd <your-local-branch-directory>
+
+git add .
+
+git commit -m "<your commit message goes here>"
+
+git push origin <your branch name>
+```
+Remember do this for **both** source and master. 
+
+GitHub will render the `master` branch to `https://interactiveaudiolab.github.io`.
 
 
 # Dependencies
