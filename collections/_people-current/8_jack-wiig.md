@@ -1,6 +1,6 @@
 ---
 name: Jack Wiig
-position: BS/MS Undergraduate
+position: Undergraduate
 email: jackwiig@u.northwestern.edu
 image: /assets/images/people/jack.jpg
 altdescription: Picture of Jack Wiig
