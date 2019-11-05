@@ -1,7 +1,7 @@
 ---
 name: Cerberus, simultaneous audio separation and transcription
 creators: [Ethan Manilow, Prem Seetharaman, Bryan Pardo]
-external-url: https://pseeth.github.io/public/thesis/
+external-url: https://interactiveaudiolab.github.io/demos/cerberus
 external-url-text: Audio examples
 image: /assets/images/projects/cerberus.png
 altdescription: System diagram of Cerberus
