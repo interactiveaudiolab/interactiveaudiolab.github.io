@@ -10,7 +10,7 @@ collection: projects
 #put full content below the dashed line. full markdown is supported.
 ---
 
-The Multi-resolution Common Fate Transform (MCFT) is an audio signal representation developed in the context of audio source separation.
+The [Multi-resolution Common Fate Transform (MCFT)](/assets/papers/pishdadian_pardo_mcft_journal_2018.pdf) is an audio signal representation developed in the context of audio source separation.
 
 The MCFT:
 
