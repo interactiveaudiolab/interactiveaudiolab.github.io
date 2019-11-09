@@ -1,6 +1,7 @@
 ---
 name: Alisa Liu
 position: Undergraduate
+website: http://alisawuffles.github.io
 email: alisa@u.northwestern.edu
 image: /assets/images/people/alisa.jpg
 altdescription: Picture of Alisa Liu
