@@ -3,23 +3,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>5_mcft | Interactive Audio Lab</title>
+<title>07_nussl | Interactive Audio Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="5_mcft" />
+<meta property="og:title" content="07_nussl" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The Multi-resolution Common Fate Transform (MCFT) is an audio signal representation developed in the context of audio source separation." />
-<meta property="og:description" content="The Multi-resolution Common Fate Transform (MCFT) is an audio signal representation developed in the context of audio source separation." />
-<link rel="canonical" href="http://music.cs.northwestern.edu/index.php/project/5-mcft.html" />
-<meta property="og:url" content="http://music.cs.northwestern.edu/index.php/project/5-mcft.html" />
+<meta name="description" content="The Northwestern University Source Separation Library (nussl) provides implementations of common audio source separation algorithms as well as an easy-to-use framework for prototyping and adding new algorithms." />
+<meta property="og:description" content="The Northwestern University Source Separation Library (nussl) provides implementations of common audio source separation algorithms as well as an easy-to-use framework for prototyping and adding new algorithms." />
+<link rel="canonical" href="http://localhost:4000/project/07-nussl.html" />
+<meta property="og:url" content="http://localhost:4000/project/07-nussl.html" />
 <meta property="og:site_name" content="Interactive Audio Lab" />
-<meta property="og:image" content="http://music.cs.northwestern.edu/index.php/assets/images/projects/mcft.png" />
+<meta property="og:image" content="https://via.placeholder.com/150" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-11-05T16:40:54-06:00" />
+<meta property="article:published_time" content="2019-11-09T12:29:32-06:00" />
 <script type="application/ld+json">
-{"description":"The Multi-resolution Common Fate Transform (MCFT) is an audio signal representation developed in the context of audio source separation.","@type":"BlogPosting","headline":"5_mcft","dateModified":"2019-11-05T16:40:54-06:00","datePublished":"2019-11-05T16:40:54-06:00","url":"http://music.cs.northwestern.edu/index.php/project/5-mcft.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://music.cs.northwestern.edu/index.php/project/5-mcft.html"},"image":"http://music.cs.northwestern.edu/index.php/assets/images/projects/mcft.png","@context":"https://schema.org"}</script>
+{"headline":"07_nussl","dateModified":"2019-11-09T12:29:32-06:00","datePublished":"2019-11-09T12:29:32-06:00","url":"http://localhost:4000/project/07-nussl.html","image":"https://via.placeholder.com/150","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/project/07-nussl.html"},"description":"The Northwestern University Source Separation Library (nussl) provides implementations of common audio source separation algorithms as well as an easy-to-use framework for prototyping and adding new algorithms.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css""><link type="application/atom+xml" rel="alternate" href="http://music.cs.northwestern.edu/index.php/feed.xml" title="Interactive Audio Lab" /></head>
+  <link rel="stylesheet" href="/assets/css/main.css""><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Interactive Audio Lab" /></head>
 <body>
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-nav" aria-label="primary navigation">
@@ -88,14 +88,14 @@
     <main id="content" class="content" tabindex=-1 aria-label="Content">
         <div class="row">
     <header class="col">
-        <h1 class="display-5">Multi-resolution Common Fate Transform</h1>
+        <h1 class="display-5">nussl</h1>
     </header>
 </div>
 
 <div class="row">
     
         <div class="col-lg-3">
-            <img class="img-fluid" src="/assets/images/projects/mcft.png" alt="MCFT filter">
+            <img class="img-fluid" src="https://via.placeholder.com/150" alt="NUSSL logo">
         </div>
     
 
@@ -103,17 +103,29 @@
         <h2 class="text-muted">
             
                 
-                    Fatemeh Pishdadian and Bryan Pardo
+                    Ethan Manilow,
+                
+            
+                
+                    Prem Seetharaman,
+                
+            
+                
+                    Fatemeh Pishdadian,
+                
+            
+                
+                    Bryan Pardo
                 
             
         </h2>
 
         
-            <h3><a href="https://github.com/interactiveaudiolab/MCFT">Source Code</a></h3>
+            <h3><a href="https://github.com/interactiveaudiolab/nussl">Source code</a></h3>
         
 
         
-            <h3>Funding provided by the National Science Foundation</h3>
+            <h3>This work was supported by National Science Foundation Award 1420971</h3>
         
     </div>
 </div>
@@ -122,22 +134,15 @@
 
 <div class="row">
     <div class="col">
-        <p>The <a href="/assets/papers/pishdadian_pardo_mcft_journal_2018.pdf">Multi-resolution Common Fate Transform (MCFT)</a> is an audio signal representation developed in the context of audio source separation.</p>
+        <p>The <a href="https://github.com/interactiveaudiolab/nussl">Northwestern University Source Separation Library (nussl)</a> provides implementations of common audio source separation algorithms as well as an easy-to-use framework for prototyping and adding new algorithms.</p>
 
-<p>The MCFT:</p>
+<p>Audio source separation is the process of isolating individual sonic elements from a mixture or auditory scene. Nussl is an open-source, object-oriented audio source separation library implemented in Python. nussl provides implementations for many existing source separation algorithms and a platform for creating the next generation of source separation algorithms. By nature of its design, nussl easily allows new algorithms to be benchmarked against existing algorithms on established data sets and facilitates development of new variations on algorithms.</p>
 
-<ul>
-  <li>
-    <p>Combines the invertibility of the <a href="https://hal.archives-ouvertes.fr/hal-01248012/document">Common Fate Transform (CFT)</a>, and  the multi-resolution  property of the cortical stage output of <a href="https://asa.scitation.org/doi/abs/10.1121/1.1945807">an auditory model</a>.</p>
-  </li>
-  <li>
-    <p>Explicitly represents spectro-temporal modulation patterns of audio signals and thus facilitates the separation of signals that overlap in the time-frequency domain.</p>
-  </li>
-  <li>
-    <p>Has been shown to provide higher separability than the Short-time Fourier Transform (STFT), Constant-Q Transform (CQT), and CFT.</p>
-  </li>
-</ul>
+<p>The aim of nussl is to create a low barrier to entry for using popular source separation algorithms, while also allowing the user fine tuned control of low-level parameters.</p>
 
+<h3 id="related-publications">Related publications</h3>
+
+<p><a href="/assets/papers/manilow_seetharaman_ismir18.pdf">[pdf]</a> E. Manilow, P. Seetharaman, and B. Pardo, “The Northwestern University Source Separation Library,” in Proceedings of the 19th International Society of Music Information Retrieval Conference (ISMIR 2018), 2018.</p>
 
     </div> 
 </div>
