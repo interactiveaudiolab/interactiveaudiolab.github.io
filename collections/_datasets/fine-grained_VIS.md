@@ -3,7 +3,7 @@ name: Fine-grained Vocal Imitation Set
 creators: [Bongjun Kim, Bryan Pardo]
 external-url: https://zenodo.org/record/3538534
 external-url-text: Fine-grained Vocal Imitation Set
-image: /assets/images/datasets/vocal_imitation.png
+image: /assets/images/datasets/fine_grained.png
 altdescription: vocal imitation of a sound for fine-grained search
 navigation: resources
 
