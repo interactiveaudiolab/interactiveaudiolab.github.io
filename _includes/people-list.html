@@ -9,9 +9,11 @@
 
     <ul class="list-unstyled preview-list">
         {% for item in collection %}
-            <li class="media"> 
+            <li class="media">
                 {% if item.image %}
-                <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                <div>
+                    <img class="mr-3" src="{{ item.image }}" alt="{{ item.altdescription }}">
+                </div>
                 {% endif %}
 
                 <div class="mt-0 mb-1">

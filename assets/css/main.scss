@@ -53,7 +53,7 @@ button {
             border-bottom-left-radius: none;
             border-bottom-right-radius: none;
             color: $secondary;
-        } 
+        }
 
     }
 }
@@ -85,8 +85,10 @@ button {
 }
 
 .preview-list img {
-    max-width: 8rem;
-    max-height: 8rem;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 //publications list
@@ -143,7 +145,7 @@ body {
     font-size: $font-size-lg;
     padding-bottom: map-get($spacers, 1);
     line-height: map-get($spacers, 3);
-    
+
 }
 
 // Usage as a mixin for skip navigation
