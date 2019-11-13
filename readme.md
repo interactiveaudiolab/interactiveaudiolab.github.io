@@ -44,7 +44,7 @@ package management tool called `bundler`.
 gem install bundler jekyll
 ```
 
-**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) you might experience 
+**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) you might experience
 difficulties installing Jekyll by only running the above command.
 If you receive the following error message, you may find [this post](https://github.com/jekyll/jekyll/issues/7274#issuecomment-445499110) helpful in resolving the issue.
 
@@ -60,11 +60,11 @@ called `Gemfile`) and run the following.
 bundler install
 ```
 
-This installs the rest of the RubyGems (packages) we need. 
+This installs the rest of the RubyGems (packages) we need.
 
 ### Compiling the website
 We can now compile the website to the directory containing the master branch.
-Navigate to the directory containing the source branch and execute the following command. 
+Navigate to the directory containing the source branch and execute the following command.
 ```
 jekyll serve --destination <master-branch-directory>
 ```
@@ -80,7 +80,7 @@ newly-compiled site and your webpage will be locally visible at `http://localhos
 
 
 ### Deployment
-Website deployment is handled via GitHub. You now need to take 3 steps to deploy: Add any new files you've created to git control. Then commit the changes to them. Then push to github. You need to do this for **both** the source and master branches. 
+Website deployment is handled via GitHub. You now need to take 3 steps to deploy: Add any new files you've created to git control. Then commit the changes to them. Then push to github. You need to do this for **both** the source and master branches.
 
 ```
 cd <your-local-branch-directory>
@@ -91,7 +91,7 @@ git commit -m "<your commit message goes here>"
 
 git push origin <your branch name>
 ```
-Remember do this for **both** source and master. 
+Remember do this for **both** source and master.
 
 GitHub will render the `master` branch to `https://interactiveaudiolab.github.io`.
 
