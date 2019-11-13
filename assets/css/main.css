@@ -6543,8 +6543,10 @@ button {
   padding-top: 1rem; }
 
 .preview-list img {
-  max-width: 8rem;
-  max-height: 8rem; }
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  overflow: hidden; }
 
 .bibliography, .bibliography-details, .bibtitle {
   list-style: none;
