@@ -20,7 +20,7 @@ navigation: projects
 </nav>
 
 ## Search
-Content-addressable search through collections of many audio files (thousdands) or lengthy audio files (hours) is an ongoing research area. Advances in this area require us to develop and apply cutting edge techniques in machine learning, signal processing and interface design. This work is part of a [collaboration with the University of Rochester AIR lab](http://www2.ece.rochester.edu/projects/air/projects/audiosearch) and is supported by the National Science Foundation. Representative recent projects in this area are below. For further publications in this area, see our [publications](/publications) page.   
+Content-addressable search through collections of many audio files (thousands) or lengthy audio files (hours) is an ongoing research area. In this work, we develop and apply cutting edge techniques in machine learning, signal processing and interface design. This is part of a [collaboration with the University of Rochester AIR lab](http://www2.ece.rochester.edu/projects/air/projects/audiosearch) and is supported by the National Science Foundation. Representative recent projects in this area are below. For further publications in this area, see our [publications](/publications) page.   
 
 {% include list.html collection=site.projects-search title="" anchor-tag="search" %}
 
