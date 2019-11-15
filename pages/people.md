@@ -7,10 +7,6 @@ navigation: people
 
 {%- include title.html -%}
 
-<!--
-{% assign anchors= "current,alumni,collaborators" | split: ","%}
--->
-
 {% assign anchors= "current,alumni" | split: ","%}
 
 <nav class="sub-nav">
@@ -23,7 +19,7 @@ navigation: people
     </ul>
 </nav>
 
-{% include people-list.html collection=site.people-current title="Current Members" anchor-tag="current" %}
+{% include list.html collection=site.people-current title="Current Members" anchor-tag="current" %}
 
-{% include people-list.html collection=site.people-alumni title="Alumni" anchor-tag="alumni" %}
+{% include list.html collection=site.people-alumni title="Alumni" anchor-tag="alumni" %}
 
