@@ -22,3 +22,9 @@ The MCFT:
 
 * Has been shown to provide higher separability than the Short-time Fourier Transform (STFT), Constant-Q Transform (CQT), and CFT.
 
+### Related publications
+
+[[pdf]](https://interactiveaudiolab.github.io/assets/papers/pishdadian_pardo_liutkus.pdf) Fatemeh Pishdadian, Bryan Pardo, and Antoine Liutkus, “A multi-resolution approach to common fate-based audio separation,” in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2017. 
+
+[[pdf]](https://interactiveaudiolab.github.io/assets/papers/pishdadian_pardo_mcft_journal_2018.pdf) Fatemeh Pishdadian and Bryan Pardo, “Multi-Resolution Common Fate Transform,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2018. 
+
