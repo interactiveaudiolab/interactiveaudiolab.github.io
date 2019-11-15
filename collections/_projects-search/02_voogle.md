@@ -1,5 +1,5 @@
 ---
-name: Voogle - Content-based audio search
+name: Voogle
 creators: [Max Morrison, Fatemeh Pishdadian, Bongjun Kim, Prem Seetharaman, Madhav Ghei, Bryan Pardo]
 external-url: https://github.com/interactiveaudiolab/voogle
 external-url-text: Source Code
