@@ -21,7 +21,7 @@ Advancing accessible content production tools requires rethinking the way inform
 
 ### Related publications
 
-[[pdf]](http://localhost:4000/assets/papers/haptEQ_karp.pdf)A. Karp and B. Pardo, “HaptEQ: A Collaborative Tool For Visually Impaired Audio Producers,” in Proceedings of the 12th International Audio Mostly Conference on Augmented and Participatory Sound and Music Experiences, 2017, p. 39. 
+[[pdf]](/assets/papers/haptEQ_karp.pdf)A. Karp and B. Pardo, “HaptEQ: A Collaborative Tool For Visually Impaired Audio Producers,” in Proceedings of the 12th International Audio Mostly Conference on Augmented and Participatory Sound and Music Experiences, 2017, p. 39. 
 
-[[pdf]](http://localhost:4000/assets/papers brewer_karp_cartwright_pardo_assets2016.pdf)R. N. Brewer, M. Cartwright, A. Karp, B. Pardo, and A. M. Piper, “An approach to audio-only editing for visually impaired seniors,” in Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility, 2016, pp. 307–308. 
+[[pdf]](/assets/papers brewer_karp_cartwright_pardo_assets2016.pdf)R. N. Brewer, M. Cartwright, A. Karp, B. Pardo, and A. M. Piper, “An approach to audio-only editing for visually impaired seniors,” in Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility, 2016, pp. 307–308. 
 

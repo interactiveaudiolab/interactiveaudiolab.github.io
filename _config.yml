@@ -51,6 +51,8 @@ collections:
     output: true
   projects-interfaces:
     output: true
+  projects-featured:
+    output: true
 #tells jekyll the directory where all collections are located
 collections_dir: collections
 
@@ -105,6 +107,12 @@ defaults:
   - scope:
       path: ""
       type: "projects-interfaces"
+    values:
+      layout: "detail"
+      permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "projects-featured"
     values:
       layout: "detail"
       permalink: /project/:name.html
