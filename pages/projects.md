@@ -7,7 +7,7 @@ navigation: projects
 
 {%- include title.html -%}
 
-{% assign anchors= "search, separation, interfaces" | split: ","%}
+{% assign anchors= "interfaces,search,separation" | split: ","%}
 
 <nav class="sub-nav">
     <ul class="nav">
@@ -18,6 +18,13 @@ navigation: projects
     {% endfor %}
     </ul>
 </nav>
+
+## Interfaces 
+Improving audio production tools meaningful enhances the creative output of musicians, podcasters,producers and videographers. We focus on bridging the gap between the intentions of creators and the interfaces of audio recording and manipulation tools they use. Our work in this area has a strong human-centered machine learning component.  Representative projects in the area are below. For further publications in this area, see our [publications](/publications) page.   
+
+{% include list.html collection=site.projects-interfaces title="" anchor-tag="interfaces" %}
+
+
 
 ## Search
 Content-addressable search through collections of many audio files (thousands) or lengthy audio files (hours) is an ongoing research area. In this work, we develop and apply cutting edge techniques in machine learning, signal processing and interface design. This is part of a [collaboration with the University of Rochester AIR lab](http://www2.ece.rochester.edu/projects/air/projects/audiosearch) and is supported by the National Science Foundation. Representative recent projects in this area are below. For further publications in this area, see our [publications](/publications) page.   
@@ -33,7 +40,3 @@ Audio source separation is the process of extracting a single sound (e.g. one vi
 
 <br>
 
-## Interfaces 
-Improving audio production tools meaningful enhances the creative output of musicians, podcasters,producers and videographers. We focus on bridging the gap between the intentions of creators and the interfaces of audio recording and manipulation tools they use. Our work in this area has a strong human-centered machine learning component.  Representative projects in the area are below. For further publications in this area, see our [publications](/publications) page.   
-
-{% include list.html collection=site.projects-interfaces title="" anchor-tag="interfaces" %}
