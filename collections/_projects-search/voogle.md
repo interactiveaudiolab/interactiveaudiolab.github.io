@@ -16,6 +16,10 @@ Typical search engines for collections of audio either rely solely on matching f
 
 While Voogle is domain-agnostic, incorporating domain-specific information can further improve performance. As an example, our paper [OtoMechanic: Auditory Automobile Diagnostics via Query-by-Example](/assets/papers/mm_bp_dcase_2019_cr.pdf) adapts Voogle to the domain of consumer vehicle diagnostics.
 
+### Demo video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m8Aa35x_P5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ### Related Publications
 
 [[pdf]](/assets/papers/mm_bp_dcase_2019_cr.pdf) M. Morrison and B. Pardo, “OtoMechanic: Auditory Automobile Diagnostics via Query-by-Example,” in Proceedings of the 2019 Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE2019), 2019.
