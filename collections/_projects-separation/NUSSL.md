@@ -3,8 +3,8 @@ name: nussl
 creators: [Ethan Manilow, Prem Seetharaman, Fatemeh Pishdadian, Bryan Pardo]
 external-url: https://github.com/interactiveaudiolab/nussl
 external-url-text: Source code
-image: https://via.placeholder.com/150
-altdescription: NUSSL logo
+image: /assets/images/projects/Love_in_the_Goat_World-150x150-wikimedia-cc-by-sa-3p0.jpg
+altdescription: Picture of two goats nussling
 funding: This work was supported by National Science Foundation Award 1420971
 collection: projects
 #put full content below the dashed line. full markdown is supported.
