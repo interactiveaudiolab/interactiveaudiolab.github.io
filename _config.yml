@@ -45,7 +45,13 @@ collections:
     output: true
   people-alumni:
     output: true
-  projects:
+  projects-search:
+    output: true
+  projects-separation:
+    output: true
+  projects-interfaces:
+    output: true
+  projects-featured:
     output: true
 #tells jekyll the directory where all collections are located
 collections_dir: collections
@@ -88,7 +94,25 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "projects"
+      type: "projects-search"
+    values:
+      layout: "detail"
+      permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "projects-separation"
+    values:
+      layout: "detail"
+      permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "projects-interfaces"
+    values:
+      layout: "detail"
+      permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "projects-featured"
     values:
       layout: "detail"
       permalink: /project/:name.html
@@ -97,7 +121,7 @@ defaults:
     values:
       layout: "default"
 
-      
+
 # jekyll-scholar settings
 scholar:
   style: assets/bibliography/ieee-with-url.csl

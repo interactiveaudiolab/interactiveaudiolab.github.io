@@ -1,11 +1,11 @@
 ---
 name: Eyes Free Audio Production
-creators: [Bryan Pardo]
+creators: [Bryan Pardo, Jack Wiig, Abir Saha, Robin Brewer, Andrew Karp, Anne Marie Piper]
 external-url: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1901456&HistoricalAwards=false
 external-url-text: Next Generation Content Production Tools for People with Vision Impairments
 image: /assets/images/projects/hands-over-eyes-150by150-shutterstock_354081641.png
 altdescription: Man with hands over his eyes #alt description of image for screen readers
-funding: NSF
+funding: This work is supported by NSF Award 1901456
 collection: projects
 #put full content below the dashed line. full markdown is supported.
 ---
@@ -18,3 +18,10 @@ Advancing accessible content production tools requires rethinking the way inform
 * accessible interaction techniques that advance the ability of blind users to understand, navigate, and edit their works
 
 * collaboration support features that will support collaboration in the context of mixed-ability teams that have different levels of vision.
+
+### Related publications
+
+[[pdf]](/assets/papers/haptEQ_karp.pdf)A. Karp and B. Pardo, “HaptEQ: A Collaborative Tool For Visually Impaired Audio Producers,” in Proceedings of the 12th International Audio Mostly Conference on Augmented and Participatory Sound and Music Experiences, 2017, p. 39. 
+
+[[pdf]](/assets/papers brewer_karp_cartwright_pardo_assets2016.pdf)R. N. Brewer, M. Cartwright, A. Karp, B. Pardo, and A. M. Piper, “An approach to audio-only editing for visually impaired seniors,” in Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility, 2016, pp. 307–308. 
+
