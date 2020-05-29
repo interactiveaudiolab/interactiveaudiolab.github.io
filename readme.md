@@ -31,15 +31,14 @@ Once you have finished your edits, you will need to do the following.
 
 
 ### Making sure you're ready to compile the website
-Compilation of the website depends on Jekyll, which is a part of the Ruby ecosystem. Verify you have both Ruby  and the gem package manager by running the following.
+Compilation of the website depends on Jekyll, which is a part of the Ruby ecosystem. Verify you have both Ruby and the gem package manager by running the following.
 
 ```
 gem --version
 ```
 
-**Note** I (Bryan) had success with ruby 2.4.0. Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version...
-
-Run the following to install `jekyll` as well as a package management tool called `bundler`.
+Once you have done that, run the following to install Jekyll as well as a
+package management tool called `bundler`.
 
 ```
 gem install bundler jekyll
