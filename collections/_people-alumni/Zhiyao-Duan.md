@@ -9,5 +9,5 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Zhiyao is an assistant professor in the Department of Electrical and Computer Engineering at the University of Rochester since July 2013. He also holds a secondary appointment in the Department of Computer Science and am affiliated faculty of the Goergen Institute for Data Science.
+Zhiyao is an associate professor in the Department of Electrical and Computer Engineering at the University of Rochester since July 2013. He also holds a secondary appointment in the Department of Computer Science and am affiliated faculty of the Goergen Institute for Data Science.
 
