@@ -37,7 +37,7 @@ Compilation of the website depends on Jekyll, which is a part of the Ruby ecosys
 gem --version
 ```
 
-Once you have done that, run the following to install Jekyll as well as a
+**Note** You will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version, run the following to install Jekyll as well as a
 package management tool called `bundler`.
 
 ```
