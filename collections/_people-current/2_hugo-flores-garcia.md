@@ -2,7 +2,7 @@
 name: Hugo Flores Garcia
 position: Doctoral Student
 email: HugoFloresGarcia2025@u.northwestern.edu
-website: hugofloresgarcia.github.io
+website: https://hugofloresgarcia.github.io
 image: /assets/images/people/hugo.png
 altdescription: Picture of Hugo Flores
 navigation: people
