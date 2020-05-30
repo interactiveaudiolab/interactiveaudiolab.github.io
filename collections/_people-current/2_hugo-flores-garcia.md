@@ -9,6 +9,6 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Hugo Flores Garcia is a doctoral student at Northwestern University and a member of the Interactive Audio Lab. His research interests include audio source separation, designing accessible musical interfaces, and algorithmic composition. Hugo enjoys exploring the ways computers can be used to enhance creative expression, as well as playing jazz guitar. 
+Hugo Flores Garcia is a doctoral student at Northwestern University and a member of the Interactive Audio Lab. His research interests include audio source separation, designing accessible musical interfaces, and algorithmic composition. Hugo enjoys exploring the ways computers can be used to enhance creative expression, as well as playing jazz guitar. [[website]](https://hugofloresgarcia.github.io) 
 
 
