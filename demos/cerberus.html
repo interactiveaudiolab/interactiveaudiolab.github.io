@@ -13087,7 +13087,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Abstract">Abstract<a class="anchor-link" href="#Abstract">&#182;</a></h2><p>We present a single deep learning architecture that can both separate an audio recording of a musical mixture into constituent single-instrument recordings and transcribe these instruments into a human-readable format at the same time, learning a shared musical representation for both tasks. This novel architecture, which we call Cerberus, builds on the Chimera network for source separation by adding a third "head" for transcription. By training each head with different losses, we are able to jointly learn how to separate and transcribe up to 5 instruments in our experiments with a single network. We show that the two tasks are highly complementary with one another and when learned jointly, lead to Cerberus networks that are better at both separation and transcription and generalize better to unseen mixtures.</p>
-<h4 id="See-Arxiv-Submission"><a href="https://arxiv.org/abs/1910.12621">See Arxiv Submission</a><a class="anchor-link" href="#See-Arxiv-Submission">&#182;</a></h4><h4 id="Submitted-to-ICASSP-2020">Submitted to ICASSP 2020<a class="anchor-link" href="#Submitted-to-ICASSP-2020">&#182;</a></h4><p><strong><em>(This page best viewed on Firefox or Safari)</em></strong></p>
+<h4 id="Presented-at-ICASSP-2020">Presented at ICASSP 2020<a class="anchor-link" href="#Presented-at-ICASSP-2020">&#182;</a></h4><h4 id="Watch-ICASSP-Video"><a href="https://2020.ieeeicassp-virtual.org/presentation/poster/simultaneous-separation-and-transcription-mixtures-multiple-polyphonic-and">Watch ICASSP Video</a><a class="anchor-link" href="#Watch-ICASSP-Video">&#182;</a></h4><h4 id="Read-the-paper-here-or-here.">Read the paper <a href="https://ieeexplore.ieee.org/document/9054340">here</a> or <a href="https://arxiv.org/pdf/1910.12621.pdf">here.</a><a class="anchor-link" href="#Read-the-paper-here-or-here.">&#182;</a></h4><p><strong><em>(This page best viewed on Firefox or Safari)</em></strong></p>
 <h2 id="Architecture-Overview">Architecture Overview<a class="anchor-link" href="#Architecture-Overview">&#182;</a></h2><p><img src="images/system_diagram-crop.png" alt="Cerberus Architecture" width="500"/></p>
 
 </div>
@@ -13096,38 +13096,322 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Cerberus-Vs.-Other-Architectures">Cerberus Vs. Other Architectures<a class="anchor-link" href="#Cerberus-Vs.-Other-Architectures">&#182;</a></h2><h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><p>The Cerberus loss is given by:</p>
-<p>$\mathcal{L}_{\text{Cerberus}} = \alpha \mathcal{L}_{\text{DC}} + \beta \mathcal{L}_{\text{MI}} + \gamma \mathcal{L}_{\text{TR}}$</p>
-<p>Where $\mathcal{L}_{\text{DC}}$ is the Deep Clustering loss, $\mathcal{L}_{\text{MI}}$ is the Mask Inference loss, and $\mathcal{L}_{\text{TR}}$ is the Transcription loss. In this set of experiments, we examine different weights for $\alpha$, $\beta$, and $\gamma$ to make different networks. By setting $\alpha$, $\beta$, or $\gamma$ $:=$ $0$, we effectively change the architecture of the network. Full results are shown in the table below.</p>
-<table>
-<thead><tr>
-<th></th>
-<th style="text-align:right"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Training Set</td>
-<td style="text-align:right">Slakh2100 train partition</td>
-</tr>
-<tr>
-<td>Validation Set</td>
-<td style="text-align:right">Slakh2100 validation partition</td>
-</tr>
-<tr>
-<td>Test Set</td>
-<td style="text-align:right">Slakh2100 test partition</td>
-</tr>
-</tbody>
-</table>
+<h2 id="Example-1:-Guitar/Piano-Cerberus-on-YouTube-Guitar-&amp;-Piano-Duet">Example 1: Guitar/Piano Cerberus on YouTube Guitar &amp; Piano Duet<a class="anchor-link" href="#Example-1:-Guitar/Piano-Cerberus-on-YouTube-Guitar-&amp;-Piano-Duet">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
 
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/87cnbLi0xBw?rel=0&amp;amp;showinfo=0;start=135&amp;amp;end=165&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/87cnbLi0xBw?rel=0&amp;showinfo=0;start=135&amp;end=165"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Cerberus Piano/Guitar Model tested on above video from 2:15-2:45. (Audio downsampled to 16k below)</p>
+<table>
+  <tr>
+    <th rowspan="2">Mixture</th>
+    <th colspan="2">Separation Output</th>
+    <th colspan="3">Transcription Output <br> (re-synthesized)</th>
+  </tr>
+  <tr>
+    <td>Guitar</td>
+    <td>Piano</td>
+    <td>Guitar</td>
+    <td>Piano</td>
+    <td>Remixed</td>
+  </tr>
+  <tr>
+    <td><audio controls src="audio/youtube-dl/duet/mix.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/duet/guitar_est.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/duet/piano_est.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/duet/guitar_tr.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/duet/piano_tr.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/duet/remix.wav"></audio></td>
+  </tr>
+</table>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Audio-Examples">Audio Examples<a class="anchor-link" href="#Audio-Examples">&#182;</a></h3><h4 id="Cerberus-Output">Cerberus Output<a class="anchor-link" href="#Cerberus-Output">&#182;</a></h4><table>
+<h2 id="Example-2:-Guitar/Piano-Cerberus-on-Jazz-Piano-&amp;-Guitar-Duet">Example 2: Guitar/Piano Cerberus on Jazz Piano &amp; Guitar Duet<a class="anchor-link" href="#Example-2:-Guitar/Piano-Cerberus-on-Jazz-Piano-&amp;-Guitar-Duet">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/NfkpObyxIGQ?rel=0&amp;amp;showinfo=0;start=33&amp;amp;end=60&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NfkpObyxIGQ?rel=0&amp;showinfo=0;start=33&amp;end=60"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fred Herch (piano) &amp; Bill Frisell (guitar) playing the song "Wave" from their album Songs We Know. (Audio downsampled to 16k below)</p>
+<table>
+  <tr>
+    <th rowspan="2">Mixture</th>
+    <th colspan="2">Separation Output</th>
+    <th colspan="3">Transcription Output <br> (re-synthesized)</th>
+  </tr>
+  <tr>
+    <td>Guitar</td>
+    <td>Piano</td>
+    <td>Guitar</td>
+    <td>Piano</td>
+    <td>Remixed</td>
+  </tr>
+  <tr>
+    <td><audio controls src="audio/youtube-dl/hersh_frisell/mix.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/hersh_frisell/guitar_est.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/hersh_frisell/piano_est.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/hersh_frisell/guitar_tr.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/hersh_frisell/piano_tr.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/hersh_frisell/remix.wav"></audio></td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example-3:-Guitar/Piano-Cerberus-on-YouTube-Violin-&amp;-Piano-Duet">Example 3: Guitar/Piano Cerberus on YouTube Violin &amp; Piano Duet<a class="anchor-link" href="#Example-3:-Guitar/Piano-Cerberus-on-YouTube-Violin-&amp;-Piano-Duet">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/RBx-Ue28KUE?rel=0&amp;amp;showinfo=0;start=45&amp;amp;end=60&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/RBx-Ue28KUE?rel=0&amp;showinfo=0;start=45&amp;end=60"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is an example of a Cerberus model trained on <strong>Guitar and Piano</strong> transcribing a duet with <strong>Violin and Piano</strong>!
+Cerberus Piano/<strong>Guitar</strong> Model tested on above video from 0:45-1:00. (Audio downsampled to 16k below)</p>
+<table>
+  <tr>
+    <th rowspan="2">Mixture</th>
+    <th colspan="2">Separation Output</th>
+    <th colspan="3">Transcription Output <br> (re-synthesized)</th>
+  </tr>
+  <tr>
+    <td>Violin</td>
+    <td>Piano</td>
+    <td>Violin</td>
+    <td>Piano</td>
+    <td>Remixed</td>
+  </tr>
+  <tr>
+    <td><audio controls src="audio/youtube-dl/canon/mix.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/canon/guitar_est.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/canon/piano_est.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/canon/guitar_tr.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/canon/piano_tr.wav"></audio></td>
+    <td><audio controls src="audio/youtube-dl/canon/remix.wav"></audio></td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example-4:-Guitar/Piano/Bass/Drums-Cerberus-on-a-four-piece-band">Example 4: Guitar/Piano/Bass/Drums Cerberus on a four piece band<a class="anchor-link" href="#Example-4:-Guitar/Piano/Bass/Drums-Cerberus-on-a-four-piece-band">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/B-bvtV29Pws?rel=0&amp;amp;showinfo=0;start=133&amp;amp;end=60&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/B-bvtV29Pws?rel=0&amp;showinfo=0;start=133&amp;end=60"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From a karaoke version of The Beatles' "Oh! Darling". (Audio downsampled to 16k below)</p>
+<table>
+  <tr>
+    <th rowspan="2">Mixture</th>
+    <th colspan="4">Separation Output</th>
+    <th colspan="5">Transcription Output (re-synthesized)</th>
+  </tr>
+  <tr>
+    <td>Guitar</td>
+    <td>Piano</td>
+    <td>Bass</td>
+    <td>Drums</td>
+    <td>Guitar</td>
+    <td>Piano</td>
+    <td>Bass</td>
+    <td>Drums</td>
+    <td>Remixed</td>
+  </tr>
+  <tr>
+      <td><audio controls src="audio/youtube-dl/oh_darling/mix.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/guitar_est.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/piano_est.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/bass_est.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/drums_est.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/guitar_tr.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/piano_tr.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/bass_tr.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/drums_tr.wav"></audio></td>
+      <td><audio controls src="audio/youtube-dl/oh_darling/remix.wav"></audio></td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Misc-Examples:-Cerberus-on-recordings-from-Slakh2100">Misc Examples: Cerberus on recordings from Slakh2100<a class="anchor-link" href="#Misc-Examples:-Cerberus-on-recordings-from-Slakh2100">&#182;</a></h2><h4 id="Piano-&amp;-Guitar-mixes">Piano &amp; Guitar mixes<a class="anchor-link" href="#Piano-&amp;-Guitar-mixes">&#182;</a></h4><table>
   <tr>
     <th rowspan="2">Mixture</th>
     <th colspan="2">Separation Output</th>
@@ -13171,194 +13455,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Evaluation-Measures">Evaluation Measures<a class="anchor-link" href="#Evaluation-Measures">&#182;</a></h4><div class="tg-wrap"><table id="tg-HqcnY">
-  <tr>
-    <th rowspan="2">Model Name</th>
-    <th colspan="3">Loss Weights</th>
-    <th rowspan="2">SDR</th>
-    <th rowspan="2">SIR</th>
-    <th rowspan="2">SAR</th>
-    <th colspan="3">Frame Level</th>
-    <th colspan="3">Onsets</th>
-    <th colspan="3">Note on/off</th>
-  </tr>
-  <tr>
-    <td>DC</td>
-    <td>MI</td>
-    <td>TR</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-  </tr>
-  <tr>
-    <td>Deep Clustering</td>
-    <td>1.0</td>
-    <td></td>
-    <td></td>
-    <td>8.5</td>
-    <td>16.5</td>
-    <td>9.8</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Mask Inference</td>
-    <td></td>
-    <td>1.0</td>
-    <td></td>
-    <td><b>10.0</b></td>
-    <td><b>16.9</b></td>
-    <td><b>11.9</b></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Transcription Only</td>
-    <td></td>
-    <td></td>
-    <td>1.0</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>0.90</td>
-    <td>0.83</td>
-    <td>0.85</td>
-    <td>0.77</td>
-    <td>0.70</td>
-    <td>0.71</td>
-    <td>0.48</td>
-    <td>0.43</td>
-    <td>0.44</td>
-  </tr>
-  <tr>
-    <td>Chimera</td>
-    <td>0.5</td>
-    <td>0.5</td>
-    <td></td>
-    <td>9.8</td>
-    <td>16.5</td>
-    <td>11.6</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>DC + TR</td>
-    <td>0.2</td>
-    <td></td>
-    <td>0.8</td>
-    <td>9.3</td>
-    <td>18.1</td>
-    <td>10.4</td>
-    <td>0.91</td>
-    <td>0.81</td>
-    <td>0.84</td>
-    <td>0.79</td>
-    <td>0.68</td>
-    <td>0.71</td>
-    <td>0.48</td>
-    <td>0.41</td>
-    <td>0.43</td>
-  </tr>
-  <tr>
-    <td>MI + TR</td>
-    <td></td>
-    <td>0.2</td>
-    <td>0.8</td>
-    <td>9.8</td>
-    <td>16.7</td>
-    <td>11.6</td>
-    <td><b>0.91</b></td>
-    <td><b>0.84</b></td>
-    <td><b>0.86</b></td>
-    <td><b>0.81</b></td>
-    <td><b>0.71</b></td>
-    <td><b>0.74</b></td>
-    <td><b>0.51</b></td>
-    <td><b>0.46</b></td>
-    <td><b>0.47</b></td>
-  </tr>
-  <tr>
-    <td>Cerberus</td>
-    <td>0.1</td>
-    <td>0.1</td>
-    <td>0.8</td>
-    <td><b>10.0</b></td>
-    <td><b>16.9</b></td>
-    <td><b>11.8</b></td>
-    <td><b>0.91</b></td>
-    <td><b>0.83</b></td>
-    <td><b>0.85</b></td>
-    <td><b>0.81</b></td>
-    <td><b>0.71</b></td>
-    <td><b>0.73</b></td>
-    <td><b>0.51</b></td>
-    <td><b>0.45</b></td>
-    <td><b>0.47</b></td>
-  </tr>
-</table></div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Three,-Four,-and-Five-Instrument-Mixtures">Three, Four, and Five Instrument Mixtures<a class="anchor-link" href="#Three,-Four,-and-Five-Instrument-Mixtures">&#182;</a></h2><h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><p>In this set of experiments, we train a Cerberus network to separate and transcribe mixtures with 3, 4, and 5 instrument classes. Each network has its own training, validation, and testing set that contain mixtures of only the noted instruments.</p>
-<table>
-<thead><tr>
-<th></th>
-<th style="text-align:right"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Training Set</td>
-<td style="text-align:right">Slakh2100 train partition</td>
-</tr>
-<tr>
-<td>Validation Set</td>
-<td style="text-align:right">Slakh2100 validation partition</td>
-</tr>
-<tr>
-<td>Test Set</td>
-<td style="text-align:right">Slakh2100 test partition</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Audio-Examples">Audio Examples<a class="anchor-link" href="#Audio-Examples">&#182;</a></h3><h4 id="Piano,-Guitar,-Bass">Piano, Guitar, Bass<a class="anchor-link" href="#Piano,-Guitar,-Bass">&#182;</a></h4><table>
+<h4 id="Piano,-Guitar,-Bass">Piano, Guitar, Bass<a class="anchor-link" href="#Piano,-Guitar,-Bass">&#182;</a></h4><table>
   <tr>
     <th rowspan="2">Mixture</th>
     <th colspan="3">Separation Output</th>
@@ -13524,404 +13621,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Evaluation-Measures">Evaluation Measures<a class="anchor-link" href="#Evaluation-Measures">&#182;</a></h3><h4 id="Piano,-Guitar,-Bass">Piano, Guitar, Bass<a class="anchor-link" href="#Piano,-Guitar,-Bass">&#182;</a></h4><table>
-  <tr>
-    <th rowspan="2">Instrument</th>
-    <th rowspan="2">SDR</th>
-    <th rowspan="2">SIR</th>
-    <th rowspan="2">SAR</th>
-    <th colspan="3">Frame Level<br></th>
-    <th colspan="3">Onsets</th>
-    <th colspan="3">Note on/off</th>
-  </tr>
-  <tr>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-  </tr>
-  <tr>
-    <td>Piano</td>
-    <td>7.6</td>
-    <td>13.5</td>
-    <td>9.7</td>
-    <td>0.91</td>
-    <td>0.83</td>
-    <td>0.85</td>
-    <td>0.77</td>
-    <td>0.73</td>
-    <td>0.73</td>
-    <td>0.44</td>
-    <td>0.42</td>
-    <td>0.42</td>
-  </tr>
-  <tr>
-    <td>Guitar</td>
-    <td>6.9</td>
-    <td>12.5</td>
-    <td>9.8</td>
-    <td>0.91</td>
-    <td>0.78</td>
-    <td>0.82</td>
-    <td>0.75</td>
-    <td>0.59</td>
-    <td>0.63</td>
-    <td>0.46</td>
-    <td>0.35</td>
-    <td>0.38</td>
-  </tr>
-  <tr>
-    <td>Bass</td>
-    <td>10.1</td>
-    <td>16.9</td>
-    <td>11.9</td>
-    <td>0.96</td>
-    <td>0.93</td>
-    <td>0.94</td>
-    <td>0.94</td>
-    <td>0.89</td>
-    <td>0.91</td>
-    <td>0.85</td>
-    <td>0.80</td>
-    <td>0.82</td>
-  </tr>
-</table><h4 id="Piano,-Guitar,-Bass,-Drums">Piano, Guitar, Bass, Drums<a class="anchor-link" href="#Piano,-Guitar,-Bass,-Drums">&#182;</a></h4><table>
-  <tr>
-    <th rowspan="2">Instrument</th>
-    <th rowspan="2">SDR</th>
-    <th rowspan="2">SIR</th>
-    <th rowspan="2">SAR</th>
-    <th colspan="3">Frame Level<br></th>
-    <th colspan="3">Onsets</th>
-    <th colspan="3">Note on/off</th>
-  </tr>
-  <tr>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-  </tr>
-  <tr>
-    <td>Piano</td>
-    <td>6.1</td>
-    <td>11.5</td>
-    <td>8.3</td>
-    <td>0.89</td>
-    <td>0.81</td>
-    <td>0.83</td>
-    <td>0.73</td>
-    <td>0.70</td>
-    <td>0.68</td>
-    <td>0.38</td>
-    <td>0.36</td>
-    <td>0.36</td>
-  </tr>
-  <tr>
-    <td>Guitar</td>
-    <td>5.8</td>
-    <td>10.8</td>
-    <td>8.7</td>
-    <td>0.89</td>
-    <td>0.76</td>
-    <td>0.79</td>
-    <td>0.72</td>
-    <td>0.55</td>
-    <td>0.58</td>
-    <td>0.42</td>
-    <td>0.32</td>
-    <td>0.34</td>
-  </tr>
-  <tr>
-    <td>Bass</td>
-    <td>7.7</td>
-    <td>13.0</td>
-    <td>10.0</td>
-    <td>0.96</td>
-    <td>0.92</td>
-    <td>0.94</td>
-    <td>0.92</td>
-    <td>0.88</td>
-    <td>0.89</td>
-    <td>0.82</td>
-    <td>0.78</td>
-    <td>0.79</td>
-  </tr>
-  <tr>
-    <td>Drums</td>
-    <td>11.3</td>
-    <td>19.2</td>
-    <td>12.2</td>
-    <td>0.64</td>
-    <td>0.71</td>
-    <td>0.63</td>
-    <td>0.61</td>
-    <td>0.76</td>
-    <td>0.63</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table><h4 id="Piano,-Guitar,-Bass,-Drums,-Strings">Piano, Guitar, Bass, Drums, Strings<a class="anchor-link" href="#Piano,-Guitar,-Bass,-Drums,-Strings">&#182;</a></h4><table>
-  <tr>
-    <th rowspan="2">Instrument</th>
-    <th rowspan="2">SDR</th>
-    <th rowspan="2">SIR</th>
-    <th rowspan="2">SAR</th>
-    <th colspan="3">Frame Level<br></th>
-    <th colspan="3">Onsets</th>
-    <th colspan="3">Note on/off</th>
-  </tr>
-  <tr>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-    <td>Precision</td>
-    <td>Recall</td>
-    <td>F1</td>
-  </tr>
-  <tr>
-    <td>Piano</td>
-    <td>3.4</td>
-    <td>6.7</td>
-    <td>7.3</td>
-    <td>0.86</td>
-    <td>0.75</td>
-    <td>0.78</td>
-    <td>0.69</td>
-    <td>0.62</td>
-    <td>0.61</td>
-    <td>0.31</td>
-    <td>0.28</td>
-    <td>0.28</td>
-  </tr>
-  <tr>
-    <td>Guitar</td>
-    <td>3.1</td>
-    <td>6.5</td>
-    <td>7.0</td>
-    <td>0.84</td>
-    <td>0.70</td>
-    <td>0.73</td>
-    <td>0.64</td>
-    <td>0.45</td>
-    <td>0.49</td>
-    <td>0.29</td>
-    <td>0.20</td>
-    <td>0.22</td>
-  </tr>
-  <tr>
-    <td>Bass</td>
-    <td>6.4</td>
-    <td>11.4</td>
-    <td>8.6</td>
-    <td>0.95</td>
-    <td>0.91</td>
-    <td>0.93</td>
-    <td>0.91</td>
-    <td>0.84</td>
-    <td>0.87</td>
-    <td>0.77</td>
-    <td>0.72</td>
-    <td>0.74</td>
-  </tr>
-  <tr>
-    <td>Drums</td>
-    <td>10.6</td>
-    <td>18.7</td>
-    <td>11.5</td>
-    <td>0.63</td>
-    <td>0.71</td>
-    <td>0.63</td>
-    <td>0.62</td>
-    <td>0.75</td>
-    <td>0.64</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Strings</td>
-    <td>4.1</td>
-    <td>8.6</td>
-    <td>8.5</td>
-    <td>0.91</td>
-    <td>0.83</td>
-    <td>0.85</td>
-    <td>0.62</td>
-    <td>0.53</td>
-    <td>0.53</td>
-    <td>0.39</td>
-    <td>0.35</td>
-    <td>0.35</td>
-  </tr>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Cerberus-on-Real-Recordings">Cerberus on Real Recordings<a class="anchor-link" href="#Cerberus-on-Real-Recordings">&#182;</a></h2><p>In this section we test Cerberus models (trained on synthesized data) on real recordings found on YouTube.</p>
+<p>(Formatting for web below)</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
-
-<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/87cnbLi0xBw?rel=0&amp;amp;showinfo=0;start=125&amp;amp;end=155&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/87cnbLi0xBw?rel=0&amp;showinfo=0;start=125&amp;end=155"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-        
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cerberus Piano/Guitar Model tested on above video from 2:05-2:35. (Audio downsampled to 16k below)</p>
-<table>
-  <tr>
-    <th rowspan="2">Mixture</th>
-    <th colspan="2">Separation Output</th>
-    <th colspan="3">Transcription Output <br> (re-synthesized)</th>
-  </tr>
-  <tr>
-    <td>Piano</td>
-    <td>Guitar</td>
-    <td>Piano</td>
-    <td>Guitar</td>
-      <td>Remixed</td>
-  </tr>
-  <tr>
-    <td><audio controls src="audio/youtube-dl/duet/mix.wav"></audio></td>
-    <td><audio controls src="audio/youtube-dl/duet/piano_est.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/duet/guitar_est.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/duet/piano_tr.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/duet/guitar_tr.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/duet/remix.mp3"></audio></td>
-  </tr>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/RBx-Ue28KUE?rel=0&amp;amp;showinfo=0;start=45&amp;amp;end=60&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/RBx-Ue28KUE?rel=0&amp;showinfo=0;start=45&amp;end=60"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-        
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cerberus Piano/<strong>Guitar</strong> Model tested on above video from 0:45-1:00. (Audio downsampled to 16k below)</p>
-<table>
-  <tr>
-    <th rowspan="2">Mixture</th>
-    <th colspan="2">Separation Output</th>
-    <th colspan="3">Transcription Output <br> (re-synthesized)</th>
-  </tr>
-  <tr>
-    <td>Piano</td>
-    <td>"Guitar"</td>
-    <td>Piano</td>
-    <td>"Guitar"</td>
-      <td>Remixed</td>
-  </tr>
-  <tr>
-    <td><audio controls src="audio/youtube-dl/cannon/mix.wav"></audio></td>
-    <td><audio controls src="audio/youtube-dl/cannon/piano_est.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/cannon/guitar_est.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/cannon/piano_tr.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/cannon/guitar_tr.mp3"></audio></td>
-    <td><audio controls src="audio/youtube-dl/cannon/remix.mp3"></audio></td>
-  </tr>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
