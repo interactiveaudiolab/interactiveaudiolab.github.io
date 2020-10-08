@@ -13,13 +13,15 @@ We use metaphors and techniques familiar to musicians to produce customizable en
 
 Rather than force nonintuitive interactions, or remove control altogether, we reframe the controls to work within the interaction paradigms identified by research done on how audio engineers and musicians communicate auditory concepts to each other. Click on the examples below to learn how we built interfaces based on the following interaction paradigms: 
 
-* [Evaluation](https://www.youtube.com/watch?v=Oz3b-IC56F4) (e.g., “I like the first equalization setting better than the second one.”)
-* [Descriptive words](https://audealize.appspot.com) (e.g., “Make the reverb sound ‘watery’”)
-* [Vocal imitation](https://www.youtube.com/watch?v=RPVTRF5_ZoI&t=2s) (e.g., vocally making a “whoosh” sound to illustrate a desired synth patch)
-* [Exploration](https://www.youtube.com/watch?v=qix2nOQ3z5A&t=2s) (e.g., “What other mixes are like this, but different?”)
+### Videos
+* [An Evaluative Interface](https://www.youtube.com/watch?v=Oz3b-IC56F4) (e.g., “I like the first equalization setting better than the second one.”)
+* [Programming a synthesizer with vocal imitation](https://www.youtube.com/watch?v=RPVTRF5_ZoI&t=0s) (e.g., vocally making a “whoosh” sound to illustrate a desired synth patch)
+* [Mixing Music through Exploration](https://www.youtube.com/watch?v=qix2nOQ3z5A&t=0s) (e.g., “What other mixes are like this, but different?”)
 
-### Downloads
-[The Audealize reverberation and EQ plugin for MacOs](https://github.com/interactiveaudiolab/audealize-plugin)
+### Downloads and Demos
+
+* [The Audealize web demo](https://audealize.appspot.com) (e.g., “Make the reverb sound ‘watery’”)
+* [The Audealize reverberation and EQ plugin for MacOs](https://github.com/interactiveaudiolab/audealize-plugin)
 
 ### Related publications
 
