@@ -45,7 +45,7 @@ Run the following to install `jekyll` as well as a package management tool calle
 gem install bundler jekyll
 ```
 
-**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) you might experience
+**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) or Catalina (10.15) you might experience
 difficulties installing Jekyll by only running the above command.
 If you receive the following error message, you may find [this post](https://github.com/jekyll/jekyll/issues/7274#issuecomment-445499110) helpful in resolving the issue.
 
