@@ -20,6 +20,9 @@ The system lets reduce the time required to search for a set of sound events of 
 
 ### Related publications
 
-[[pdf]](https://interactiveaudiolab.github.io/assets/papers/kim_pardo_tiis_2018.pdf) Bongjun Kim and Bryan Pardo, "A Human-in-the-loop System for Sound Event Detection and Annotation," ACM Transaction on Interactive Intelligent System (TiiS), Vol. 8, Issue 2, Article 13, July 2018.
+[[pdf]](/assets/papers/waspaa_2019_kim.pdf) B. Kim and B. Pardo, “Sound Event Detection using point-labeled data,” in IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA 2019), New Paltz, NY, USA, 2019.
 
-[[pdf]](https://interactiveaudiolab.github.io/assets/papers/Kim_Pardo_IUI2017.pdf) Bongjun Kim and Bryan Pardo, "I-SED: an Interactive Sound Event Detector," ACM International Conference on Intelligent User Interface (IUI), Limassol, Cyprus, Mar. 2017
+[[pdf]](/assets/papers/kim_pardo_tiis_2018.pdf) Bongjun Kim and Bryan Pardo, "A Human-in-the-loop System for Sound Event Detection and Annotation," ACM Transaction on Interactive Intelligent System (TiiS), Vol. 8, Issue 2, Article 13, July 2018.
+
+[[pdf]](/assets/papers/Kim_Pardo_IUI2017.pdf) Bongjun Kim and Bryan Pardo, "I-SED: an Interactive Sound Event Detector," ACM International Conference on Intelligent User Interface (IUI), Limassol, Cyprus, Mar. 2017
+

@@ -8,4 +8,4 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Jack is a BS/MS student at Northwestern University doing research in the Interactive Audio Lab, under Prof. Bryan Pardo. He is currently working with Abir Saha to design audio engineering interfaces for the blind. His work involves reimagining existing digital audio workstations (DAWs) and audio plugins (VSTs) to make them more accessible.
+Andreas is currently a undergraduate student working towards a BS in computer science at Northwestern. He is interested in machine learning and music information retrieval. In his free time, he plays classical guitar and enjoys the outdoors.
