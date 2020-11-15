@@ -37,7 +37,7 @@ Compilation of the website depends on Jekyll, which is a part of the Ruby ecosys
 gem --version
 ```
 
-**Note** I (Bryan) had success with ruby 2.4.0. Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version...
+**Note** I (Bryan) had success with ruby 2.4.0. and 2.7.2 Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version...
 
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
 
@@ -45,7 +45,7 @@ Run the following to install `jekyll` as well as a package management tool calle
 gem install bundler jekyll
 ```
 
-**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) you might experience
+**Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) or Catalina (10.15) you might experience
 difficulties installing Jekyll by only running the above command.
 If you receive the following error message, you may find [this post](https://github.com/jekyll/jekyll/issues/7274#issuecomment-445499110) helpful in resolving the issue.
 
@@ -69,12 +69,17 @@ Navigate to the directory containing the source branch and execute the following
 ```
 jekyll serve --destination <master-branch-directory>
 ```
-
+**Note**: If you receive an error, you may need to prefix the previous command with `bundle exec`. This will let ruby know which gems to use to make this go. 
+```
+bundle exec jekyll serve --destination <master-branch-directory>
+```
+If this is the first time you're running this bundle, you may need to run `bundle install` to install missing gems.
+```
+bundle install
+```
 **Note**: Windows users may encounter a `Liquid Exception` complaining about Unicode
 Normalization. Fix this by running `chcp 65001` in your terminal.
 
-**Note**: If you receive an error, you may need to prefix the previous command with `bundle exec`
-(i.e., `bundle exec jekyll serve --destination <master-branch-directory>`).
 
 If compilation succeeded, the `<master-branch-directory>` directory should now be populated with the
 newly-compiled site and your webpage will be locally visible at `http://localhost:4000`.
