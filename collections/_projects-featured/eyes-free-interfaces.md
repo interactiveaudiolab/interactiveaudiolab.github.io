@@ -1,6 +1,6 @@
 ---
 name: Eyes Free Audio Production
-creators: [Bryan Pardo, Jack Wiig, Abir Saha, Robin Brewer, Aaron Karp, Anne Marie Piper]
+creators: [Bryan Pardo, Hugo Flores Garcia, Jack Wiig, Abir Saha, Anne Marie Piper]
 external-url: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1901456&HistoricalAwards=false
 external-url-text: Next Generation Content Production Tools for People with Vision Impairments
 image: /assets/images/projects/hands-over-eyes-150by150-shutterstock_354081641.png
