@@ -2,6 +2,7 @@
 name: Andreas Bugler
 position: Undergraduate
 email: andreas@u.northwestern.edu
+website: https://abugler.github.io
 image: /assets/images/people/andreas-150x150.png
 altdescription: Picture of Andreas Bugler
 navigation: people
