@@ -42,7 +42,8 @@ gem --version
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
 
 ```
-gem install bundler jekyll
+gem install jekyll
+gem install bundler -v 2.1.4
 ```
 
 **Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) or Catalina (10.15) you might experience
@@ -69,7 +70,7 @@ Navigate to the directory containing the source branch and execute the following
 ```
 jekyll serve --destination <master-branch-directory>
 ```
-**Note**: If you receive an error, you may need to prefix the previous command with `bundle exec`. This will let ruby know which gems to use to make this go. 
+**Note**: If you receive an error, you may need to prefix the previous command with `bundle exec`. This will let ruby know which gems to use to make this go.
 ```
 bundle exec jekyll serve --destination <master-branch-directory>
 ```

@@ -52,6 +52,8 @@ collections:
     output: true
   projects-separation:
     output: true
+  projects-generation:
+    output: true
   projects-interfaces:
     output: true
   projects-featured:
@@ -110,6 +112,12 @@ defaults:
   - scope:
       path: ""
       type: "projects-interfaces"
+    values:
+      layout: "detail"
+      permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "projects-generation"
     values:
       layout: "detail"
       permalink: /project/:name.html
