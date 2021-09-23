@@ -15,6 +15,8 @@ collection: projects
 
 We provide a software framework that lets deep learning practitioners easily integrate their own PyTorch models into Audacity, a free and open-source DAW. This creates a pipeline for ML audio researchers and developers to put tools in the hands of the artistic creators without the need to do DAW-specific development work, without having to learn how to create a VST plugin, and without having to maintain a server to deploy their models.
 
+Our software framework lets ML developers easily integrate new deep-models into Audacity, a free and open-source DAW that has logged over 100 million downloads since 2015. Developers upload their trained PyTorch model to HuggingFace's [Model Hub](https://huggingface.co/models?filter=audacity). The model becomes accessible through Audacity's UI and loads in a manner similar to traditional plugins. 
+
 <img src="/assets/images/projects/audacity-frontpage.png"
     width="100%"
     height="100%">
