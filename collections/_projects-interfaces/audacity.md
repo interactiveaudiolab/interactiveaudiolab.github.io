@@ -21,7 +21,7 @@ We provide a software framework that lets deep learning practitioners easily int
 
 ### Download Audacity with Deep Learning
 
-Our work has not yet been merged to the main build of Audacity, though it will be soon. You can keep track of its progress by viewing our [pull request](https://github.com/audacity/audacity/pull/1384). In the meantime, you can download a beta version of Audacity + Deep Learning here:
+Our work has not yet been merged to the main build of Audacity, though it will be soon. You can keep track of its progress by viewing our [pull request](https://github.com/audacity/audacity/pull/1384). In the meantime, you can download an alpha version of Audacity + Deep Learning here:
 
 - [Mac OS](https://github.com/hugofloresgarcia/audacity/suites/3854232957/artifacts/95694217)
 - [Windows (64 bit)](https://github.com/hugofloresgarcia/audacity/suites/3854232957/artifacts/95694220)
