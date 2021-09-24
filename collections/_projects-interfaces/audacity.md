@@ -27,7 +27,6 @@ Our work has not yet been merged to the main build of Audacity, though it will b
 
 - [Mac OS](https://github.com/hugofloresgarcia/audacity/suites/3854232957/artifacts/95694217)
 - [Windows (64 bit)](https://github.com/hugofloresgarcia/audacity/suites/3854232957/artifacts/95694220)
-- [Linux](https://github.com/hugofloresgarcia/audacity/suites/3854232957/artifacts/95694218)
 
 If you encounter any issues while using this nightly build, please report them on our [issue tracker](https://github.com/hugofloresgarcia/audacity/issues).
 
