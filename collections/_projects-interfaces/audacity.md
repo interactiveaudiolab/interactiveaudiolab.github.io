@@ -36,7 +36,9 @@ Contributing a model to audacity only requires familiarity with [PyTorch](https:
 
 ### Usage Example - Upmixing and Remixing with Source Separation
 
-Here, we use the source separation models built-in with Audacity to create a collage of pop songs, taking instruments and vocals from different artists, and remixing them to create a new work. (*todo*)
+Here, we use the source separation models built-in with Audacity to create a collage of pop songs, taking instruments and vocals from different artists, and remixing them to create a new work. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/muEOJqGSYVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- ### Related publications -->
 
