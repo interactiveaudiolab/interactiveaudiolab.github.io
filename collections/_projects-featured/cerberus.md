@@ -1,5 +1,5 @@
 ---
-name: Cerberus, simultaneous audio separation and transcription
+name: Cerberus
 creators: [Ethan Manilow, Prem Seetharaman, Bryan Pardo]
 external-url: /demos/cerberus
 external-url-text: Audio examples
