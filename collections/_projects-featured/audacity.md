@@ -2,18 +2,15 @@
 name: Deep Learning Tools for Audacity
 creators: [Hugo Flores Garcia, Aldo Aguilar, Ethan Manilow, Dmitry Vedenko and Bryan Pardo]
 
-# external-url: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1901456&HistoricalAwards=false
-# external-url-text: Next Generation Content Production Tools for People with Vision Impairments
 
 image: /assets/images/projects/audacity-logo.png
 altdescription: Audacity logo #alt description of image for screen readers
-# funding: 
 
 collection: projects
 #put full content below the dashed line. full markdown is supported.
 ---
 
-We provide a software framework that lets deep learning practitioners easily integrate their own PyTorch models into Audacity, a free and open-source DAW. This creates a pipeline for ML audio researchers and developers to put tools in the hands of the artistic creators without the need to do DAW-specific development work, without having to learn how to create a VST plugin, and without having to maintain a server to deploy their models.
+We provide a software framework that lets deep learning practitioners easily integrate their own PyTorch models into the open-source Audacity DAW. This lets ML audio researchers put tools in the hands of sound artists without doing DAW-specific development work.
 
 Our software framework lets ML developers easily integrate new deep-models into Audacity, a free and open-source DAW that has logged over 100 million downloads since 2015. Developers upload their trained PyTorch model to HuggingFace's [Model Hub](https://huggingface.co/models?filter=audacity). The model becomes accessible through Audacity's UI and loads in a manner similar to traditional plugins. 
 
@@ -25,8 +22,8 @@ Our software framework lets ML developers easily integrate new deep-models into 
 
 Our work has not yet been merged to the main build of Audacity, though it will be soon. You can keep track of its progress by viewing our [pull request](https://github.com/audacity/audacity/pull/1384). In the meantime, you can download an alpha version of Audacity + Deep Learning here:
 
-- [Mac OS](https://github.com/audacity/audacity/suites/4115888235/artifacts/105188140)
-- [Windows (64 bit)](https://github.com/audacity/audacity/suites/4115888235/artifacts/105188143)
+- [Mac OS](https://github.com/audacity/audacity/suites/4155973171/artifacts/106696343)
+- [Windows (64 bit)](https://github.com/audacity/audacity/suites/4155973171/artifacts/106696345)
 
 If you encounter any issues while using this nightly build, please report them on our [issue tracker](https://github.com/hugofloresgarcia/audacity/issues).
 
@@ -38,7 +35,7 @@ Contributing a model to audacity only requires familiarity with [PyTorch](https:
 
 Here, we use the source separation models built-in with Audacity to create a collage of pop songs, taking instruments and vocals from different artists, and remixing them to create a new work. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/muEOJqGSYVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></ifch drame>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/muEOJqGSYVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- ### Related publications -->
 
