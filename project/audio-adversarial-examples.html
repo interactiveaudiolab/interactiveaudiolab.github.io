@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Interactive Audio Lab" />
 <meta property="og:image" content="http://localhost:4000/assets/images/projects/filters.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-10-27T16:13:52-05:00" />
+<meta property="article:published_time" content="2021-10-27T17:18:09-05:00" />
 <script type="application/ld+json">
-{"headline":"Audio Adversarial Examples","dateModified":"2021-10-27T16:13:52-05:00","datePublished":"2021-10-27T16:13:52-05:00","url":"http://localhost:4000/project/audio-adversarial-examples.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/project/audio-adversarial-examples.html"},"image":"http://localhost:4000/assets/images/projects/filters.png","description":"We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"Audio Adversarial Examples","dateModified":"2021-10-27T17:18:09-05:00","datePublished":"2021-10-27T17:18:09-05:00","url":"http://localhost:4000/project/audio-adversarial-examples.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/project/audio-adversarial-examples.html"},"image":"http://localhost:4000/assets/images/projects/filters.png","description":"We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css""><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Interactive Audio Lab" /></head>
@@ -136,7 +136,30 @@
 
 <!--end_excerpt-->
 
-<p>We demonstrate the effectiveness of our method by performing over-the-air attacks against a state-of-the-art speaker verification model and show that our attack is less conspicuous than an existing state-of-the-art attack while matching its effectiveness. Our results demonstrate the potential of transformations beyond direct waveform addition for concealing high-magnitude adversarial perturbations, allowing adversaries to attack more effectively in challenging real-world settings.</p>
+<h3 id="audio-interfaces-are-vulnerable-to-adversarial-examples">Audio Interfaces are Vulnerable to Adversarial Examples</h3>
+
+<p>Deep neural networks achieve state-of-the-art performance on many audio tasks, including speaker verification, and as a result have been incorporated into voice-based systems for authentication and control in a wide variety of products. While deep networks are powerful classifiers, they are known to be vulnerable to adversarial examples, artificially-generated perturbations of natural instances that cause a network to make incorrect predictions. This vulnerability presents an opportunity for malicious actors to gain access to and influence the behavior of various products by surreptitiously passing adversarially-crafted audio to the underlying neural network systems. The research community has developed a number of audio-domain adversarial attacks to evaluate the robustness of deep neural networks across a variety of tasks, and we continue this work here.</p>
+
+<h3 id="attacking-with-adaptive-filtering">Attacking with Adaptive Filtering</h3>
+<p>Rather than optimize an additive waveform perturbation of a benign recording, as is typical, we optimize the parameters of an adaptive filter in the form of a time-varying frequency-domain transfer function. We then apply our filter to benign audio frame-by-frame to produce adversarial examples.</p>
+
+<p style="text-align:center;">
+<img src="/demos/images/adaptive_filter/filter_process_1.png" width="80%" height="100%" />
+<br />
+<img src="/demos/images/adaptive_filter/filter_process_2.png" width="80%" height="100%" />
+</p>
+
+<p>Above, for each audio frame we adversarially parameterize a sparsely-sampled frequency-domain transfer function (<b>1</b>). After scaling (<b>2</b>), we convert each transfer function to a time-domain impulse response via the IDFT and apply a Hann window (<b>3</b>). We then take the DFT to obtain a smoothed, interpolated transfer function (<b>4</b>) which can be applied to a frame of audio input (<b>5</b>) via element-wise multiplication in the Fourier domain (<b>6</b>, <b>7</b>). Finally, we combine the filtered frames in the time domain via overlap-add (<b>8</b>) to obtain our adversarially-filtered audio.</p>
+
+<h3 id="attacking-in-realistic-settings">Attacking in Realistic Settings</h3>
+
+<p>In order to craft attacks that work well in real-world playback scenarios (“over-the-air”), we can optimize through simulated distortions that mimic the properties of acoustic environments (e.g. reverb, noise, time-domain offset).
+<br /><br /></p>
+<p style="text-align:center;">
+<img src="/demos/images/adaptive_filter/system_diagram.png" width="80%" height="100%" />
+</p>
+
+<p>Crafting attacks capable of surviving these distortions often means introducing large-magnitude perturbations, and for typical waveform-additive attacks, this means noisy artifacts. We demonstrate the effectiveness of our filtering method by performing over-the-air attacks against a state-of-the-art speaker verification model, and show that our attack can match or exceed the perceptual quality of existing attacks when controlling for effectiveness (you can listen to audio examples <a href="/demos/audio-adversarial-examples.html">here</a>). In a user study, listeners rate our attack as less conspicuous than a state-of-the-art additive frequency-masking attack by a ratio of 2-to-1. Our results demonstrate the potential of transformations beyond direct waveform addition for concealing high-magnitude adversarial perturbations, allowing adversaries to attack more effectively in challenging real-world settings.</p>
 
 <h3 id="related-publications">Related Publications</h3>
 <p><a href="/assets/papers/oreilly_awasthi_vijayaraghavan_pardo_2021.pdf">P. O’Reilly, P. Awasthi, A. Vijayaraghavan, and B. Pardo, “Effective and Inconspicuous Over-the-Air Adversarial Examples with Adaptive Filtering,” 2021. Manuscript submitted for publication.</a></p>
