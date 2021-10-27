@@ -58,6 +58,9 @@ collections:
     output: true
   projects-featured:
     output: true
+  projects-robustness:
+    output: true
+
 #tells jekyll the directory where all collections are located
 collections_dir: collections
 
@@ -124,6 +127,12 @@ defaults:
   - scope:
       path: ""
       type: "projects-featured"
+    values:
+      layout: "detail"
+      permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "projects-robustness"
     values:
       layout: "detail"
       permalink: /project/:name.html
