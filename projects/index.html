@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://localhost:4000/projects/" />
 <meta property="og:site_name" content="Interactive Audio Lab" />
 <script type="application/ld+json">
-{"headline":"Projects","url":"http://localhost:4000/projects/","description":"Lab description","@type":"WebPage","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/projects/","description":"Lab description","headline":"Projects","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css""><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Interactive Audio Lab" /></head>
@@ -108,11 +108,15 @@
         <a class="nav-link" href="#generation">generation</a>
     </li>
     
+    <li class="nav-item">
+        <a class="nav-link" href="#robustness">robustness</a>
+    </li>
+    
     </ul>
 </nav>
 
 <h2 id="interfaces">Interfaces</h2>
-<p>Improving audio production tools meaningful enhances the creative output of musicians, podcasters,producers and videographers. We focus on bridging the gap between the intentions of creators and the interfaces of audio recording and manipulation tools they use. Our work in this area has a strong human-centered machine learning component.  Representative projects in the area are below. For further publications in this area, see our <a href="/publications">publications</a> page.</p>
+<p>Improving audio production tools meaningfully enhances the creative output of musicians, podcasters, producers and videographers. We focus on bridging the gap between the intentions of creators and the interfaces of audio recording and manipulation tools they use. Our work in this area has a strong human-centered machine learning component.  Representative projects in the area are below. For further publications in this area, see our <a href="/publications">publications</a> page.</p>
 
 <!-- collection, title, and anchor-tag needs to be passed into this to work -->
 
@@ -339,6 +343,38 @@
                     <h3 class="mt-0"><a href="/project/symbolic-music-generation.html">Symbolic music generation</a></h3>
                     <h4 class=" h5 text-muted"></h4>
                     <p><p>Symbolic music generation uses machine learning to produce music in a symbolic form, such as the Musical Instrument Digital Interface (MIDI) format. Generating music in a symbolic format has the advantages of being both interpretable (e.g., as pitch, duration, and loudness values) and editable in standard digital audio workstations (DAWs).</p>
+
+</p>
+                </div>
+            </li>
+        
+    </ul>
+</div>
+
+<p><br /></p>
+
+<h2 id="robustness">Robustness</h2>
+<p>Neural network-based audio interfaces should be robust to various input distortions, especially in sensitive applications. We study the behavior of audio models under maliciously-crafted inputs - called <em>adversarial examples</em> - in order to better understand how to secure audio interfaces against bad-faith actors and naturally-occurring distortions. For further publications in this area, see our <a href="/publications">publications</a> page.</p>
+
+<!-- collection, title, and anchor-tag needs to be passed into this to work -->
+
+<div>
+
+    <h2 class="display-6 people-header"><a name="robustness"></a></h2>
+
+    <ul class="list-unstyled preview-list">
+        
+            <li class="media my-2">
+                
+                <div>
+                    <img class="mr-3" src="/assets/images/projects/filters.png" alt="Adaptive filtering" />
+                </div>
+                
+
+                <div class="mt-0 mb-1">
+                    <h3 class="mt-0"><a href="/project/audio-adversarial-examples.html">Audio adversarial examples with adaptive filtering</a></h3>
+                    <h4 class=" h5 text-muted"></h4>
+                    <p><p>We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters.</p>
 
 </p>
                 </div>
