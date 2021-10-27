@@ -22,6 +22,8 @@ Our software framework lets ML developers easily integrate new deep-models into 
 
 Our work has not yet been merged to the main build of Audacity, though it will be soon. You can keep track of its progress by viewing our [pull request](https://github.com/audacity/audacity/pull/1384). In the meantime, you can download an alpha version of Audacity + Deep Learning here:
 
+**NOTE**: To be able to download these builds, you need to sign into GitHub before clicking on the link. Having a GitHub account is free, and shouldn't take longer than a minute. This is only a temporary workaround, and will be mended soon. 
+
 - [Mac OS](https://github.com/audacity/audacity/suites/4155973171/artifacts/106696343)
 - [Windows (64 bit)](https://github.com/audacity/audacity/suites/4155973171/artifacts/106696345)
 
