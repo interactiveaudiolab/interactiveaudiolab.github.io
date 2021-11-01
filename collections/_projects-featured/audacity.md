@@ -58,7 +58,7 @@ Here, we use the source separation models built-in with Audacity to create a col
 ## Related Talks
 
 ### Bay Innovative Signal Hackers Meetup (2021) 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gUXdQLUdOsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gUXdQLUdOsU?start=2887" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Related Publications 
 
