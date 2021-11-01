@@ -55,8 +55,11 @@ Here, we use the source separation models built-in with Audacity to create a col
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/muEOJqGSYVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<!-- ### Related publications -->
+## Related Talks
 
-<!-- 
-[[pdf]](/assets/papers/haptEQ_karp.pdf)A. Karp and B. Pardo, “HaptEQ: A Collaborative Tool For Visually Impaired Audio Producers,” in Proceedings of the 12th International Audio Mostly Conference on Augmented and Participatory Sound and Music Experiences, 2017, p. 39. --> 
+### Bay Innovative Signal Hackers Meetup (2021) 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gUXdQLUdOsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Related Publications 
+
+[[pdf]](https://arxiv.org/pdf/2107.07029.pdf) H. Flores Garcia, A. Aguilar, E. Manilow, D. Vedenko, and B. Pardo. Deep learning tools for audacity: Helping researchers expand the artist’s toolkit. In 5th Workshop on Machine Learning for Creativity and Design at NeurIPS 2021, 2021
