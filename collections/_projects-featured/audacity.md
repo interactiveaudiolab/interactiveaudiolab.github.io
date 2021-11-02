@@ -62,4 +62,4 @@ Here, we use the source separation models built-in with Audacity to create a col
 
 ## Related Publications 
 
-[[pdf]](https://arxiv.org/pdf/2107.07029.pdf) H. Flores Garcia, A. Aguilar, E. Manilow, D. Vedenko, and B. Pardo. Deep learning tools for audacity: Helping researchers expand the artist’s toolkit. In 5th Workshop on Machine Learning for Creativity and Design at NeurIPS 2021, 2021
+[[pdf]](https://arxiv.org/pdf/2110.13323.pdf) H. Flores Garcia, A. Aguilar, E. Manilow, D. Vedenko, and B. Pardo. Deep learning tools for audacity: Helping researchers expand the artist’s toolkit. In 5th Workshop on Machine Learning for Creativity and Design at NeurIPS 2021, 2021
