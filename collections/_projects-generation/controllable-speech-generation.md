@@ -10,7 +10,7 @@ collection: projects
 Nuances in speech prosody (i.e., the pitch, timing, and loudness of speech) are a vital part of how we communicate. We utilize generative machine learning models to generate prosody with user control over these nuances and generate speech reflecting user-specified prosody.
 
 
-### Fine-grained prosody editing
+### Fine-grained prosody control
 
 Given a speech recording and a target prosody (e.g., a pitch contour and phoneme durations), how can we transform the speech recording to have the target prosody? This task is called fine-grained prosody editing, and is useful for speech editing applications such as podcast post-production. Audio examples can be found [here](https://maxrmorrison.com/sites/controllable-lpcnet).
 
