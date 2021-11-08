@@ -27,19 +27,10 @@ Our work has not yet been merged to the main build of Audacity, though it will b
 
 #### Download Using Google Drive
 
-*last updated*: 10/28/2021
+*last updated*: 11/07/2021
 
-- [Mac OS](https://drive.google.com/file/d/1FQlMabqP9cstwk9z6liwMJ0cjqoAilK4/view?usp=sharing)
-- [Windows (64 bit)](https://drive.google.com/file/d/1fXD1JENDaUBNtRaT2peAJgmvKkX_QQ9q/view?usp=sharing)
-
-#### Download Using GitHub
-
-*last updated*: 10/28/2021
-
-**NOTE**: To be able to download these builds, you need to **sign into GitHub before clicking on the link**. Having a GitHub account is free, and shouldn't take longer than a minute. This is only a temporary workaround, and will be mended soon. 
-
-- [Mac OS](https://github.com/audacity/audacity/suites/4195012772/artifacts/108203358)
-- [Windows (64 bit)](https://github.com/audacity/audacity/suites/4195012772/artifacts/108203360)
+- [Mac OS](https://drive.google.com/file/d/1ogOtoqKK6725XrIuGoCRlBXqtsJN2nhN/view?usp=sharing)
+- [Windows (64 bit)](https://drive.google.com/file/d/1j_ndSIBrUH_Sg82j11wFVpA2VtJBJCCj/view?usp=sharing)
 
 #### Issues? 
 
