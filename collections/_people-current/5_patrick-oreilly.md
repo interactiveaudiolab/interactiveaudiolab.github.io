@@ -1,6 +1,7 @@
 ---
 name: Patrick O'Reilly
 position: Doctoral Student
+website: https://oreillyp.github.io/
 email: patrick.oreilly2024@u.northwestern.edu
 image: /assets/images/people/patrick.jpeg
 altdescription: Picture of Patrick O'Reilly
