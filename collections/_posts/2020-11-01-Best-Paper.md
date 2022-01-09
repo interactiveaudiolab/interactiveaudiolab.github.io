@@ -1,5 +1,5 @@
 ---
-title:  "Alisa Liu wins student paper award in DCASE 2020"
+title:  "Best student paper award in DCASE 2020"
 date:   2020-11-01 09:00:0 -0600
 categories: news 
 ---

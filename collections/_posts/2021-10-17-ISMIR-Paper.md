@@ -1,5 +1,5 @@
 ---
-title:  "Best Paper at at ISMIR 2021"
+title:  "Best Paper at ISMIR 2021"
 date:   2021-11-12 09:00:0 -0600
 categories: news
 ---
