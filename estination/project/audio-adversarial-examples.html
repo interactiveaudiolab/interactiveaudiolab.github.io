@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Audio Adversarial Examples | Interactive Audio Lab</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Audio Adversarial Examples" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters." />
+<meta property="og:description" content="We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters." />
+<link rel="canonical" href="http://localhost:4000/project/audio-adversarial-examples.html" />
+<meta property="og:url" content="http://localhost:4000/project/audio-adversarial-examples.html" />
+<meta property="og:site_name" content="Interactive Audio Lab" />
+<meta property="og:image" content="http://localhost:4000/assets/images/projects/filters.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-10T17:33:39-05:00" />
+<script type="application/ld+json">
+{"headline":"Audio Adversarial Examples","dateModified":"2022-08-10T17:33:39-05:00","datePublished":"2022-08-10T17:33:39-05:00","url":"http://localhost:4000/project/audio-adversarial-examples.html","image":"http://localhost:4000/assets/images/projects/filters.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/project/audio-adversarial-examples.html"},"description":"We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css""><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Interactive Audio Lab" /></head>
+<body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-nav" aria-label="primary navigation">
+    <div class="container">
+      <a class="navbar-brand display" href="/">INTERACTIVE AUDIO LAB</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- main navigation -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"> 
+            <li class="nav-item">
+              
+                <a class="nav-link " href="/projects/">
+                  Projects
+                </a>
+              
+            </li>
+           
+            <li class="nav-item">
+              
+                <a class="nav-link " href="/publications/">
+                  Publications
+                </a>
+              
+            </li>
+           
+            <li class="nav-item">
+              
+                <a class="nav-link " href="/resources/">
+                  Resources
+                </a>
+              
+            </li>
+           
+            <li class="nav-item">
+              
+                <a class="nav-link " href="/people/">
+                  People
+                </a>
+              
+            </li>
+          
+    
+        </ul>
+
+        <!-- Social media links -->
+        <ul class="navbar-nav mr-sm-2">
+            <li class="nav-item">
+                <a class="nav-link external-link social-link" href="https://github.com/interactiveaudiolab" target="_blank"><span class="fab fa-github" title="Interactive Audio Lab on GitHub"></span><span class="sr-only">Link opens in a new window</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link external-link social-link" href="https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw" target="_blank"><span class="fab fa-youtube" title="Interactive Audio Lab on YouTube"></span><span class="sr-only">Link opens in a new window</span></a>
+              </li>
+        </ul>
+      </div>
+    </div> <!-- end container -->
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary subnav" aria-label="subnavigation">
+  </nav>
+</header>
+
+<div class="container">
+    <main id="content" class="content" tabindex=-1 aria-label="Content">
+        <div class="row">
+    <header class="col">
+        <h1 class="display-5">Audio adversarial examples with adaptive filtering</h1>
+    </header>
+</div>
+
+<div class="row">
+    
+        <div class="col-lg-3">
+            <img class="img-fluid" src="/assets/images/projects/filters.png" alt="Adaptive filtering">
+        </div>
+    
+
+    <div class="col">
+        <h2 class="text-muted">
+            
+                
+                    Patrick O'Reilly,
+                
+            
+                
+                    Pranjal Awasthi,
+                
+            
+                
+                    Aravindan Vijayaraghavan,
+                
+            
+                
+                    Bryan Pardo
+                
+            
+        </h2>
+
+        
+            <h3><a href="#examples">Audio Examples</a></h3>
+        
+
+        
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        <p>We demonstrate a novel audio-domain adversarial attack that modifies benign audio using an interpretable and differentiable parametric transformation - adaptive filtering. Unlike existing state-of-the-art attacks, our proposed method does not require a complex optimization procedure or generative model, relying only on a simple variant of gradient descent to tune filter parameters. <!--end_excerpt--></p>
+
+<p><br /></p>
+
+<h3 id="background-audio-interfaces-are-vulnerable-to-adversarial-examples">Background: Audio Interfaces are Vulnerable to Adversarial Examples</h3>
+
+<p>Deep neural networks achieve state-of-the-art performance on many audio tasks, including speaker verification, and as a result have been incorporated into voice-based systems for authentication and control in a wide variety of products. While deep networks are powerful classifiers, they are known to be vulnerable to adversarial examples, artificially-generated perturbations of natural instances that cause a network to make incorrect predictions. This vulnerability presents an opportunity for malicious actors to gain access to and influence the behavior of various products by surreptitiously passing adversarially-crafted audio to the underlying neural network systems. The research community has developed a number of audio-domain adversarial attacks to evaluate the robustness of deep neural networks across a variety of tasks, and we continue this work here.</p>
+
+<p><br /></p>
+
+<h3 id="attacking-with-adaptive-filtering">Attacking with Adaptive Filtering</h3>
+<p>Rather than optimize an additive waveform perturbation of a benign recording, as is typical, we optimize the parameters of an adaptive filter in the form of a time-varying frequency-domain transfer function. We then apply our filter to benign audio frame-by-frame to produce adversarial examples.</p>
+
+<p style="text-align:center;">
+<img src="/demos/images/adaptive_filter/filter_process_1.png" width="80%" height="100%" />
+<br />
+<img src="/demos/images/adaptive_filter/filter_process_2.png" width="80%" height="100%" />
+</p>
+
+<p>Above, for each audio frame we adversarially parameterize a sparsely-sampled frequency-domain transfer function (<b>1</b>). After scaling (<b>2</b>), we convert each transfer function to a time-domain impulse response via the IDFT and apply a Hann window (<b>3</b>). We then take the DFT to obtain a smoothed, interpolated transfer function (<b>4</b>) which can be applied to a frame of audio input (<b>5</b>) via element-wise multiplication in the Fourier domain (<b>6</b>, <b>7</b>). Finally, we combine the filtered frames in the time domain via overlap-add (<b>8</b>) to obtain our adversarially-filtered audio.</p>
+
+<p><br /></p>
+
+<h3 id="attacking-in-realistic-settings">Attacking in Realistic Settings</h3>
+
+<p>In order to craft attacks that work well in real-world playback scenarios (“over-the-air”), we can optimize through simulated distortions that mimic the properties of acoustic environments (e.g. reverb, noise, time-domain offset).
+<br /><br /></p>
+<p style="text-align:center;">
+<img src="/demos/images/adaptive_filter/system_diagram.png" width="80%" height="100%" />
+</p>
+
+<p>Over-the-air attacks often require large-magnitude perturbations of the original audio in order to survive playback, and for typical waveform-additive attacks, this means noisy artifacts. We demonstrate the effectiveness of our filtering method by performing over-the-air attacks against a state-of-the-art speaker verification model, and show that our attack can match or exceed the perceptual quality of existing attacks when controlling for effectiveness. In a user study, listeners rate our attack as less conspicuous than a state-of-the-art additive frequency-masking attack by a ratio of 2-to-1. Our results demonstrate the potential of transformations beyond direct waveform addition for concealing high-magnitude adversarial perturbations, allowing adversaries to attack more effectively in challenging real-world settings.</p>
+
+<p><br /></p>
+
+<h3 id="examples">Examples: Existing Methods Introduce Noise</h3>
+
+<p>Below, we provide examples of over-the-air attacks on a <em>speaker verification</em> system. In this scenario, attacks modify a recording of the <strong>source speaker</strong> to trick the system into recognizing the <strong>target speaker</strong>. The <strong>baseline attack</strong> relies on a state-of-the-art frequency-masking loss and multi-stage optimization procedure, while <strong>our attack</strong> sidesteps these requirements using adaptive filtering. Because both methods are relatively inconspicuous, <em>we recommend listening to these examples using headphones</em>.</p>
+
+<p>Because our proposed filter attack is multiplicative rather than additive, it does not introduce noise into silent regions of the waveform. In this example, listen to the end of each recording – the baseline attack adds noise, while the proposed attack remains silent.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Source Speaker</th>
+      <th style="text-align: center">Target Speaker</th>
+      <th style="text-align: center">Baseline Attack</th>
+      <th style="text-align: center">Our Attack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/reference_1.wav" type="audio/wav" preload="auto" /></audio></td>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/target_1.wav" type="audio/wav" preload="auto" /></audio></td>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/baseline_1.wav" type="audio/wav" preload="auto" /></audio></td>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/proposed_1.wav" type="audio/wav" preload="auto" /></audio></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p>This noise is often audible throughout attacks generated with the baseline method, not just in silent regions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Source Speaker</th>
+      <th style="text-align: center">Target Speaker</th>
+      <th style="text-align: center">Baseline Attack</th>
+      <th style="text-align: center">Our Attack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/reference_2.wav" type="audio/wav" preload="auto" /></audio></td>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/target_2.wav" type="audio/wav" preload="auto" /></audio></td>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/baseline_2.wav" type="audio/wav" preload="auto" /></audio></td>
+      <td style="text-align: center"><audio controls="" id="player" style="width:270px;"><source src="/demos/audio/adaptive_filter/main_run/proposed_2.wav" type="audio/wav" preload="auto" /></audio></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+Audio for all attacks included in our over-the-air evaluation and perceptual study can be found <a href="/demos/audio-adversarial-examples.html">here</a>.</p>
+
+<p><br /></p>
+
+<h3 id="related-publications">Related Publications</h3>
+<p><a href="/assets/papers/oreilly_awasthi_vijayaraghavan_pardo_2021.pdf">P. O’Reilly, P. Awasthi, A. Vijayaraghavan, and B. Pardo, “Effective and Inconspicuous Over-the-Air Adversarial Examples with Adaptive Filtering,” 2021. Manuscript submitted for publication.</a></p>
+
+
+    </div>
+</div>
+
+    </main>
+  </div>
+  <br></br><footer class="footer bg-light" role="contentinfo">
+
+    <div class="container">
+
+      <div class="row align-items-center footer-copy">
+            &copy; 2022 Interactive Audio Lab
+            <a class="external-link social-link" href="https://github.com/interactiveaudiolab" target="_blank"><span class="fab fa-github" title="Interactive Audio Lab on GitHub"></span><span class="sr-only">Link opens in a new window</span></a>
+            <a class="external-link social-link" href="https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw" target="_blank"><span class="fab fa-youtube" title="Interactive Audio Lab on YouTube"></span><span class="sr-only">Link opens in a new window</span></a>
+    </div>
+
+</footer>
+
+<!-- js scripts for bootstrap and fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></body>
+
+</html>
