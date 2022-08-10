@@ -19,5 +19,6 @@ State-of-the-art music separation systems produce source estimates with signific
 [Audio examples](https://master.d3neehbzr2rbmh.amplifyapp.com/)
 
 ### Related Publications
-[The 2022 ISMIR paper](/assets/papers/ismir2022-schaffer-et-al.pdf)
+[[pdf]](/assets/papers/ismir2022-schaffer-et-al.pdf) N. Schaffer, B. Cogan, E. Manilow, M. Morrison, P. Seetharaman, and B. Pardo, “Music Separation Enhancement with Generative Modeling,” in ISMIR, 2022.
+
 
