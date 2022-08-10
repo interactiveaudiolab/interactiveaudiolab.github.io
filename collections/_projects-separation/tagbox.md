@@ -17,5 +17,5 @@ is used to guide gradient _ascent_ in the (unchanging) latent space of the  gene
 [Demo and audio examples](https://ethman.github.io/tagbox/)
 
 ### Related Publications
-[E. Manilow, P. O'Reilly, P. Seetharaman, and B. Pardo, “Unsupervised Source Separation By Steering Pretrained Music Models,” Submitted to ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2022.](https://arxiv.org/abs/2110.13071)
+[E. Manilow, P. O'Reilly, P. Seetharaman, and B. Pardo, “Unsupervised Source Separation By Steering Pretrained Music Models,” ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2022.](https://arxiv.org/abs/2110.13071)
 
