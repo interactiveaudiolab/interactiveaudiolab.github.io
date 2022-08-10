@@ -19,5 +19,5 @@ State-of-the-art music separation systems produce source estimates with signific
 [Audio examples](https://master.d3neehbzr2rbmh.amplifyapp.com/)
 
 ### Related Publications
-[The 2022 ISMIR paper](/publications/ismir2022-schaffer-et-al.pdf)
+[The 2022 ISMIR paper](/assets/papers/ismir2022-schaffer-et-al.pdf)
 
