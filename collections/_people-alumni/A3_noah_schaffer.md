@@ -1,6 +1,6 @@
 ---
 name: Noah Schaffer
-position: Graduated!
+position: Caterpillar
 email: noahschaffer2022@u.northwestern.edu
 image: /assets/images/people/noah.png
 altdescription: Picture of Noah Schaffer
