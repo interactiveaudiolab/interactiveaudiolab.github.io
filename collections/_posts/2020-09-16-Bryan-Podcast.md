@@ -1,7 +1,7 @@
 ---
-title:  "Pardo on Headroom podcast"
-date:   2020-09-16 09:00:0 -0600
+title:  "NSF funds new grant"
+date:   2022-09-12 09:00:0 -0600
 categories: news 
 ---
-Lab director Bryan Pardo is featured on episode 7 of [Headroom](https://www.izotope.com/en/learn/headroom-podcast.html?utm_source=twitter&utm_medium=social&utm_campaign=Headroom_Episode_7), a podcast dedicated to the impact of audio technology, hosted by Grammy-nominated mastering engineer Jonathan Wyner.
+ Our grant "Collaborative Research: FW-HTF-R: Toward an Ecosystem of Artificial-intelligence-powered Music Production (TEAMuP)" has been funded by the National Science Foundation. This work, to be done in collaboration with the University of Rochester, will be to bring next-generation deep-learning-based tools for audio processing (pitch trackers, source separators, effects, etc.) to a broad swath of the professional music community.
 
