@@ -9,8 +9,15 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-[Prof. Bryan Pardo](https://bryan-pardo.github.io/) is the head of the [Interactive Audio Lab](https://interactiveaudiolab.github.io), co-director of the [Northwestern HCI+Design institute](), and a faculty member in the department of [Computer Science](https://www.mccormick.northwestern.edu/computer-science/). His research lies at the intersection of Artificial Intelligence, Human Computer Interaction, Machine Learning, and Signal Processing. 
+I head the [Interactive Audio Lab](https://interactiveaudiolab.github.io). 
 
-To find out more about his research, explore this website and check out the [lab YouTube channel](https://www.youtube.com/channel/UCY-jggB_-R3rYaTsWN2_Ssw). 
+I am a Northwestern University [professor of computer science](https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/pardo-bryan.html).
+
+I co-direct the Northwestern [Center for Human Computer Interaction + Design](https://hci.northwestern.edu/people/faculty-postdoc-researchers.html).
+
+I teach courses in [Deep Learning](https://interactiveaudiolab.github.io/course-deep-learning), [Machine Learning](https://nucs-349-fall21.github.io/), [Generative Modeling](https://interactiveaudiolab.github.io/teaching/generative_deep_models.html), [Digital Music Instrument Design](https://interactiveaudiolab.github.io/teaching/DMID.html), [Machine Perception of Music](https://interactiveaudiolab.github.io/teaching/eecs352.html), and [Computer Audition](https://interactiveaudiolab.github.io/teaching/computeraudition.html).
 
 
+I head the [Computer Science Diversity Committe](https://www.mccormick.northwestern.edu/computer-science/diversity/) and am faculty advisor to the [Latin@CS student group](https://sites.northwestern.edu/hispanicsincs/about/).
+
+When I'm not being an academic, I make music with the Latin Folk Fusion ensemble [Son Monarcas](https://www.sonmonarcas.com/about-us) and the Jazz/Maqam ensemble [The East Loop](https://www.eastloopmusic.com/video).
