@@ -27,10 +27,11 @@ Our work has not yet been merged to the main build of Audacity, though it will b
 
 #### Download Using Google Drive
 
-*last updated*: 11/07/2021
+*last updated*: 2/27/2023
 
-- [Mac OS](https://drive.google.com/file/d/1ogOtoqKK6725XrIuGoCRlBXqtsJN2nhN/view?usp=sharing)
-- [Windows (64 bit)](https://drive.google.com/file/d/1j_ndSIBrUH_Sg82j11wFVpA2VtJBJCCj/view?usp=sharing)
+- [Mac OS 13](https://drive.google.com/file/d/1cFxVrbJjmZmncQAOO-QOp1bcRai7H-B-/view?usp=share_link)
+- [Windows (64 bit)](https://drive.google.com/file/d/17B61LXCbPX9k1jrnALu_hBoA5U0OIp73/view?usp=share_link)
+- [Ubuntu 22.04](https://drive.google.com/file/d/1HdRc1MH0We61Wp28RapXj287BL3jHWRD/view?usp=share_link)
 
 #### Issues? 
 
@@ -45,11 +46,6 @@ Contributing a model to audacity only requires familiarity with [PyTorch](https:
 Here, we use the source separation models built-in with Audacity to create a collage of pop songs, taking instruments and vocals from different artists, and remixing them to create a new work. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/muEOJqGSYVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Related Talks
-
-### Bay Innovative Signal Hackers Meetup (2021) 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gUXdQLUdOsU?start=2887" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Related Publications 
 
