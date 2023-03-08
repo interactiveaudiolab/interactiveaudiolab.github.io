@@ -27,11 +27,13 @@ Our work has not yet been merged to the main build of Audacity, though it will b
 
 #### Download Using Google Drive
 
-*last updated*: 2/27/2023
+*last updated*: 3/8/2023
 
-- [Mac OS 13](https://drive.google.com/file/d/1cFxVrbJjmZmncQAOO-QOp1bcRai7H-B-/view?usp=share_link)
-- [Windows (64 bit)](https://drive.google.com/file/d/17B61LXCbPX9k1jrnALu_hBoA5U0OIp73/view?usp=share_link)
-- [Ubuntu 22.04](https://drive.google.com/file/d/1HdRc1MH0We61Wp28RapXj287BL3jHWRD/view?usp=share_link)
+- [Mac OS 13](https://drive.google.com/file/d/1uWV3SnHd-IVaZx4V8owX_h5VWu3GdTj2/view?usp=share_link) *
+- [Windows (64 bit)](https://drive.google.com/file/d/1i_HjTMkv9KfD4UZt0DX-XEyVgkxTTygn/view?usp=share_link)
+- [Ubuntu 22.04](https://drive.google.com/file/d/1MKU7UyA3z5Ap8tk7_lqHaTjlMPxZFzAc/view?usp=share_link)
+
+\* To open on Mac hold `control` while clicking on the Audacity file and select "Open"
 
 #### Issues? 
 
