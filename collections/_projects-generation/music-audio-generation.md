@@ -1,6 +1,6 @@
 ---
 name: Music Audio Generation
-creators: [Hugo Flores Garcia, Prem Seetharaman, Bryan Pardo]
+creators: [Hugo Flores Garcia, Prem Seetharaman, Rithesh Kumar,  Bryan Pardo]
 image: /assets/images/projects/vampnet.png
 altdescription: System description
 collection: projects
@@ -17,6 +17,6 @@ Find the code [here](https://github.com/hugofloresgarcia/vampnet)
 
 ### Related publications
 
-[[pdf]](/assets/papers/ismir2023-flores-seetharaman-pardo.pdf) H. Flores, P.  P. Seetharaman, and B. Pardo, “VampNet: Music Generation via Masked Acoustic Token Modeling,,” International Society of the Society of Music Information Retrieval (ISMIR), 2023.
+[[pdf]](/assets/papers/ismir2023-flores-seetharaman-pardo.pdf) H. Flores, P.  P. Seetharaman, R. Kumar, and B. Pardo, “VampNet: Music Generation via Masked Acoustic Token Modeling,,” International Society of the Society of Music Information Retrieval (ISMIR), 2023.
 
 
