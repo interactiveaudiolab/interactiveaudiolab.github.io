@@ -30,8 +30,6 @@ Our work has not yet been merged to the main build of Audacity, though it will b
 *last updated*: 6/26/2023
 
 - [Mac OS](https://drive.google.com/file/d/1NmcYlgFy7YIDxQ-G0QAGCOfWmUt5DoSF/view?usp=share_link)
-- [Windows (64 bit)](https://drive.google.com/file/d/1i_HjTMkv9KfD4UZt0DX-XEyVgkxTTygn/view?usp=share_link)
-- [Ubuntu 22.04](https://drive.google.com/file/d/1MKU7UyA3z5Ap8tk7_lqHaTjlMPxZFzAc/view?usp=share_link)
 
 
 #### Issues? 
