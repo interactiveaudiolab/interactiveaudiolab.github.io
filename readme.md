@@ -43,7 +43,7 @@ Run the following to install `jekyll` as well as a package management tool calle
 
 ```
 gem install jekyll
-gem install bundler -v 2.1.4
+gem install bundler:2.2.24
 ```
 
 **Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) or Catalina (10.15) you might experience
