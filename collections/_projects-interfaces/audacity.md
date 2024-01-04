@@ -29,7 +29,7 @@ Our work has not yet been merged to the main build of Audacity, though it will b
 
 *last updated*: 6/26/2023
 
-- [Mac OS](https://drive.google.com/file/d/1NmcYlgFy7YIDxQ-G0QAGCOfWmUt5DoSF/view?usp=share_link)
+- [Mac OS](https://drive.google.com/file/d/1Ptw6X5TsOUP3zryOgmsyKOvcH2zMLMHd/view?usp=sharing)
 
 
 #### Issues? 
