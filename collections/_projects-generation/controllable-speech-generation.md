@@ -1,14 +1,13 @@
 ---
 name: Controllable Speech Generation
-creators: [Max Morrison and Bryan Pardo]
+creators: [Max Morrison, Cameron Churchwell, Nathan Pruyne, Bryan Pardo]
 image: /assets/images/projects/speech.png
 altdescription: Speech conversation icon
 collection: projects
 #put full content below the dashed line. full markdown is supported.
 ---
 
-Nuances in speech prosody (i.e., the pitch, timing, and loudness of speech) are a vital part of how we communicate. We utilize generative machine learning models to generate prosody with user control over these nuances and generate speech reflecting user-specified prosody.
-
+Nuances in speech prosody (i.e., the pitch, timing, and loudness of speech) are a vital part of how we communicate. We develop generative machine learning models that use interpretable, disentangled representations of speech to give control over these nuances and generate speech reflecting user-specified prosody.
 
 ### Fine-grained prosody control
 
@@ -29,3 +28,7 @@ Speech prosody correction is where speech with unnatural pitch, phoneme duration
 [[pdf]](/assets/papers/morrison2021context.pdf) M. Morrison, L. Rencker, Z. Jin, N. J. Bryan, J.-P. Caceres, and B. Pardo, “Context-Aware Prosody Correction for Text-Based Speech Editing,” in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021.
 
 [[pdf]](/assets/papers/morrison2022neural.pdf) M. Morrison, Z. Jin, N. J. Bryan, J.-P. Caceres, and B. Pardo, “Neural Pitch-Shifting and Time-Stretching with Controllable LPCNet,” Submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2022.
+
+[[pdf]](/assets/papers/icassp2024_Speech_Prominence_Estimation.pdf) M. Morrison, P. Pawar, N. Pruyne, J. Cole, and B. Pardo, “Crowdsourced and Automatic Speech Prominence Estimation,” IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Seoul, April 14-19, 2024
+
+C. Churchwell, M. Morrison, and B. Pardo, “High Fidelity Neural Phonetic Posteriorgrams,” in ICASSP 2024 Workshop on Explainable AI for Speech and Audio, 2024.

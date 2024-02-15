@@ -12,7 +12,7 @@ collection: projects
 
 Interactive Sound Event Detector (I-SED) is a human-in-the-loop interface for sound event annotation that helps users label sound events of interest within a lengthy recording quickly. The annotation is performed by a collaboration between a user and a machine.
 
-The system lets reduce the time required to search for a set of sound events of interest in an audio recording when there are too few labeled examples (e.g., one) of the sound class to train a state-of-the-art machine audio labeling system.
+The system lets you reduce the time required to search for a set of sound events of interest in an audio recording when there are too few labeled examples (e.g., one) of the sound class to train a state-of-the-art machine audio labeling system.
 
 ### Demo video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ss2eGSW4_4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
