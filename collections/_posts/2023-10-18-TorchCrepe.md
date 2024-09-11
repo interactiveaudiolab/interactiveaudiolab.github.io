@@ -1,5 +1,5 @@
 ---
-title:  "TorchCrepe pitch tracker passes 2,000,0000 downloads."
+title:  "TorchCrepe pitch tracker: 2,000,0000+ downloads."
 date:   2023-10-18 09:00:0 -0600
 categories: news 
 ---

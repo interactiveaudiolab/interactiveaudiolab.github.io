@@ -9,7 +9,7 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Cameron Churchwell is an undergraduate in the McCormick School of Engineering studying Computer Science and Math. His current research centers on neural speech editing and pronunciation information. In his free time he reads, plays trombone, fixes his constantly-breaking 3D printer, and is learning to rollerblade.
+Cameron Churchwell was an undergraduate who worked in the lab on  on neural speech editing and pronunciation information. Today he is a doctoral student at the University of Illinois. 
 [[website]](https://www.cameronchurchwell.com/) 
 
 
