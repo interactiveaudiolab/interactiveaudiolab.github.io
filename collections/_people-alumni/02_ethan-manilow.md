@@ -1,6 +1,6 @@
 ---
 name: Ethan Manilow
-position: Google Brain
+position: Research Scientist, Google Deep Mind
 email: ethanm@northwestern.edu
 website: http://www.ethanmanilow.com
 image: /assets/images/people/ethan.png
@@ -9,4 +9,5 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Ethan Manilow  defended his dissertation in 2022 and is now a research scientist at Google Brain. He recieved a BS in Physics and a BFA in Jazz Studies from the University of Michigan in 2013, and afterwords worked for two years as a software engineer at National Instruments in Austin, TX. His research interests include source separation (isolating sounds from audio mixtures), audio imputation (repairing damaged sounds), and making novel software interfaces for musicians and recording engineers. [[website]](http://www.ethanmanilow.com)
+Ethan is currently a Research Scientist at Google DeepMind on the Magenta Team. He finished my PhD in Computer Science in 2022 working under Bryan Pardo in the Interactive Audio Lab at Northwestern University. During his PhD, he spent two years as a Student Researcher with Magenta and prior to that, spent a year and half as Student Researcher at MERL on the Speech and Audio Team. His research centers on making machine learning systems that listen to and understand musical audio in an effort to make tools that can better assist artists.
+

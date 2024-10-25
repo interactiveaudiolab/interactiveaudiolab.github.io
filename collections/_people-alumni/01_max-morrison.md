@@ -1,6 +1,6 @@
 ---
 name: Max Morrison
-position: PhD Candidate
+position: Research Scientist, Murf.AI
 email: maxrmorrison@gmail.com
 website: http://maxrmorrison.com
 image: /assets/images/people/max.jpg

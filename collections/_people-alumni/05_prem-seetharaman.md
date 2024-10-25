@@ -1,6 +1,6 @@
 ---
 name: Prem Seetharaman
-position: Research Scientist, Descript
+position: Senior Research Scientist, Adobe Research
 email: prem@u.northwestern.edu
 website: http://prem.seeth.org
 image: /assets/images/people/prem.jpg
@@ -9,5 +9,4 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Prem got his PhD from Northwestern University in the Interactive Audio Lab, under Prof. Bryan Pardo in 2019. The objective of his research is to create machines that can understand the auditory world like humans can. He works in machine learning, music information retrieval, audio source separation, music structure and similarity, acoustics, and human computer interaction. He is currently a research scientist at [Descript](https://www.descript.com).
-
+Prem is a Senior Research Scientist at Adobe Research, working in the Audio AI Lab. He received a PhD in 2019 at Northwestern University, advised by Bryan Pardo. Afterwards, he spent time at Descript where he worked on audio enhancement and generation. His recent work focuses on generative models for all types of audio, such as every-day sounds, music, and speech. He works at the intersection of computer audition, generative modeling, and interaction, with the goal of lowering the barrier to entry for content creation.
