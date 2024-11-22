@@ -67,11 +67,12 @@ rbenv global 2.7.2
 You should now have a website-friendly version of ruby. You can check your version numbers on ruby and gem, just to be sure.
 
 #### Installing Jekyll
-Run the following to install `jekyll` as well as a package management tool called `bundler`.
+Run the following to install `jekyll` as well as a package management tool called `bundler`. The version numbers below are the ones I verified work with ruby 2.7.2 to build the website. 
 
 ```
-gem install jekyll
-gem install bundler -v 2.1.4
+gem install bundler -v 2.2.24
+gem install jekyll -v 4.3.2
+
 ```
 
 **Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) or Catalina (10.15) you might experience
