@@ -31,11 +31,8 @@ Once you have finished your edits, you will need to do the following.
 
 
 ### Making sure you're ready to compile the website
-Compilation of the website depends on Jekyll, which is a part of the Ruby ecosystem. Verify you have both Ruby  and the gem package manager by running the following.
+Compilation of the website depends on having GIT (to download the site and push up changes to the server), and Jekyll (to host and run it locally), which is a part of the Ruby ecosystem. 
 
-```
-gem --version
-```
 #### Installing GIT
 If you don't have GIT installed, then you need to install XCode commandline tools. Type this at the command line.
 ```
@@ -43,8 +40,16 @@ git --version
 ```
 If you have git, it will give you a version number. If not, it will tell you that a request has been made to install xcode. Then you have to go to MacOS "system settings/software update". Then you tell it you're OK with installing XCode commandline tools by cliking on a button. Then you wait while your OS updates.
 
+
+
 #### Installing Ruby and gem
-Once you have a working git, you need ruby. Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. You can do this with Homebrew.
+Once you have a working git, you need ruby.
+Verify you have both Ruby  and the gem package manager by running the following.
+
+```
+gem --version
+```
+Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. You can do this with Homebrew.
 
 ```
 brew install rbenv
