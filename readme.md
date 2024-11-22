@@ -37,8 +37,12 @@ Compilation of the website depends on Jekyll, which is a part of the Ruby ecosys
 gem --version
 ```
 
+#### Installing Ruby and gem
 **Note** I (Bryan) had success with ruby 2.4.0. and 2.7.2 Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version...
 
+I (Bryan) used this helpful [Guide to installing Ruby Gems on a Mac](https://www.moncefbelyamani.com/the-definitive-guide-to-installing-ruby-gems-on-a-mac/)
+
+#### Installing Jekyll
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
 
 ```
