@@ -34,7 +34,7 @@ Once you have finished your edits, you will need to do the following.
 Compilation of the website depends on having GIT (to download the site and push up changes to the server), and Jekyll (to host and run it locally), which is a part of the Ruby ecosystem. 
 
 #### Installing GIT
-If you don't have GIT installed, then you need to install XCode commandline tools. Type this at the command line.
+If you don't have GIT installed, and you're on a Mac you need to install XCode commandline tools. Type this at the command line.
 ```
 git --version
 ```
@@ -43,19 +43,19 @@ If you have git, it will give you a version number. If not, it will tell you tha
 
 
 #### Installing Ruby and gem
-Once you have a working git, you need ruby.
-Verify you have both Ruby  and the gem package manager by running the following.
+Once you have a working git, you need ruby. I (Bryan) had success with both ruby 2.4.0. and 2.7.2  Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version
+
+Verify you have both the right Ruby and the right gem package manager by running the following.
 
 ```
 gem --version
 ```
-Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. You can do this with Homebrew.
+If you don't have them installed, you're going to want to use your ruby environment manager to do this installation, so that you point things a good version (not the one that Apple defaults to, if you're on a Mac). I (Bryan) had success with installing `[rbenv](https://github.com/rbenv/rbenv)` as a ruby environment manager so that I can select the ruby version to use. On a Mac, you can do this with Homebrew.
 
 ```
 brew install rbenv
 ```
 
-**Note** I (Bryan) had success with ruby 2.4.0. and 2.7.2 Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version
 
 #### Installing Jekyll
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
