@@ -55,7 +55,10 @@ If you don't have them installed, you're going to want to use your ruby environm
 ```
 brew install rbenv
 ```
-
+Now install your version of ruby
+```
+rbenv install 2.7.2
+```
 
 #### Installing Jekyll
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
