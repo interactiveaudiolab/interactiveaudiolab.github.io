@@ -50,7 +50,7 @@ Verify you have both the right Ruby and the right gem package manager by running
 ```
 gem --version
 ```
-If you don't have them installed, you're going to want to use your ruby environment manager to do this installation, so that you point things a good version (not the one that Apple defaults to, if you're on a Mac). I (Bryan) had success with installing [rbenv](https://github.com/rbenv/rbenv) as a ruby environment manager so that I can select the ruby version to use. On a Mac, you can do this with Homebrew.
+If you don't have them installed, you're going to want to use your ruby environment manager to do this installation, so that you point things a good version (not the one that Apple defaults to, if you're on a Mac). I (Bryan) had success with installing [rbenv](https://github.com/rbenv/rbenv) as a ruby environment manager so that I can select the ruby version to use. On a Mac, you can do this with Homebrew by doing the following
 
 ```
 brew install rbenv
@@ -59,6 +59,13 @@ Now install your version of ruby
 ```
 rbenv install 2.7.2
 ```
+Then restart your system.
+
+Then set this version of ruby as your version
+```
+rbenv global 2.7.2
+```
+You will now have a website-friendly version of ruby.
 
 #### Installing Jekyll
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
