@@ -40,14 +40,13 @@ git --version
 ```
 If you have git, it will give you a version number. If not, it will tell you that a request has been made to install xcode. Then you have to go to MacOS "system settings/software update". Then you tell it you're OK with installing XCode commandline tools by cliking on a button. Then you wait while your OS updates.
 
-
-
 #### Installing Ruby and gem
 Once you have a working git, you need ruby. I (Bryan) had success with both ruby 2.4.0. and 2.7.2  Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. 
 
 Verify you have both the right Ruby and the right gem package manager by running the following.
 
 ```
+ruby --version
 gem --version
 ```
 If you don't have them installed, you're going to want to use your ruby environment manager to do this installation, so that you point things a good version (not the one that Apple defaults to, if you're on a Mac). I (Bryan) had success with installing [rbenv](https://github.com/rbenv/rbenv) as a ruby environment manager so that I can select the ruby version to use. On a Mac, you can do this with Homebrew by doing the following
@@ -65,7 +64,7 @@ Then set this version of ruby as your version
 ```
 rbenv global 2.7.2
 ```
-You will now have a website-friendly version of ruby.
+You should now have a website-friendly version of ruby. You can check your version numbers on ruby and gem, just to be sure.
 
 #### Installing Jekyll
 Run the following to install `jekyll` as well as a package management tool called `bundler`.
