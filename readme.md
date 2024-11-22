@@ -43,7 +43,7 @@ If you have git, it will give you a version number. If not, it will tell you tha
 
 
 #### Installing Ruby and gem
-Once you have a working git, you need ruby. I (Bryan) had success with both ruby 2.4.0. and 2.7.2  Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version
+Once you have a working git, you need ruby. I (Bryan) had success with both ruby 2.4.0. and 2.7.2  Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. 
 
 Verify you have both the right Ruby and the right gem package manager by running the following.
 
