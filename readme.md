@@ -31,48 +31,19 @@ Once you have finished your edits, you will need to do the following.
 
 
 ### Making sure you're ready to compile the website
-Compilation of the website depends on having GIT (to download the site and push up changes to the server), and Jekyll (to host and run it locally), which is a part of the Ruby ecosystem. 
-
-#### Installing GIT
-If you don't have GIT installed, and you're on a Mac you need to install XCode commandline tools. Type this at the command line.
-```
-git --version
-```
-If you have git, it will give you a version number. If not, it will tell you that a request has been made to install xcode. Then you have to go to MacOS "system settings/software update". Then you tell it you're OK with installing XCode commandline tools by cliking on a button. Then you wait while your OS updates.
-
-#### Installing Ruby and gem
-Once you have a working git, you need ruby. I (Bryan) had success with both ruby 2.4.0. and 2.7.2  Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. 
-
-Verify you have both the right Ruby and the right gem package manager by running the following.
+Compilation of the website depends on Jekyll, which is a part of the Ruby ecosystem. Verify you have both Ruby  and the gem package manager by running the following.
 
 ```
-ruby --version
 gem --version
 ```
-If you don't have them installed, you're going to want to use your ruby environment manager to do this installation, so that you point things a good version (not the one that Apple defaults to, if you're on a Mac). I (Bryan) had success with installing [rbenv](https://github.com/rbenv/rbenv) as a ruby environment manager so that I can select the ruby version to use. On a Mac, you can do this with Homebrew by doing the following
+
+**Note** I (Bryan) had success with ruby 2.4.0. and 2.7.2 Consider installing `rbenv` as a ruby environment manager so that you can select the ruby version you use. Also, you will need a version of gem that is 2.7.0 or later to install Jekyll. Once you have gotten that version...
+
+Run the following to install `jekyll` as well as a package management tool called `bundler`.
 
 ```
-brew install rbenv
-```
-Now install your version of ruby
-```
-rbenv install 2.7.2
-```
-Then restart your system.
-
-Then set this version of ruby as your version
-```
-rbenv global 2.7.2
-```
-You should now have a website-friendly version of ruby. You can check your version numbers on ruby and gem, just to be sure.
-
-#### Installing Jekyll
-Run the following to install `jekyll` as well as a package management tool called `bundler`. The version numbers below are the ones I verified work with ruby 2.7.2 to build the website. 
-
-```
-gem install bundler -v 2.2.24
-gem install jekyll -v 4.3.2
-
+gem install jekyll
+gem install bundler -v 2.1.4
 ```
 
 **Note**: If you are using macOS High Sierra (10.13) or Mojave (10.14) or Catalina (10.15) you might experience
