@@ -9,7 +9,8 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Nathan Pruyne is an undergraduate student studying Computer Science in the McCormick School of Engineering and Music Technology in the Bienen School of Music. He currently works with Max on speech analysis and editing, and is interested in applying machine learning to creative works, such as speech and music editing. He also plays French horn, jazz trombone, and mellophone in various ensembles on campus, and enjoys writing and producing electronic music in his free time.
-[[website]]() 
+Nathan Pruyne is an undergraduate student studying Computer Science in the McCormick School of Engineering and Music Technology in the Bienen School of Music. He currently works on [HARP](https://github.com/TEAMuP-dev/HARP) and data attribution for generative music models, and previously worked with Max on speech analysis and editing. He is interested in helping musicians' and songwriters' creativity by giving them fine-grained control of generative models. He also plays French horn, jazz trombone, and mellophone in various ensembles on campus, and enjoys writing and producing electronic music in his free time.
+
+[[website]](https://nathanpruyne.com) 
 
 
