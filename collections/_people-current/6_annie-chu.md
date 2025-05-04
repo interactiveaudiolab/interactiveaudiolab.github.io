@@ -1,6 +1,6 @@
 ---
 name: Annie Chu
-position: Doctoral Studenet
+position: Doctoral Student
 email: anniechu@u.northwestern.edu 
 website: https://anniejchu.github.io 
 image: /assets/images/people/annie-chu.jpg

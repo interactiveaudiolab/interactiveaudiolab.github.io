@@ -1,6 +1,6 @@
 ---
 name: Zafar Rafii
-position: Research Engineer, Gracenote
+position: Audio Research Scientist, Audible Magic
 email: 
 website: http://zafarrafii.com/
 image: /assets/images/people/Zafar-150x150.jpg

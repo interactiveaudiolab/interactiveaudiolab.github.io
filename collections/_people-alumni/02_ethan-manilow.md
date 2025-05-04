@@ -1,6 +1,6 @@
 ---
 name: Ethan Manilow
-position: Research Scientist, Google Deep Mind
+position: Senior Research Scientist, Google Deep Mind
 email: ethanm@northwestern.edu
 website: http://www.ethanmanilow.com
 image: /assets/images/people/ethan.png
