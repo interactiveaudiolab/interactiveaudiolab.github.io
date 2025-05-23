@@ -1,6 +1,6 @@
 ---
 name: Cameron Churchwell
-position: Undergraduate
+position: Doctoral Student, University of Illinois
 email: cameronchurchwell2024@u.northwestern.edu
 website: https://www.cameronchurchwell.com/
 image: /assets/images/people/cameron.jpg

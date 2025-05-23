@@ -1,7 +1,7 @@
 ---
 name: Adrian Hoffer
 position: Masters Student
-email: nathanpruyne2025@u.northwestern.edu
+email: 
 website: 
 image: /assets/images/people/adrian-hoffer.jpg
 altdescription: Picture of Nathan Pruyne

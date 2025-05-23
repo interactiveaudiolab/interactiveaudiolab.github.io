@@ -1,6 +1,6 @@
 ---
 name: Zhiyao Duan
-position: Associate Professor, Department of Electrical and Computer Engineering, University of Rochester
+position: Professor, Department of Electrical and Computer Engineering, University of Rochester
 email: 
 website: http://www2.ece.rochester.edu/~zduan/
 image: /assets/images/people/Zhiyao-150x150.jpg
