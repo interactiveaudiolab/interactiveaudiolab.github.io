@@ -1,5 +1,5 @@
 ---
-name: Lindsey Quixin Deng
+name: Lindsey Qixin Deng
 position: Masters Student
 email: qixindeng2026@u.northwestern.edu
 website: 
