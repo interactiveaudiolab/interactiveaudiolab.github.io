@@ -9,7 +9,7 @@ navigation: people
 
 #full description of member goes below the dashed line
 ---
-Adrian Hoffer is a masters student studying Computer Science at Northwestern University and also a member of the Interactive Audio Lab. He currently works with Patrick on using discrete diffusion for symbolic music generation and continuation tasks. In his free time he listens to lots of Santana and Jamiroquai as well as playing pickup basketball at Northwestern’s courts.
+Adrian Hoffer graduated with his masters of Computer Science in June 2025. He worked with Patrick O'Reilly on using discrete diffusion for symbolic music generation and continuation tasks. In his free time he listens to lots of Santana and Jamiroquai as well as playing pickup basketball at Northwestern’s courts.
 
 
 

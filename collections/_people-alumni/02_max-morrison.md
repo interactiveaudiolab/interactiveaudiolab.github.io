@@ -1,6 +1,6 @@
 ---
 name: Max Morrison
-position: Research Scientist, Murf.AI
+position: Research Engineer, Elevenlabs
 email: maxrmorrison@gmail.com
 website: http://maxrmorrison.com
 image: /assets/images/people/max.jpg
