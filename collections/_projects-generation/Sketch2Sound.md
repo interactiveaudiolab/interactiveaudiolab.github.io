@@ -1,7 +1,7 @@
 ---
 name: Sketch2Sound - Controllable Audio Generation via Time-Varying Signals and Sonic Imitations
-creators: [Hugo Flores Garcia, Prem Seetharaman, Oriol Nieto, Justin Salamon,  Bryan Pardo]
-image: /assets/images/projects/tria.jpg
+creators: [Hugo Flores Garcia, Oriol Nieto, Justin Salamon, Bryan Pardo, Prem Seetharaman]
+image: /assets/images/projects/sketch2sound.png
 altdescription: System description
 funding: This work supported by NSF Award Number 2222369
 collection: projects
