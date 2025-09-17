@@ -20,7 +20,7 @@ navigation: projects
 </nav>
 
 ## Generation
-Audio generation leverages generative machine learning models (e.g., Variational Autoencoders or Generative Adversarial Networks) to create an audio waveform or a symbolic representation of audio (e.g., MIDI). This includes tasks such as music generation and text-to-speech (TTS). These generative models can be unconditioned (e.g., generating any kind of music without user input) or conditioned (e.g., generating jazz-rock played on a cello where the first eight bars are the same as Beethoven's Fifth Symphony). Conditional audio generation has the potential to enable novel tools for composers, dialogue editors for film and podcasts, and sound designers. For further publications in this area, see our [publications](/publications) page.
+Audio generation leverages generative machine learning models (e.g., Variational Autoencoders, Diffusion Transformers) to create an audio waveform or a symbolic representation of audio (e.g., MIDI). Our work includes generation of music, sound effects, and speech. Highlighted projects follow. For further publications in this area, see our [publications](/publications) page.
 
 {% include list.html collection=site.projects-generation title="" anchor-tag="generation" %}
 
