@@ -17,7 +17,7 @@ git clone https://github.com/interactiveaudiolab/interactiveaudiolab.github.io.g
 Then, open the directory containing the `source` branch. Where you perform edits depends on
 what edits you are making.
 - If you want to add a course, dataset, person, or project, find the `collections` directory.
-- If you want to add a paper, first find the `_data` directory and enter its bibtex into the `references.bib` file (please put it in the right place chronologically). Then you need to add the pdf of the paper in the `assets` directory. *NOTE* if this paper is the 1st paper published in year X you need to go to '_config.yml' and add year X to the publication-years list.
+- If you want to add a paper, first find the `_data` directory and enter its bibtex into the `references.bib` file (please put it in the right place chronologically). Then you need to add the pdf of the paper in the `assets` directory. *NOTE* if this paper is the 1st paper published in year X you need to go to `_config.yml` (in the root directory) and add year X to the publication-years list.
 - If you want to add an image or the pdf of a paper, find the `assets` directory.
 - If you want to edit any of the other site text, find the `pages` directory.
 
